@@ -93,9 +93,8 @@ public:
     }
 
     bool Generate(const std::string &code, int traits);
-    void SetSeedWithTraits(const std::vector<World *> &worlds, int traitsFlag);
     void SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites);
-    void SetResultTraits(const std::vector<const WorldTrait *> &traits);
+    void SetResultTraits(const SettingsCache::WorldTraitArray &traits);
     void SetResultGeysers(int seed, const WorldGen &worldGen);
     void SetResultPolygons(World *world, std::vector<Site> &sites);
     // union sites with the same zone type. if result has hole return true.
@@ -122,10 +121,22 @@ bool App::Generate(const std::string &code, int traitsFlag)
         worlds[0]->locationType = LocationType::StartWorld;
     }
     if (traitsFlag != 0) { // roll seed for preset traits
-        SetSeedWithTraits(worlds, traitsFlag);
+        m_settings.SetSeedWithTraits(worlds, traitsFlag, m_random);
+    }
+    int seed = m_settings.Seed();
+    std::vector<SettingsCache::WorldTraitArray> allWorldTraits;
+    for (size_t i = 0; i < worlds.size(); ++i) {
+        auto world = worlds[i];
+        world->ClearMixingsAndTraits();
+        auto traits = m_settings.GetRandomTraits(*world, seed + i);
+        for (auto trait : traits) {
+            if (trait) {
+                world->ApplayTraits(*trait, m_settings);
+            }
+        }
+        allWorldTraits.emplace_back(traits);
     }
     m_settings.DoSubworldMixing(worlds);
-    int seed = m_settings.seed;
     bool genWarpWorld = code.find("M-") == 0;
     for (size_t i = 0; i < worlds.size(); ++i) {
         auto world = worlds[i];
@@ -138,70 +149,18 @@ bool App::Generate(const std::string &code, int traitsFlag)
         } else if (!genWarpWorld) {
             continue;
         }
-        m_settings.seed = seed + i;
-        auto traits = m_settings.GetRandomTraits(*world);
-        for (auto trait : traits) {
-            world->ApplayTraits(*trait, m_settings);
-        }
-        WorldGen worldGen(*world, m_settings);
+        WorldGen worldGen(*world, m_settings, seed + i);
         std::vector<Site> sites;
         if (!worldGen.GenerateOverworld(sites)) {
             LogE("generate overworld failed.");
             return false;
         }
         SetResultWorldInfo(seed, world, sites);
-        SetResultTraits(traits);
+        SetResultTraits(allWorldTraits[i]);
         SetResultGeysers(seed, worldGen);
         SetResultPolygons(world, sites);
     }
     return true;
-}
-
-void App::SetSeedWithTraits(const std::vector<World *> &worlds, int traitsFlag)
-{
-    std::vector<const WorldTrait *> presets;
-    int index = 0;
-    for (auto &pair : m_settings.traits) {
-        if ((traitsFlag >> index & 1) == 1) {
-            presets.push_back(&pair.second);
-        }
-        ++index;
-    }
-    if (presets.empty()) {
-        m_settings.seed = m_random.Next();
-        return;
-    }
-    index = 0;
-    World *world = worlds[index];
-    for (size_t i = 0; i < worlds.size(); ++i) {
-        world = worlds[i];
-        if (world->locationType == LocationType::StartWorld) {
-            index = i;
-            break;
-        }
-    }
-    size_t maxCount = 0;
-    int maxCountSeed = 0;
-    for (int i = 0; i < 1000; ++i) {
-        int seed = m_random.Next();
-        m_settings.seed = seed + index;
-        auto traits = m_settings.GetRandomTraits(*world);
-        m_settings.seed = seed;
-        size_t count = 0;
-        for (auto *preset : presets) {
-            if (std::ranges::contains(traits, preset)) {
-                ++count;
-            }
-        }
-        if (count == presets.size()) {
-            return;
-        } else if (maxCount < count) {
-            maxCount = count;
-            maxCountSeed = seed;
-        }
-    }
-    m_settings.seed = maxCountSeed;
-    LogI("can not find seed for preset traits");
 }
 
 void App::SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites)
@@ -214,11 +173,11 @@ void App::SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites)
     jsExchangeData(RT_WorldSize, seed, (size_t)&worldSize);
 }
 
-void App::SetResultTraits(const std::vector<const WorldTrait *> &traits)
+void App::SetResultTraits(const SettingsCache::WorldTraitArray &traits)
 {
     std::vector<int> result;
     result.reserve(traits.size());
-    for (auto &item : traits) {
+    for (auto *item : traits) {
         uint32_t index = 0;
         for (auto &pair : m_settings.traits) {
             if (item == &pair.second) {

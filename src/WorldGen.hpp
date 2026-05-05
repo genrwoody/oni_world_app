@@ -21,8 +21,8 @@ private:
     std::vector<TemplateSpawner> m_templates;
 
 public:
-    WorldGen(World &world, SettingsCache &settings)
-        : m_seed{settings.seed}
+    WorldGen(World &world, SettingsCache &settings, int seed)
+        : m_seed{seed}
         , m_settings{settings}
         , m_world{world}
     {

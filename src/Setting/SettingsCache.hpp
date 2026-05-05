@@ -32,6 +32,9 @@ struct MixingConfig {
 class SettingsCache
 {
 public:
+    using WorldTraitArray = std::array<const WorldTrait *, 4>;
+
+public:
     ComposableDictionary<std::vector<WeightedSimHash>> borders;
     DefaultSettings defaults;
     LevelLayerSettings layers;
@@ -59,17 +62,20 @@ public:
 
 public:
     ClusterLayout *cluster = nullptr;
-    int seed = 0;
 
 private:
     static Variant m_nil;
+    int m_seed = 0;
     int m_dlcState = 0;
 
 public:
+    int Seed() const { return m_seed; }
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text, SettingsCache &settings);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }
-    std::vector<const WorldTrait *> GetRandomTraits(const World &world) const;
+    WorldTraitArray GetRandomTraits(const World &world, int seed) const;
+    void SetSeedWithTraits(const std::vector<World *> &worlds,
+                           int traitsFlag, KRandom &random);
     void DoSubworldMixing(std::vector<World *> worlds);
     static uint32_t Base36ToBinary(const std::string &input);
     static std::string BinaryToBase36(uint32_t input);

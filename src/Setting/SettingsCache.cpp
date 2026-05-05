@@ -293,7 +293,7 @@ bool SettingsCache::CoordinateChanged(const std::string &text,
     if (codes.size() < 4 || codes.size() > 6) {
         return false;
     }
-    seed = std::stoi(codes[2]);
+    m_seed = std::stoi(codes[2]);
     cluster = nullptr;
     for (auto &pair : settings.clusters) {
         if (pair.second.coordinatePrefix == codes[1]) {
@@ -339,8 +339,8 @@ void SettingsCache::ParseAndApplyMixingSettingsCode(const std::string &code)
     }
 }
 
-std::vector<const WorldTrait *>
-SettingsCache::GetRandomTraits(const World &world) const
+SettingsCache::WorldTraitArray
+SettingsCache::GetRandomTraits(const World &world, int seed) const
 {
     if (seed == 0 || world.disableWorldTraits ||
         world.worldTraitRules.empty()) {
@@ -361,7 +361,8 @@ SettingsCache::GetRandomTraits(const World &world) const
             total.push_back(&pair.second);
         }
     }
-    std::vector<const WorldTrait *> result;
+    unsigned resultCursor = 0;
+    WorldTraitArray result{};
     std::vector<std::string> names;
     std::set<std::string> except;
     for (auto &rule : world.worldTraitRules) {
@@ -370,7 +371,7 @@ SettingsCache::GetRandomTraits(const World &world) const
                 names.emplace_back(specificTrait);
                 for (auto trait : total) {
                     if (specificTrait == trait->filePath) {
-                        result.emplace_back(trait);
+                        result[resultCursor++] = trait;
                         break;
                     }
                 }
@@ -419,7 +420,7 @@ SettingsCache::GetRandomTraits(const World &world) const
             }
             if (!flag) {
                 names.emplace_back(worldTrait->filePath);
-                result.emplace_back(worldTrait);
+                result[resultCursor++] = worldTrait;
                 for (auto &exclusiveWithTag2 : worldTrait->exclusiveWithTags) {
                     except.emplace(exclusiveWithTag2);
                 }
@@ -434,6 +435,52 @@ SettingsCache::GetRandomTraits(const World &world) const
         }
     }
     return result;
+}
+
+void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
+                                      int traitsFlag, KRandom &random)
+{
+    std::vector<const WorldTrait *> presets;
+    int index = 0;
+    for (auto &pair : traits) {
+        if ((traitsFlag >> index & 1) == 1) {
+            presets.push_back(&pair.second);
+        }
+        ++index;
+    }
+    if (presets.empty()) {
+        m_seed = random.Next();
+        return;
+    }
+    index = 0;
+    World *world = asteroids[index];
+    for (size_t i = 0; i < asteroids.size(); ++i) {
+        world = asteroids[i];
+        if (world->locationType == LocationType::StartWorld) {
+            index = i;
+            break;
+        }
+    }
+    size_t maxCount = 0;
+    int maxCountSeed = 0;
+    for (int i = 0; i < 1000; ++i) {
+        int seed = random.Next();
+        auto worldTraits = GetRandomTraits(*world, seed + index);
+        size_t count = 0;
+        for (auto *preset : presets) {
+            if (std::ranges::contains(worldTraits, preset)) {
+                ++count;
+            }
+        }
+        if (count == presets.size()) {
+            return;
+        } else if (maxCount < count) {
+            maxCount = count;
+            maxCountSeed = seed;
+        }
+    }
+    m_seed = maxCountSeed;
+    LogI("can not find seed for preset traits");
 }
 
 void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
@@ -460,7 +507,7 @@ void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
             filtered.push_back(&config);
         }
     }
-    KRandom random(seed);
+    KRandom random(m_seed);
     ShuffleSeeded(asteroids, random);
     ArraySortHelper::Sort(
         asteroids, 0, (int)asteroids.size(), [](World *a, World *b) {
@@ -469,7 +516,6 @@ void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
         });
     for (auto world : asteroids) {
         ShuffleSeeded(filtered, random);
-        world->ClearMixingsAndTraits();
         world->ApplayMixings(filtered);
     }
 }
