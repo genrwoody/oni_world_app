@@ -11,6 +11,9 @@ template<typename T>
 void BubbleSort(std::vector<T *> &list)
 {
     size_t size = list.size();
+    if (size < 2) {
+        return;
+    }
     size_t sorted = 0;
     while (sorted < size - 1) {
         size_t last = 0;

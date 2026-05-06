@@ -2,6 +2,7 @@
 
 #include <string_view>
 
+#include "Utils/Log.hpp"
 #include "ClusterLayout.hpp"
 #include "TemplateContainer.hpp"
 

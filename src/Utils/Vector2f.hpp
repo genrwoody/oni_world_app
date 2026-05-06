@@ -233,13 +233,3 @@ struct Vector3 {
 typedef Vector3<int> Vector3i;
 typedef Vector3<float> Vector3f;
 typedef Vector3<double> Vector3d;
-
-#if defined(EMSCRIPTEN) && defined(NDEBUG)
-#define LogI(format, ...)
-#define LogE(format, ...)
-#else
-#define LogI(format, ...)                                                      \
-    printf("info %s:%d " format "\n", __func__, __LINE__, ##__VA_ARGS__)
-#define LogE(format, ...)                                                      \
-    printf("error %s:%d " format "\n", __func__, __LINE__, ##__VA_ARGS__)
-#endif

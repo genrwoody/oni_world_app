@@ -436,6 +436,7 @@ bool TemplateSpawning::ApplyTemplateRules(const TemplateSpawnRules &rule,
 void TemplateSpawning::SpawnTemplatesFromTemplateRules()
 {
     std::vector<const TemplateSpawnRules *> rules;
+    rules.reserve(32);
     for (auto item : m_world.worldTemplateRules2) {
         rules.push_back(item);
     }

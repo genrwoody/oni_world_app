@@ -11,6 +11,7 @@
 #include "Utils/Voronoi.hpp"
 #include "Utils/Diagram.hpp"
 #include "Utils/PointGenerator.hpp"
+#include "Utils/Log.hpp"
 
 struct WeightedSubWorld {
     const SubWorld *subWorld;
@@ -35,6 +36,7 @@ struct WeightedSubWorld {
 static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites);
 static void ApplySwapTags(std::vector<Site> &sites, KRandom &random);
 extern void WriteToBinary(const std::vector<Site> &sites);
+extern void WriteToBinary(const std::vector<Site *> &sites);
 
 bool WorldGen::GenerateOverworld(std::vector<Site> &sites)
 {

@@ -1,4 +1,4 @@
-#ifdef EMSCRIPTEN
+#ifdef __EMSCRIPTEN__
 #include <emscripten.h>
 #else
 #include <iostream>
@@ -15,6 +15,7 @@
 #include <clipper.hpp>
 
 #include "config.h"
+#include "Utils/Log.hpp"
 #include "Setting/SettingsCache.hpp"
 #include "WorldGen.hpp"
 
@@ -31,38 +32,54 @@ enum ResultType {
     RT_Resource
 };
 
+static void SerializeSite(const Site &site, std::vector<uint32_t> &data)
+{
+    data.push_back(site.idx);
+    data.push_back(*(uint32_t *)&site.x);
+    data.push_back(*(uint32_t *)&site.y);
+    int count = (int)site.polygon.Vertices.size();
+    if (count != 0) {
+        data.push_back(count);
+        for (auto &point : site.polygon.Vertices) {
+            data.push_back(*(uint32_t *)&point.x);
+            data.push_back(*(uint32_t *)&point.y);
+        }
+    }
+    if (site.children && !site.children->empty()) {
+        for (auto &child : *site.children) {
+            data.push_back(child.idx);
+            data.push_back(*(uint32_t *)&child.x);
+            data.push_back(*(uint32_t *)&child.y);
+            int count2 = (int)child.polygon.Vertices.size();
+            if (count2 != 0) {
+                data.push_back(count2);
+                for (auto &point : child.polygon.Vertices) {
+                    data.push_back(*(uint32_t *)&point.x);
+                    data.push_back(*(uint32_t *)&point.y);
+                }
+            }
+        }
+    }
+}
+
 // for debug
 void WriteToBinary(const std::vector<Site> &sites)
 {
     static int index = 10;
     std::vector<uint32_t> data;
     for (auto &site : sites) {
-        data.push_back(site.idx);
-        data.push_back(*(uint32_t *)&site.x);
-        data.push_back(*(uint32_t *)&site.y);
-        int count = (int)site.polygon.Vertices.size();
-        if (count != 0) {
-            data.push_back(count);
-            for (auto &point : site.polygon.Vertices) {
-                data.push_back(*(uint32_t *)&point.x);
-                data.push_back(*(uint32_t *)&point.y);
-            }
-        }
-        if (site.children && !site.children->empty()) {
-            for (auto &child : *site.children) {
-                data.push_back(child.idx);
-                data.push_back(*(uint32_t *)&child.x);
-                data.push_back(*(uint32_t *)&child.y);
-                int count2 = (int)child.polygon.Vertices.size();
-                if (count2 != 0) {
-                    data.push_back(count2);
-                    for (auto &point : child.polygon.Vertices) {
-                        data.push_back(*(uint32_t *)&point.x);
-                        data.push_back(*(uint32_t *)&point.y);
-                    }
-                }
-            }
-        }
+        SerializeSite(site, data);
+    }
+    jsExchangeData(index++, (uint32_t)data.size(), (uint32_t)data.data());
+}
+
+// for debug
+void WriteToBinary(const std::vector<Site *> &sites)
+{
+    static int index = 10;
+    std::vector<uint32_t> data;
+    for (auto *site : sites) {
+        SerializeSite(*site, data);
     }
     jsExchangeData(index++, (uint32_t)data.size(), (uint32_t)data.data());
 }
@@ -299,7 +316,7 @@ extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
     return App::Instance()->Generate(code, traits);
 }
 
-#ifndef EMSCRIPTEN
+#ifndef __EMSCRIPTEN__
 
 int main()
 {
@@ -308,7 +325,7 @@ int main()
     while (true) {
         std::cout << "input type, seed, mixing: ";
         std::cin >> type >> seed >> mixing;
-        if (seed == 0) {
+        if (std::cin.eof()) {
             break;
         }
         if (!app_generate(type, seed, mixing)) {
@@ -363,6 +380,7 @@ void jsExchangeData(uint32_t type, uint32_t count, size_t data)
         break;
     }
     case RT_Polygon:
+    case RT_WorldSize:
         break;
     case RT_Resource: {
         auto ptr = (char *)data;
