@@ -17,7 +17,7 @@ inline int Voronoi::CompareByYThenX(const Site &s1, const Vector2f &s2)
     return 0;
 }
 
-inline Site *Voronoi::FortunesAlgorithm_leftRegion(Halfedge &he)
+inline const Site *Voronoi::FortunesAlgorithm_leftRegion(Halfedge &he)
 {
     auto edge = he.edge;
     if (edge == nullptr) {
@@ -26,7 +26,7 @@ inline Site *Voronoi::FortunesAlgorithm_leftRegion(Halfedge &he)
     return edge->GetSite(he.leftRight);
 }
 
-inline Site *Voronoi::FortunesAlgorithm_rightRegion(Halfedge &he)
+inline const Site *Voronoi::FortunesAlgorithm_rightRegion(Halfedge &he)
 {
     auto edge = he.edge;
     if (edge == nullptr) {
@@ -35,7 +35,7 @@ inline Site *Voronoi::FortunesAlgorithm_rightRegion(Halfedge &he)
     return edge->GetSite(OtherSide(he.leftRight));
 }
 
-void Voronoi::Create(std::vector<Site> &points, const Rect &plotBounds)
+void Voronoi::Create(const std::vector<Site> &points, const Rect &plotBounds)
 {
     m_plotBounds = plotBounds;
     m_sites.resize(points.size());
@@ -115,7 +115,7 @@ Halfedge *Voronoi::EdgeListGetHash(int num)
     return halfedge;
 }
 
-Halfedge *Voronoi::EdgeListLeftNeighbor(Site &site)
+Halfedge *Voronoi::EdgeListLeftNeighbor(const Site &site)
 {
     auto xmin = m_sitesBounds.x;
     auto deltax = m_sitesBounds.width;
@@ -153,7 +153,7 @@ Halfedge *Voronoi::EdgeListLeftNeighbor(Site &site)
     return halfedge;
 }
 
-Edge *Voronoi::CreateBisectingEdge(Site &site0, Site &site1)
+Edge *Voronoi::CreateBisectingEdge(const Site &site0, const Site &site1)
 {
     auto &coord = site1;
     auto &coord2 = site0;
@@ -190,7 +190,7 @@ void Voronoi::FortunesAlgorithm()
     Vector2f s;
     int sites_cursor = 0;
     fortunesAlgorithm_bottomMostSite = m_sites[sites_cursor++];
-    Site *site = m_sites[sites_cursor++];
+    const Site *site = m_sites[sites_cursor++];
     while (true) {
         if (!halfedgePriorityQueue.empty()) {
             auto bottom = *halfedgePriorityQueue.begin();
@@ -199,7 +199,7 @@ void Voronoi::FortunesAlgorithm()
         }
         Halfedge *halfedge;
         Halfedge *edgeListRightNeighbor;
-        Site *site2;
+        const Site *site2;
         Edge *edge;
         Halfedge *halfedge2;
         Vector2f *vertex;
@@ -244,7 +244,7 @@ void Voronoi::FortunesAlgorithm()
         Halfedge *edgeListRightNeighbor2 =
             edgeListRightNeighbor->edgeListRightNeighbor;
         site2 = FortunesAlgorithm_leftRegion(*halfedge);
-        Site *site3 = FortunesAlgorithm_rightRegion(*edgeListRightNeighbor);
+        const Site *site3 = FortunesAlgorithm_rightRegion(*edgeListRightNeighbor);
         Vector2f *vertex2 = halfedge->vertex;
         halfedge->edge->SetVertex(halfedge->leftRight, vertex2);
         edgeListRightNeighbor->edge->SetVertex(edgeListRightNeighbor->leftRight,
@@ -254,7 +254,7 @@ void Voronoi::FortunesAlgorithm()
         DisconnectHalfedges(edgeListRightNeighbor);
         Side side = Side::LEFT;
         if (site2->y > site3->y) {
-            Site *site4 = site2;
+            const Site *site4 = site2;
             site2 = site3;
             site3 = site4;
             side = Side::RIGHT;

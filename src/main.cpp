@@ -228,7 +228,7 @@ bool App::GetZonePolygon(Site &site, Polygon &polygon)
 {
     ZoneType zoneType = site.subworld->zoneType;
     ClipperLib::Clipper clipper;
-    std::stack<Site *> stack;
+    std::stack<const Site *> stack;
     stack.push(&site);
     while (!stack.empty()) {
         auto top = stack.top();

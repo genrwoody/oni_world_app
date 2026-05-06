@@ -103,7 +103,8 @@ static bool ContainsVert(const ConvexFace<Site> *face, const Site *target)
     return false;
 }
 
-static Edge GetEdge(ConvexFace<Site> &face0, ConvexFace<Site> &face1)
+static Edge GetEdge(const ConvexFace<Site> &face0,
+                    const ConvexFace<Site> &face1)
 {
     Edge edge;
     for (int i = 0; i < 3; i++) {
@@ -142,11 +143,11 @@ static void TouchingFaces(Site *site, ConvexFace<Site> &startingFace,
     }
 }
 
-static std::vector<Site *> GenerateNeighbors(Site *site, ConvexFace<Site> &startFace)
+static void GenerateNeighbors(Site *site, const ConvexFace<Site> &startFace)
 {
-    std::vector<Site *> list;
-    std::vector<ConvexFace<Site> *> list2;
-    std::stack<ConvexFace<Site> *> stack;
+    std::vector<const Site *> &neighbors = site->neighbours;
+    std::vector<const ConvexFace<Site> *> list2;
+    std::stack<const ConvexFace<Site> *> stack;
     stack.push(&startFace);
     while (!stack.empty()) {
         auto convexFaceExt = stack.top();
@@ -158,12 +159,11 @@ static std::vector<Site *> GenerateNeighbors(Site *site, ConvexFace<Site> &start
                 auto edge = GetEdge(*convexFaceExt, *face);
                 auto dualSite3d =
                     ((edge.leftSite == site) ? edge.rightSite : edge.leftSite);
-                list.push_back(dualSite3d);
+                neighbors.push_back(dualSite3d);
                 stack.push(face);
             }
         }
     }
-    return list;
 }
 
 static void FilterNeighbours(Site &home)
@@ -285,7 +285,7 @@ bool Diagram::ComputePD()
             site->neighbours.clear();
             site->polygon.Clear();
             TouchingFaces(site, face, roundFaces);
-            site->neighbours = GenerateNeighbors(site, face);
+            GenerateNeighbors(site, face);
             for (auto item : roundFaces) {
                 auto center = GetDualPoint(*item);
                 site->polygon.Vertices.emplace_back(center);

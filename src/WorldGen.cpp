@@ -87,7 +87,7 @@ static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites)
         site.tags.insert("IgnoreCaveOverride");
     }
     for (auto neighbour : startSite->neighbours) {
-        neighbour->tags.insert("NearStartLocation");
+        const_cast<Site *>(neighbour)->tags.insert("NearStartLocation");
     }
     return allSites;
 }
@@ -430,27 +430,32 @@ void WorldGen::PropagateDistanceTags(std::vector<Site> &sites) const
     for (auto &tag : tags) {
         for (auto &site : sites) {
             site.visited = false;
-            site.currentWeight = 0.0f;
         }
         auto &sitesWithTag = sitesWithTags[tag];
-        std::queue<Site *> neighbours;
-        for (auto site : sitesWithTag) {
+        std::queue<const Site *> neighbours;
+        for (auto *site : sitesWithTag) {
             site->visited = true;
+            site->minDistanceToTag.emplace(tag, 0);
             neighbours.push(site);
         }
+        int distance = 0;
+        const Site *site = nullptr;
+        const Site *end = nullptr;
         while (!neighbours.empty()) {
-            auto site = neighbours.front();
+            if (site == end) {
+                distance++;
+                end = neighbours.back();
+            }
+            site = neighbours.front();
             neighbours.pop();
-            for (auto neighbour : site->neighbours) {
+            for (const auto *constNeighbour : site->neighbours) {
+                Site *neighbour = const_cast<Site *>(constNeighbour);
                 if (!neighbour->visited) {
                     neighbour->visited = true;
-                    neighbour->currentWeight = site->currentWeight + 1.0f;
+                    neighbour->minDistanceToTag.emplace(tag, distance);
                     neighbours.push(neighbour);
                 }
             }
-        }
-        for (auto &site : sites) {
-            site.minDistanceToTag.emplace(tag, (int)site.currentWeight);
         }
     }
 }

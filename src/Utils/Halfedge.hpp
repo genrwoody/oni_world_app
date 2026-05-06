@@ -23,7 +23,7 @@ inline Side OtherSide(Side side)
 
 struct Site {
     bool dummy = false;
-    bool visited = false;
+    mutable bool visited = false;
     int idx = 0;
     float x = 0;
     float y = 0;
@@ -31,7 +31,7 @@ struct Site {
     float weight = 1.0f;
     float currentWeight = 0.0f;
     float previousWeightAdaption = 0.0f;
-    std::vector<Site *> neighbours;
+    std::vector<const Site *> neighbours;
     Polygon polygon;
 
     Site *parent = nullptr;
@@ -112,8 +112,8 @@ struct Edge {
 
     Vector2f clippedEnds[2];
 
-    Site *leftSite = nullptr;
-    Site *rightSite = nullptr;
+    const Site *leftSite = nullptr;
+    const Site *rightSite = nullptr;
 
     void SetVertex(Side leftRight, Vector2f *v)
     {
@@ -124,7 +124,7 @@ struct Edge {
         }
     }
 
-    Site *GetSite(Side leftRight) const
+    const Site *GetSite(Side leftRight) const
     {
         return leftRight == Side::LEFT ? leftSite : rightSite;
     }

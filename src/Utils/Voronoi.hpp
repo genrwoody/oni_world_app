@@ -24,7 +24,7 @@ private:
     std::set<Halfedge *, HalfedgeGreater> halfedgePriorityQueue;
     std::vector<Halfedge *> edgeList;
 
-    std::vector<Site *> m_sites;
+    std::vector<const Site *> m_sites;
     std::vector<std::vector<Edge *>> sitesEdges;
 
     Rect m_plotBounds;
@@ -32,12 +32,12 @@ private:
 
     Halfedge *leftEnd = nullptr;
     Halfedge *rightEnd = nullptr;
-    Site *fortunesAlgorithm_bottomMostSite = nullptr;
+    const Site *fortunesAlgorithm_bottomMostSite = nullptr;
 
 public:
     Voronoi() = default;
 
-    void Create(std::vector<Site> &points, const Rect &plotBounds);
+    void Create(const std::vector<Site> &points, const Rect &plotBounds);
 
     void BuildRegion(Site &site);
     void FindNeighborSites(Site &site);
@@ -47,10 +47,10 @@ private:
 
     std::deque<Edge *> ReorderEdges(int index, std::deque<Side> &sides);
 
-    Edge *CreateBisectingEdge(Site &site0, Site &site1);
+    Edge *CreateBisectingEdge(const Site &site0, const Site &site1);
 
     Halfedge *EdgeListGetHash(int num);
-    Halfedge *EdgeListLeftNeighbor(Site &site);
+    Halfedge *EdgeListLeftNeighbor(const Site &site);
     void ConnectHalfedges(Halfedge *left, Halfedge *right);
     void DisconnectHalfedges(Halfedge *node);
 
@@ -58,8 +58,8 @@ private:
 
     void FortunesAlgorithm();
 
-    Site *FortunesAlgorithm_leftRegion(Halfedge &he);
-    Site *FortunesAlgorithm_rightRegion(Halfedge &he);
+    const Site *FortunesAlgorithm_leftRegion(Halfedge &he);
+    const Site *FortunesAlgorithm_rightRegion(Halfedge &he);
 
     static int CompareByYThenX(const Site &s1, const Vector2f &s2);
 };
