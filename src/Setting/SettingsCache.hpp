@@ -36,15 +36,15 @@ public:
     using WorldTraitArray = std::array<const WorldTrait *, 4>;
 
 public:
-    ComposableDictionary<std::vector<WeightedSimHash>> borders;
+    // ComposableDictionary<std::vector<WeightedSimHash>> borders;
     DefaultSettings defaults;
-    LevelLayerSettings layers;
-    MobSettings mobs;
-    ComposableDictionary<River> rivers;
-    ComposableDictionary<Room> rooms;
+    // LevelLayerSettings layers;
+    // MobSettings mobs;
+    // ComposableDictionary<River> rivers;
+    // ComposableDictionary<Room> rooms;
     std::map<Range, Temperature> temperatures;
 
-    std::map<std::string, std::vector<ElementGradient>> biomes;
+    // std::map<std::string, std::vector<ElementGradient>> biomes;
     std::map<std::string, ClusterLayout> clusters;
     std::map<std::string, FeatureSettings> features;
     // std::map<std::string, NoiseTree> noise;
@@ -61,16 +61,15 @@ public:
     std::set<Feature> traitFeatures;
     std::vector<MixingConfig> mixConfigs;
 
-public:
-    ClusterLayout *cluster = nullptr;
-
 private:
     static Variant m_nil;
     int m_seed = 0;
     int m_dlcState = 0;
+    ClusterLayout *m_cluster = nullptr;
 
 public:
     int Seed() const { return m_seed; }
+    const ClusterLayout Cluster() const { return *m_cluster; }
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text, SettingsCache &settings);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }

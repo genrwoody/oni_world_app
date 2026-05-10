@@ -125,7 +125,7 @@ bool App::Generate(const std::string &code, int traitsFlag)
         return false;
     }
     std::vector<World *> worlds;
-    for (auto &worldPlacement : m_settings.cluster->worldPlacements) {
+    for (auto &worldPlacement : m_settings.Cluster().worldPlacements) {
         auto itr = m_settings.worlds.find(worldPlacement.world);
         if (itr == m_settings.worlds.end()) {
             LogE("world %s was wrong.", worldPlacement.world.c_str());
@@ -210,7 +210,7 @@ void App::SetResultTraits(const SettingsCache::WorldTraitArray &traits)
 
 void App::SetResultGeysers(int seed, const WorldGen &worldGen)
 {
-    seed += (int)m_settings.cluster->worldPlacements.size() - 1;
+    seed += (int)m_settings.Cluster().worldPlacements.size() - 1;
     auto geysers = worldGen.GetGeysers(seed);
     std::vector<int> result;
     result.reserve(geysers.size() * 3);

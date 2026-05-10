@@ -46,9 +46,12 @@ static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
     return true;
 }
 
+// dlc/dlc2/templates/bases/ceresBase.json -> dlc2::bases/ceresBase
 static std::string GenerateKey(const char *filename)
 {
+    const size_t MaxKeySize = 70;
     std::string key;
+    key.reserve(MaxKeySize);
     unsigned offset = 0;
     if (strstr(filename, "dlc/expansion1") != nullptr) {
         key = "expansion1::";
@@ -103,15 +106,15 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/layers.json") != nullptr) {
-            LoadJsonFile(zip, i, layers);
+            // LoadJsonFile(zip, i, layers);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/rooms.json") != nullptr) {
-            LoadJsonFile(zip, i, rooms);
+            // LoadJsonFile(zip, i, rooms);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/rivers.json") != nullptr) {
-            LoadJsonFile(zip, i, rivers);
+            // LoadJsonFile(zip, i, rivers);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/temperatures.json") != nullptr) {
@@ -126,15 +129,15 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/borders.json") != nullptr) {
-            ComposableDictionary<std::vector<WeightedSimHash>> borders2;
-            LoadJsonFile(zip, i, borders2);
-            borders.Merge(borders2);
+            // ComposableDictionary<std::vector<WeightedSimHash>> borders2;
+            // LoadJsonFile(zip, i, borders2);
+            // borders.Merge(borders2);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/mobs.json") != nullptr) {
-            MobSettings mobs2;
-            LoadJsonFile(zip, i, mobs2);
-            mobs.MobLookupTable.Merge(mobs2.MobLookupTable);
+            // MobSettings mobs2;
+            // LoadJsonFile(zip, i, mobs2);
+            // mobs.MobLookupTable.Merge(mobs2.MobLookupTable);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/mixing.json") != nullptr) {
@@ -148,13 +151,13 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/biomes/") != nullptr) {
-            std::string key = GenerateKey(stat.m_filename);
-            BiomeSettings biomes2;
-            LoadJsonFile(zip, i, biomes2);
-            for (auto &pair : biomes2.TerrainBiomeLookupTable.add) {
-                std::string name = key + "/" + pair.first;
-                biomes.emplace(name, std::move(pair.second));
-            }
+            // std::string key = GenerateKey(stat.m_filename);
+            // BiomeSettings biomes2;
+            // LoadJsonFile(zip, i, biomes2);
+            // for (auto &pair : biomes2.TerrainBiomeLookupTable.add) {
+            //     std::string name = key + "/" + pair.first;
+            //     biomes.emplace(name, std::move(pair.second));
+            // }
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/clusters/") != nullptr) {
@@ -294,19 +297,19 @@ bool SettingsCache::CoordinateChanged(const std::string &text,
         return false;
     }
     m_seed = std::stoi(codes[2]);
-    cluster = nullptr;
+    m_cluster = nullptr;
     for (auto &pair : settings.clusters) {
         if (pair.second.coordinatePrefix == codes[1]) {
-            cluster = &pair.second;
+            m_cluster = &pair.second;
             break;
         }
     }
-    if (cluster == nullptr) {
+    if (m_cluster == nullptr) {
         LogE("cluster %s was wrong.", codes[1].c_str());
         return false;
     }
     m_dlcState = 0;
-    for (auto &id : cluster->requiredDlcIds) {
+    for (auto &id : m_cluster->requiredDlcIds) {
         if (id == "EXPANSION1_ID") {
             m_dlcState |= 1;
         } else if (id == "DLC2_ID") {
@@ -496,8 +499,8 @@ void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
         }
         bool forbidden = false;
         for (auto &tag : itr->second.forbiddenClusterTags) {
-            auto find = std::ranges::find(cluster->clusterTags, tag);
-            if (find != cluster->clusterTags.end()) {
+            auto find = std::ranges::find(m_cluster->clusterTags, tag);
+            if (find != m_cluster->clusterTags.end()) {
                 forbidden = true;
                 break;
             }

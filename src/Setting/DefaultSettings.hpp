@@ -23,7 +23,7 @@ struct DefaultSettings {
     std::vector<StartingWorldElementSetting> startingWorldElements;
 };
 
-// for border.json
+// for border.json and features
 struct WeightedSimHash {
     std::string element;
     float weight{};
