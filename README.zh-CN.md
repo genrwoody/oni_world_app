@@ -9,21 +9,21 @@
 需要的工具: emsdk, cmake, python, node.js, yarn, emsdk中带有python和node.js
 ```sh
 cmake --preset=wasm-release
-cmake --build out/build/wasm-release
+cmake --build --preset=wasm-release
 yarn install
 yarn run build
 ```
 或者debug模式
 ```sh
 cmake --preset=wasm-debug
-cmake --build out/build/wasm-debug
+cmake --build --preset=wasm-debug
 yarn install
 yarn run start
 ```
 或者pc版
 ```sh
 cmake --preset=x86-release
-cmake --build out/build/x86-release
+cmake --build --preset=x86-release
 # run
 ./out/build/x86-release/src/oniWorldApp
 ```
