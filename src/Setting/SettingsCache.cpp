@@ -443,6 +443,7 @@ SettingsCache::GetRandomTraits(const World &world, int seed) const
 void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
                                       int traitsFlag, KRandom &random)
 {
+    constexpr int MaxTryTimes = 1000;
     std::vector<const WorldTrait *> presets;
     int index = 0;
     for (auto &pair : traits) {
@@ -466,7 +467,7 @@ void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
     }
     size_t maxCount = 0;
     int maxCountSeed = 0;
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < MaxTryTimes; ++i) {
         int seed = random.Next();
         auto worldTraits = GetRandomTraits(*world, seed + index);
         size_t count = 0;
@@ -476,6 +477,7 @@ void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
             }
         }
         if (count == presets.size()) {
+            m_seed = seed;
             return;
         } else if (maxCount < count) {
             maxCount = count;
