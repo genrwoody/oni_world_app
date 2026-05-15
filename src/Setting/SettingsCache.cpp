@@ -232,17 +232,17 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         }
     }
     mixConfigs = {
-        {"DLC2_ID", 0},
-        {"dlc2::subworldMixing/IceCavesMixingSettings", 2},
-        {"dlc2::subworldMixing/CarrotQuarryMixingSettings", 2},
-        {"dlc2::subworldMixing/SugarWoodsMixingSettings", 2},
-        {"dlc2::worldMixing/CeresMixingSettings", 1},
-        {"DLC3_ID", 0},
-        {"DLC4_ID", 0},
-        {"dlc4::subworldMixing/GardenMixingSettings", 2},
-        {"dlc4::subworldMixing/RaptorMixingSettings", 2},
-        {"dlc4::subworldMixing/WetlandsMixingSettings", 2},
-        {"dlc4::worldMixing/PrehistoricMixingSettings", 1},
+        {"DLC2_ID", MixingType::Dlc},
+        {"dlc2::subworldMixing/IceCavesMixingSettings"},
+        {"dlc2::subworldMixing/CarrotQuarryMixingSettings"},
+        {"dlc2::subworldMixing/SugarWoodsMixingSettings"},
+        {"dlc2::worldMixing/CeresMixingSettings", MixingType::World},
+        {"DLC3_ID", MixingType::Dlc},
+        {"DLC4_ID", MixingType::Dlc},
+        {"dlc4::subworldMixing/GardenMixingSettings"},
+        {"dlc4::subworldMixing/RaptorMixingSettings"},
+        {"dlc4::subworldMixing/WetlandsMixingSettings"},
+        {"dlc4::worldMixing/PrehistoricMixingSettings", MixingType::World},
     };
     return true;
 }
@@ -492,7 +492,8 @@ void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
 {
     std::vector<MixingConfig *> filtered;
     for (auto &config : mixConfigs) {
-        if (config.level == MixingLevel::Disabled || config.type != 2) {
+        if (config.level == MixingLevel::Disabled ||
+            config.type != MixingType::Subworld) {
             continue;
         }
         auto itr = subworldMixing.find(config.path);

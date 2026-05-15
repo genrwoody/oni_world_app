@@ -72,7 +72,7 @@ static MixingConfig *FindSubworldMixing(SubworldMixingRule &rule,
         if (option->maxCount <= 0) {
             continue;
         }
-        auto setting = (SubworldMixingSettings *)option->setting;
+        auto setting = option->setting;
         bool flag = true;
         for (auto &forbiddenTag : rule.forbiddenTags) {
             auto itr = std::ranges::find(setting->mixingTags, forbiddenTag);
@@ -111,7 +111,7 @@ void World::ApplayMixings(std::vector<MixingConfig *> &mixings)
         if (config == nullptr) {
             continue;
         }
-        auto setting = (SubworldMixingSettings *)config->setting;
+        auto setting = config->setting;
         auto &subworld = mixingSubworlds.emplace_back(setting->subworld);
         subworld.minCount = std::max(rule.minCount, subworld.minCount);
         subworld.maxCount = std::min(rule.maxCount, subworld.maxCount);

@@ -6,20 +6,22 @@
 #include "ClusterLayout.hpp"
 #include "TemplateContainer.hpp"
 
-enum class MixingLevel {
+enum class MixingLevel : uint8_t {
     Disabled,
     Enabled,
     TryMixing = Enabled,
     GuranteeMixing
 };
 
+enum class MixingType : uint8_t { Dlc, World, Subworld };
+
 struct MixingConfig {
     std::string path;
-    int type; // 0 dlc, 1 world, 2 subworld
+    MixingType type{MixingType::Subworld};
     MixingLevel level{};
     int minCount = 0;
     int maxCount = 3;
-    void *setting = nullptr;
+    const SubworldMixingSettings *setting = nullptr;
 
     bool operator<(const MixingConfig &other)
     {
