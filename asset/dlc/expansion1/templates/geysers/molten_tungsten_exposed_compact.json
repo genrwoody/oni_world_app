@@ -4,114 +4,13 @@
       "X": 4,
       "Y": 4
     },
-    "area": 16
-  },
-  "cells": [
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 300,
-      "location_x": -1,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 300,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 300,
-      "location_x": 1,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 300,
-      "location_x": 2,
-      "location_y": -1
-    },
-    {
-      "element": "Tungsten",
-      "mass": 200,
-      "temperature": 300,
-      "location_x": -1
-    },
-    {
-      "element": "Tungsten",
-      "mass": 200,
-      "temperature": 300
-    },
-    {
-      "element": "Tungsten",
-      "mass": 200,
-      "temperature": 300,
-      "location_x": 1
-    },
-    {
-      "element": "Tungsten",
-      "mass": 200,
-      "temperature": 300,
-      "location_x": 2
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.37119087e-05,
-      "temperature": 288.767303,
-      "location_x": -1,
-      "location_y": 1
-    },
-    {
-      "element": "Tungsten",
-      "mass": 200,
-      "temperature": 300,
-      "location_y": 1
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.15258081e-05,
-      "temperature": 290.445435,
-      "location_x": 1,
-      "location_y": 1
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.30825647e-05,
-      "temperature": 289.276703,
-      "location_x": -1,
-      "location_y": 2
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.23799518e-05,
-      "temperature": 290.620667,
-      "location_y": 2
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.17283989e-05,
-      "temperature": 290.589844,
-      "location_x": 1,
-      "location_y": 2
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.14644372e-05,
-      "temperature": 290.050446,
-      "location_x": 2,
-      "location_y": 1
-    },
-    {
-      "element": "Oxygen",
-      "mass": 1.14431959e-05,
-      "temperature": 289.627563,
-      "location_x": 2,
-      "location_y": 2
+    "area": 16,
+    "min": {
+      "X": -1,
+      "Y": -1
     }
-  ],
+  },
+  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_molten_tungsten",

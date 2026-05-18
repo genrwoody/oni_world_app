@@ -319,7 +319,7 @@
         "poi/frozen/heatsink_c",
         "poi/frozen/heatsink_d"
       ],
-      "listRule": "TrySome",
+      "listRule": "Trysome",
       "someCount": 3,
       "priority": 100,
       "allowedCellsFilter": [

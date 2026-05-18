@@ -80,6 +80,4 @@ struct TemplateContainer {
     std::vector<Prefab> pickupables;
     std::vector<Prefab> elementalOres;
     std::vector<Prefab> otherEntities;
-
-    void RefreshInfo();
 };

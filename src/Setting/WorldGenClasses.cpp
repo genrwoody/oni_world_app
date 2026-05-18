@@ -204,30 +204,3 @@ void World::ClearMixingsAndTraits()
         worldTemplateRules2.push_back(&rule);
     }
 }
-
-void TemplateContainer::RefreshInfo()
-{
-    int minX = 1;
-    int maxX = -1;
-    int minY = 1;
-    int maxY = -1;
-    for (auto &cell : cells) {
-        if (cell.location_x < minX) {
-            minX = cell.location_x;
-        }
-        if (cell.location_x > maxX) {
-            maxX = cell.location_x;
-        }
-        if (cell.location_y < minY) {
-            minY = cell.location_y;
-        }
-        if (cell.location_y > maxY) {
-            maxY = cell.location_y;
-        }
-    }
-    info.size.x = (maxX - minX) + 1;
-    info.size.y = (maxY - minY) + 1;
-    info.min.x = minX;
-    info.min.y = minY;
-    info.area = (int)cells.size();
-}

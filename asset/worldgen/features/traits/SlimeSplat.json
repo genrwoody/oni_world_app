@@ -3,7 +3,6 @@
   "tags": [
     "AllowExceedNodeBorders"
   ],
-  "borders": null,
   "blobSize": {
     "min": 3.0,
     "max": 13.0

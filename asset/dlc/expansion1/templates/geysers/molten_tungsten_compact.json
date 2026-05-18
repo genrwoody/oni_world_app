@@ -4,114 +4,13 @@
       "X": 4,
       "Y": 4
     },
-    "area": 16
-  },
-  "cells": [
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 1,
-      "location_x": -1,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 1,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 1,
-      "location_x": 1,
-      "location_y": -1
-    },
-    {
-      "element": "Unobtanium",
-      "mass": 20000,
-      "temperature": 1,
-      "location_x": 2,
-      "location_y": -1
-    },
-    {
-      "element": "Obsidian",
-      "mass": 1000,
-      "temperature": 242.126831,
-      "location_x": -1
-    },
-    {
-      "element": "Obsidian",
-      "mass": 1000,
-      "temperature": 247.901611
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 234.967422,
-      "location_x": 1
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 234.976151,
-      "location_x": 2
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 234.051483,
-      "location_x": -1,
-      "location_y": 1
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 235.121307,
-      "location_y": 1
-    },
-    {
-      "element": "Obsidian",
-      "mass": 1000,
-      "temperature": 238.076736,
-      "location_x": 1,
-      "location_y": 1
-    },
-    {
-      "element": "Obsidian",
-      "mass": 1000,
-      "temperature": 239.030518,
-      "location_x": 2,
-      "location_y": 1
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 235.449829,
-      "location_x": -1,
-      "location_y": 2
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 236.2509,
-      "location_y": 2
-    },
-    {
-      "element": "Obsidian",
-      "mass": 1000,
-      "temperature": 240.830872,
-      "location_x": 1,
-      "location_y": 2
-    },
-    {
-      "element": "Granite",
-      "mass": 1840,
-      "temperature": 236.796722,
-      "location_x": 2,
-      "location_y": 2
+    "area": 16,
+    "min": {
+      "X": -1,
+      "Y": -1
     }
-  ],
+  },
+  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_molten_tungsten",

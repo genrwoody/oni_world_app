@@ -215,7 +215,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             std::string key = GenerateKey(stat.m_filename);
             TemplateContainer &templt = templates[key];
             LoadJsonFile(zip, i, templt);
-            templt.RefreshInfo();
             templt.name = key;
             continue;
         }
