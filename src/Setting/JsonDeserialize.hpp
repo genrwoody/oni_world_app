@@ -74,6 +74,7 @@ struct Deserializer<std::vector<T>> {
             return false;
         }
         int count = 0;
+        obj.reserve(value.size());
         for (auto &item : value) {
             T &tmp = obj.emplace_back();
             count += Deserializer<T>::deserialize(item, tmp) ? 1 : 0;

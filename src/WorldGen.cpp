@@ -33,7 +33,6 @@ struct WeightedSubWorld {
     }
 };
 
-static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites);
 static void ApplySwapTags(std::vector<Site> &sites, KRandom &random);
 extern void WriteToBinary(const std::vector<Site> &sites);
 extern void WriteToBinary(const std::vector<Site *> &sites);
@@ -58,21 +57,26 @@ bool WorldGen::GenerateOverworld(std::vector<Site> &sites)
     if (usePD) {
         diagram.ComputeNodePD();
     }
+    int count = 0;
     for (int i = 0; i < (int)sites.size(); ++i) {
-        GenerateChildren(sites[i], random, m_seed + i, usePD);
+        count += GenerateChildren(sites[i], random, m_seed + i, usePD);
     }
-    auto allSites = ForceLowestToLeaf(sites);
+    std::vector<Site *> allSites;
+    allSites.reserve(count);
+    if (!ForceLowestToLeaf(sites, allSites)) {
+        return false;
+    }
     random = KRandom(m_seed);
     ApplySwapTags(sites, random);
     DetermineTemplates(allSites, random);
     return true;
 }
 
-static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites)
+bool WorldGen::ForceLowestToLeaf(std::vector<Site> &sites,
+                                 std::vector<Site *> &allSites)
 {
     int index = 1;
     Site *startSite = nullptr;
-    std::vector<Site *> allSites;
     for (auto &site : sites) {
         for (auto &child : *site.children) {
             child.idx = index++;
@@ -83,7 +87,7 @@ static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites)
         }
     }
     if (startSite == nullptr) {
-        return {};
+        return false;
     }
     for (auto &site : *startSite->parent->children) {
         site.tags.insert("IgnoreCaveOverride");
@@ -91,7 +95,7 @@ static std::vector<Site *> ForceLowestToLeaf(std::vector<Site> &sites)
     for (auto neighbour : startSite->neighbours) {
         const_cast<Site *>(neighbour)->tags.insert("NearStartLocation");
     }
-    return allSites;
+    return true;
 }
 
 static inline void SwitchNodes(Site &lhs, Site &rhs)
@@ -359,6 +363,7 @@ void WorldGen::ConvertUnknownCells(std::vector<Site> &sites, KRandom &random)
     }
     auto &globalFeatures = m_world.globalFeatures2;
     std::vector<Site *> list2;
+    list2.reserve(sites.size());
     for (auto &site : sites) {
         if (!site.tags.contains("NoGlobalFeatureSpawning")) {
             list2.push_back(&site);
@@ -544,8 +549,8 @@ void WorldGen::SetFeatureBiome(Site &site, KRandom &random,
     }
 }
 
-void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
-                                bool usePD)
+size_t WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
+                                  bool usePD)
 {
     KRandom random(seed);
     auto &subworld = *site.subworld;
@@ -629,6 +634,7 @@ void WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
             diagram.ComputeNode();
         }
     }
+    return (int)site.children->size();
 }
 
 std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
@@ -645,6 +651,7 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
         "molten_tungsten", "molten_niobium",
     };
     std::vector<Vector3i> result;
+    result.reserve(m_templates.size());
     int count = m_settings.IsSpaceOutEnabled() ? 23 : 20;
     for (auto &templt : m_templates) {
         const std::string &name = templt.container->name;

@@ -110,6 +110,10 @@ public:
     }
 
     bool Generate(const std::string &code, int traits);
+    bool Generate(int type, int seed, int mix, int traits);
+
+private:
+    bool GenerateInternal(int traitsFlag);
     void SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites);
     void SetResultTraits(const SettingsCache::WorldTraitArray &traits);
     void SetResultGeysers(int seed, const WorldGen &worldGen);
@@ -118,43 +122,45 @@ public:
     static bool GetZonePolygon(Site &site, Polygon &polygon);
 };
 
-bool App::Generate(const std::string &code, int traitsFlag)
+bool App::Generate(int type, int seed, int mix, int traitsFlag)
 {
-    if (!m_settings.CoordinateChanged(code, m_settings)) {
-        LogE("parse seed code %s failed.", code.c_str());
+    if (!m_settings.CoordinateChanged(type, seed, mix)) {
         return false;
     }
-    std::vector<World *> worlds;
-    for (auto &worldPlacement : m_settings.Cluster().worldPlacements) {
-        auto itr = m_settings.worlds.find(worldPlacement.world);
-        if (itr == m_settings.worlds.end()) {
-            LogE("world %s was wrong.", worldPlacement.world.c_str());
-            return false;
-        }
-        itr->second.locationType = worldPlacement.locationType;
-        worlds.push_back(&itr->second);
+    return GenerateInternal(traitsFlag);
+}
+
+bool App::Generate(const std::string &code, int traitsFlag)
+{
+    if (!m_settings.CoordinateChanged(code)) {
+        return false;
     }
-    if (worlds.size() == 1) {
-        worlds[0]->locationType = LocationType::StartWorld;
+    return GenerateInternal(traitsFlag);
+}
+
+bool App::GenerateInternal(int traitsFlag)
+{
+    std::vector<World *> worlds;
+    if (!m_settings.InitializeWorlds(worlds)) {
+        return false;
     }
     if (traitsFlag != 0) { // roll seed for preset traits
         m_settings.SetSeedWithTraits(worlds, traitsFlag, m_random);
     }
     int seed = m_settings.Seed();
     std::vector<SettingsCache::WorldTraitArray> allWorldTraits;
+    allWorldTraits.reserve(worlds.size());
     for (size_t i = 0; i < worlds.size(); ++i) {
         auto world = worlds[i];
         world->ClearMixingsAndTraits();
         auto traits = m_settings.GetRandomTraits(*world, seed + i);
         for (auto trait : traits) {
-            if (trait) {
-                world->ApplayTraits(*trait, m_settings);
-            }
+            world->ApplayTraits(*trait, m_settings);
         }
         allWorldTraits.emplace_back(traits);
     }
     m_settings.DoSubworldMixing(worlds);
-    bool genWarpWorld = code.find("M-") == 0;
+    bool genWarpWorld = m_settings.IsMiniCluster();
     for (size_t i = 0; i < worlds.size(); ++i) {
         auto world = worlds[i];
         if (world->locationType == LocationType::Cluster) {
@@ -174,7 +180,7 @@ bool App::Generate(const std::string &code, int traitsFlag)
         }
         SetResultWorldInfo(seed, world, sites);
         SetResultTraits(allWorldTraits[i]);
-        SetResultGeysers(seed, worldGen);
+        SetResultGeysers(seed + (int)worlds.size() - 1, worldGen);
         SetResultPolygons(world, sites);
     }
     return true;
@@ -210,7 +216,6 @@ void App::SetResultTraits(const SettingsCache::WorldTraitArray &traits)
 
 void App::SetResultGeysers(int seed, const WorldGen &worldGen)
 {
-    seed += (int)m_settings.Cluster().worldPlacements.size() - 1;
     auto geysers = worldGen.GetGeysers(seed);
     std::vector<int> result;
     result.reserve(geysers.size() * 3);
@@ -291,29 +296,12 @@ extern "C" void EMSCRIPTEN_KEEPALIVE app_init(int seed)
 
 extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
 {
-    const char *worlds[] = {
-        "SNDST-A-",  "OCAN-A-",    "S-FRZ-",     "LUSH-A-",    "FRST-A-",
-        "VOLCA-",    "BAD-A-",     "HTFST-A-",   "OASIS-A-",   "CER-A-",
-        "CERS-A-",   "PRE-A-",     "PRES-A-",    "V-SNDST-C-", "V-OCAN-C-",
-        "V-SWMP-C-", "V-SFRZ-C-",  "V-LUSH-C-",  "V-FRST-C-",  "V-VOLCA-C-",
-        "V-BAD-C-",  "V-HTFST-C-", "V-OASIS-C-", "V-CER-C-",   "V-CERS-C-",
-        "V-PRE-C-",  "V-PRES-C-",  "SNDST-C-",   "PRE-C-",     "CER-C-",
-        "FRST-C-",   "SWMP-C-",    "M-SWMP-C-",  "M-BAD-C-",   "M-FRZ-C-",
-        "M-FLIP-C-", "M-RAD-C-",   "M-CERS-C-"};
-    if (type < 0 || (int)std::size(worlds) <= type) {
-        return false;
-    }
-    std::string code = worlds[type];
     int traits = 0;
     if (seed < 0) {
         traits = -seed;
         seed = 0;
     }
-    code += std::to_string(seed);
-    code += "-0-D3-";
-    code += SettingsCache::BinaryToBase36(mix);
-    LogI("generate with code: %s", code.c_str());
-    return App::Instance()->Generate(code, traits);
+    return App::Instance()->Generate(type, seed, mix, traits);
 }
 
 #ifndef __EMSCRIPTEN__

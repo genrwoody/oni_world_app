@@ -116,6 +116,8 @@ PoissonDiskSample(KRandom &random, Vector2f topLeft, Vector2f lowerRight,
     settings.Random = &random;
     State state;
     state.Grid.resize(settings.GridWidth * settings.GridHeight);
+    state.Points.reserve(state.Grid.size());
+    state.ActivePoints.reserve(state.Grid.size());
     AddFirstPoint(settings, state);
     while (!state.ActivePoints.empty()) {
         int count = (int)state.ActivePoints.size() - 1;
@@ -140,6 +142,7 @@ static std::vector<Vector2f> UniformHexSample(float width, float height,
     auto w_2 = width / 2.0;
     auto h_2 = height / 2.0;
     int count = (int)std::sqrt(std::floor(width * height / density));
+    result.reserve(count * count);
     for (int i = 0; i < count; i++) {
         for (int j = 0; j < count; j++) {
             float x = -w_2 + (0.5 + i) / count * width;

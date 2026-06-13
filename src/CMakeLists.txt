@@ -62,6 +62,7 @@ add_executable(oniWorldApp
     "Utils/Voronoi.cpp"
     "Utils/Diagram.hpp"
     "Utils/Diagram.cpp"
+    "Utils/InplaceVector.hpp"
     "WorldGen.hpp"
     "WorldGen.cpp"
     "TemplateSpawning.cpp"

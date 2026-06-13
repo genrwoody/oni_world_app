@@ -19,6 +19,15 @@
 
 Variant SettingsCache::m_nil;
 
+template<typename Ty>
+inline bool string_view_to_number(const std::string_view& str, Ty& out)
+{
+    auto begin = str.data();
+    auto end = str.data() + str.size();
+    auto [ptr, err] = std::from_chars(begin, end, out);
+    return err == std::errc{};
+}
+
 template<typename T>
 static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
 {
@@ -86,6 +95,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         LogE("wrong content");
         return false;
     }
+    size_t mixConfigsCount = 0;
     std::map<std::string, std::vector<std::string>> Asubworlds;
     auto count = mz_zip_reader_get_num_files(&zip);
     for (unsigned i = 0; i < count; ++i) {
@@ -141,6 +151,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/mixing.json") != nullptr) {
+            mixConfigsCount++;
             //if (strstr(stat.m_filename, "dlc/dlc2") != nullptr) {
             //    LoadJsonFile(zip, i, dlcMixings["dlc2"]);
             //} else if (strstr(stat.m_filename, "dlc/dlc4") != nullptr) {
@@ -179,6 +190,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/subworldMixing/") != nullptr) {
+            mixConfigsCount++;
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, subworldMixing[key]);
             continue;
@@ -202,6 +214,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/worldMixing/") != nullptr) {
+            mixConfigsCount++;
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, worldMixing[key]);
             continue;
@@ -223,6 +236,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
     mz_zip_end(&zip);
     for (auto &pair : Asubworlds) {
         auto &list = orderedSubworlds[pair.first];
+        list.reserve(pair.second.size());
         for (auto &name : pair.second) {
             auto itr = subworlds.find(name);
             if (itr != subworlds.end()) {
@@ -230,6 +244,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             }
         }
     }
+    mixConfigs.reserve(mixConfigsCount);
     mixConfigs = {
         {"DLC2_ID", MixingType::Dlc},
         {"dlc2::subworldMixing/IceCavesMixingSettings"},
@@ -246,20 +261,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
     return true;
 }
 
-static std::vector<std::string> ParseSettingCoordinate(const std::string &coord)
-{
-    std::regex regex("(.+)-(\\d+)-(.+)-(.+)-(.+)");
-    std::smatch match;
-    std::vector<std::string> result;
-    if (std::regex_match(coord, match, regex)) {
-        for (auto &item : match) {
-            result.emplace_back(item.str());
-        }
-    }
-    return result;
-}
-
-uint32_t SettingsCache::Base36ToBinary(const std::string &input)
+uint32_t SettingsCache::Base36ToBinary(const std::string_view &input)
 {
     uint8_t dict[] = {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  // 0-9
                       0,  0,  0,  0,  0,  0,  0,              // 3A-40
@@ -288,23 +290,64 @@ std::string SettingsCache::BinaryToBase36(uint32_t input)
     return result;
 }
 
-bool SettingsCache::CoordinateChanged(const std::string &text,
-                                      SettingsCache &settings)
+bool SettingsCache::CoordinateChanged(int type, int seed, int mix)
 {
-    std::vector<std::string> codes = ParseSettingCoordinate(text);
-    if (codes.size() < 4 || codes.size() > 6) {
+    const char *clusterPrefix[] = {
+        "SNDST-A",  "OCAN-A",    "S-FRZ",     "LUSH-A",    "FRST-A",
+        "VOLCA",    "BAD-A",     "HTFST-A",   "OASIS-A",   "CER-A",
+        "CERS-A",   "PRE-A",     "PRES-A",    "V-SNDST-C", "V-OCAN-C",
+        "V-SWMP-C", "V-SFRZ-C",  "V-LUSH-C",  "V-FRST-C",  "V-VOLCA-C",
+        "V-BAD-C",  "V-HTFST-C", "V-OASIS-C", "V-CER-C",   "V-CERS-C",
+        "V-PRE-C",  "V-PRES-C",  "SNDST-C",   "PRE-C",     "CER-C",
+        "FRST-C",   "SWMP-C",    "M-SWMP-C",  "M-BAD-C",   "M-FRZ-C",
+        "M-FLIP-C", "M-RAD-C",   "M-CERS-C"};
+    if (type < 0 || (int)std::size(clusterPrefix) <= type) {
         return false;
     }
-    m_seed = std::stoi(codes[2]);
+    m_seed = seed;
+    ParseAndApplyMixingSettingsCode((uint32_t)mix);
+    return InitializeCluster(clusterPrefix[type]);
+}
+
+bool SettingsCache::CoordinateChanged(const std::string &text)
+{
+    constexpr size_t MaxGroupCount = 6;
+    std::regex regex("(.+)-(\\d+)-(.+)-(.+)-(.+)");
+    std::smatch match;
+    std::inplace_vector<std::string_view, MaxGroupCount> codes;
+    if (std::regex_match(text.begin(), text.end(), match, regex)) {
+        for (auto &item : match) {
+            codes.push_back(std::string_view{item.first, item.second});
+        }
+    }
+    if (codes.size() != MaxGroupCount) {
+        LogE("parse seed code %s failed.", text.c_str());
+        return false;
+    }
+    if (!string_view_to_number(codes[2], m_seed)) {
+        LogE("can not convert seed code to number.");
+        return false;
+    }
+    uint32_t mix = Base36ToBinary(codes[5]);
+    ParseAndApplyMixingSettingsCode(mix);
+    return InitializeCluster(codes[1]);
+}
+
+bool SettingsCache::InitializeCluster(const std::string_view &coord)
+{
+    if (m_seed > 0x7FFF0000) { // avoid overflow.
+        LogE("the seed is too large.");
+        return false;
+    }
     m_cluster = nullptr;
-    for (auto &pair : settings.clusters) {
-        if (pair.second.coordinatePrefix == codes[1]) {
+    for (auto &pair : clusters) {
+        if (pair.second.coordinatePrefix == coord) {
             m_cluster = &pair.second;
             break;
         }
     }
     if (m_cluster == nullptr) {
-        LogE("cluster %s was wrong.", codes[1].c_str());
+        LogE("cluster %*s was wrong.", (int)coord.size(), coord.data());
         return false;
     }
     m_dlcState = 0;
@@ -319,20 +362,37 @@ bool SettingsCache::CoordinateChanged(const std::string &text,
             m_dlcState |= 8;
         }
     }
-    ParseAndApplyMixingSettingsCode(codes[5]);
-    if (codes[1].contains("CER")) {
+    if (coord.contains("CER")) {
         mixConfigs[0].level = mixConfigs[1].level = mixConfigs[2].level =
             mixConfigs[3].level = mixConfigs[4].level = MixingLevel::Disabled;
-    } else if (codes[1].contains("PRE")) {
+    } else if (coord.contains("PRE")) {
         mixConfigs[6].level = mixConfigs[7].level = mixConfigs[8].level =
             mixConfigs[9].level = mixConfigs[10].level = MixingLevel::Disabled;
     }
     return true;
 }
 
-void SettingsCache::ParseAndApplyMixingSettingsCode(const std::string &code)
+bool SettingsCache::InitializeWorlds(std::vector<World *> &chosenWorlds)
 {
-    auto num = Base36ToBinary(code);
+    chosenWorlds.clear();
+    chosenWorlds.reserve(m_cluster->worldPlacements.size());
+    for (auto &worldPlacement : m_cluster->worldPlacements) {
+        auto itr = worlds.find(worldPlacement.world);
+        if (itr == worlds.end()) {
+            LogE("world %s was wrong.", worldPlacement.world.c_str());
+            return false;
+        }
+        itr->second.locationType = worldPlacement.locationType;
+        chosenWorlds.push_back(&itr->second);
+    }
+    if (worlds.size() == 1) {
+        chosenWorlds[0]->locationType = LocationType::StartWorld;
+    }
+    return true;
+}
+
+void SettingsCache::ParseAndApplyMixingSettingsCode(uint32_t num)
+{
     for (auto itr = mixConfigs.rbegin(); itr != mixConfigs.rend(); ++itr) {
         itr->level = (MixingLevel)(num % 5);
         itr->minCount = itr->level == MixingLevel::GuranteeMixing ? 1 : 0;
@@ -350,6 +410,7 @@ SettingsCache::GetRandomTraits(const World &world, int seed) const
     }
     KRandom kRandom(seed);
     std::vector<const WorldTrait *> total;
+    total.reserve(traits.size());
     for (auto &pair : traits) {
         if (pair.first[0] == 't') {
             if (IsSpaceOutEnabled() && pair.second.ForbiddenSpaceOut()) {
@@ -363,23 +424,18 @@ SettingsCache::GetRandomTraits(const World &world, int seed) const
             total.push_back(&pair.second);
         }
     }
-    unsigned resultCursor = 0;
-    WorldTraitArray result{};
-    std::vector<std::string> names;
+    WorldTraitArray result;
     std::set<std::string> except;
+    std::vector<const WorldTrait *> filtered;
+    filtered.reserve(total.size());
     for (auto &rule : world.worldTraitRules) {
         for (auto &specificTrait : rule.specificTraits) {
-            if (traits.find(specificTrait) != traits.end()) {
-                names.emplace_back(specificTrait);
-                for (auto trait : total) {
-                    if (specificTrait == trait->filePath) {
-                        result[resultCursor++] = trait;
-                        break;
-                    }
-                }
+            auto itr = traits.find(specificTrait);
+            if (itr != traits.end()) {
+                result.push_back(&itr->second);
             }
         }
-        std::vector<const WorldTrait *> subtotal;
+        filtered.clear();
         for (auto &trait : total) {
             if (!rule.requiredTags.empty() &&
                 !std::ranges::all_of(
@@ -399,17 +455,22 @@ SettingsCache::GetRandomTraits(const World &world, int seed) const
                 continue;
             }
             if (trait->IsValid(world)) {
-                subtotal.push_back(trait);
+                filtered.push_back(trait);
             }
         }
         int num = kRandom.Next(rule.min, std::max(rule.min, rule.max + 1));
-        int count = (int)names.size();
-        while ((int)names.size() < count + num && subtotal.size() > 0) {
-            int index = kRandom.Next((int)subtotal.size());
-            auto &worldTrait = subtotal[index];
+        int count = (int)result.size();
+        while ((int)result.size() < count + num && filtered.size() > 0) {
+            int index = kRandom.Next((int)filtered.size());
+            auto *worldTrait = filtered[index];
+            filtered.erase(filtered.begin() + index);
             bool flag = false;
             for (auto &exclusiveId : worldTrait->exclusiveWith) {
-                if (std::ranges::contains(names, exclusiveId)) {
+                if (std::ranges::contains(
+                        result, exclusiveId,
+                        [](const WorldTrait *trait) -> const std::string & {
+                            return trait->filePath;
+                        })) {
                     flag = true;
                     break;
                 }
@@ -421,19 +482,17 @@ SettingsCache::GetRandomTraits(const World &world, int seed) const
                 }
             }
             if (!flag) {
-                names.emplace_back(worldTrait->filePath);
-                result[resultCursor++] = worldTrait;
+                result.push_back(worldTrait);
                 for (auto &exclusiveWithTag2 : worldTrait->exclusiveWithTags) {
                     except.emplace(exclusiveWithTag2);
                 }
                 auto itr = std::remove(total.begin(), total.end(), worldTrait);
                 total.erase(itr, total.end());
             }
-            subtotal.erase(subtotal.begin() + index);
         }
-        if ((int)names.size() != count + num) {
+        if ((int)result.size() != count + num) {
             LogI("TraitRule on %s tried to generate %d but only generated %d",
-                 world.name.c_str(), num, (int)names.size() - count);
+                 world.name.c_str(), num, (int)result.size() - count);
         }
     }
     return result;
@@ -443,7 +502,7 @@ void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
                                       int traitsFlag, KRandom &random)
 {
     constexpr int MaxTryTimes = 1000;
-    std::vector<const WorldTrait *> presets;
+    std::inplace_vector<const WorldTrait *, 4> presets;
     int index = 0;
     for (auto &pair : traits) {
         if ((traitsFlag >> index & 1) == 1) {
@@ -490,6 +549,7 @@ void SettingsCache::SetSeedWithTraits(const std::vector<World *> &asteroids,
 void SettingsCache::DoSubworldMixing(std::vector<World *> asteroids)
 {
     std::vector<MixingConfig *> filtered;
+    filtered.reserve(mixConfigs.size());
     for (auto &config : mixConfigs) {
         if (config.level == MixingLevel::Disabled ||
             config.type != MixingType::Subworld) {

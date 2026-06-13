@@ -194,12 +194,15 @@ void World::ClearMixingsAndTraits()
     }
     unknownCellsAllowedSubworlds2.clear();
     worldTemplateRules2.clear();
+    subworldFiles2.reserve(subworldFiles.size());
     for (auto &subworld : subworldFiles) {
         subworldFiles2.push_back(&subworld);
     }
+    unknownCellsAllowedSubworlds2.reserve(unknownCellsAllowedSubworlds.size());
     for (auto &filter : unknownCellsAllowedSubworlds) {
         unknownCellsAllowedSubworlds2.push_back(&filter);
     }
+    worldTemplateRules2.reserve(worldTemplateRules.size());
     for (auto &rule : worldTemplateRules) {
         worldTemplateRules2.push_back(&rule);
     }
