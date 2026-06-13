@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_ARIDIO_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_ARIDIO_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-HTFST-C",
-  "menuOrder": 90,
   "clusterCategory": "SpacedOutVanillaStyle",
-  "difficulty": 5,
   "startWorldIndex": 0,
   "numRings": 12,
   "worldPlacements": [
@@ -421,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

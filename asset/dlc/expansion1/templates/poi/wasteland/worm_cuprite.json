@@ -11,76 +11,16 @@
       "Y": -4
     }
   },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "DivergentWorm",
-      "location_x": 5,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "SuperWormPlant",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "SuperWormPlant",
       "location_x": -2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -1
     }
   ]
 }

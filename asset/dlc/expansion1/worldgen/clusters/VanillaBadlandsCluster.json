@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_BADLANDS_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_BADLANDS_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-BAD-C",
   "clusterCategory": "SpacedOutVanillaStyle",
-  "difficulty": 4,
-  "menuOrder": 80,
   "startWorldIndex": 0,
   "numRings": 12,
   "worldPlacements": [
@@ -421,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

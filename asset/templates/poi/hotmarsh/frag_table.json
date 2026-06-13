@@ -11,53 +11,19 @@
     },
     "area": 113
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "BasicFabricPlant",
       "location_x": 2,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 293.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Maturity",
-          "value": 1.67480683
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "PropTable",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
-      "id": "PropLight",
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "id": "PropLight"
     }
   ]
 }

@@ -11,20 +11,11 @@
     },
     "area": 206
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "Puft",
       "location_x": 1,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 293.068481,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -3
     }
   ]
 }

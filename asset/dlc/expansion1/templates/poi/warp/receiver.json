@@ -10,26 +10,16 @@
       "Y": -5
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropLight",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropGravitasLabTable",
       "location_x": -3,
-      "location_y": -2,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

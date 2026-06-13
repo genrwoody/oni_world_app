@@ -10,80 +10,21 @@
     },
     "area": 67
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "Mosquito",
-      "element": "Creature",
-      "temperature": 308.149994,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 308.149994,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": 1,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 308.149994,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "FlyTrapPlant",
       "location_x": 2,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 291.161621,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.732285917
-        },
-        {
-          "id": "Temperature",
-          "value": 291.161621
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "PropDesk",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Steel",
-      "temperature": 294.158752,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropFacilityGlobeDroors",
       "location_x": -2,
-      "location_y": -1,
-      "element": "Granite",
-      "temperature": 294.154846,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

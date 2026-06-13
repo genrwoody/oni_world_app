@@ -10,26 +10,16 @@
     },
     "area": 202
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "GeothermalVentEntity",
       "location_x": 1,
-      "location_y": -2,
-      "element": "Katairite",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropDlc2GeothermalCart",
       "location_x": -2,
-      "location_y": -2,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

@@ -41,6 +41,8 @@ def refresh_info(cells: list, info: dict):
     info["size"] = {"X": (max_x - min_x) + 1, "Y": (max_y - min_y) + 1}
     info["min"] = {"X": min_x, "Y": min_y}
     info["area"] = len(cells)
+    if "discover_tags" in info:
+        del info["discover_tags"]
 
 def is_clusters(source: str):
     return str(Path("/worldgen/clusters/")) in source
@@ -48,8 +50,12 @@ def is_clusters(source: str):
 def handle_clusters(obj: dict, source: Path):
     if "skip" in obj and obj["skip"]:
         return False
-    if "poiPlacements" in obj:
-        obj["poiPlacements"] = [] # remove pois on a starmap.
+    remove = ["poiPlacements", "name", "description", "welcomeMessage", \
+              "clusterAudio", "clusterUnlocks", "dlcIdFrom", "difficulty", \
+              "menuOrder", "mixedPoiPlacements"]
+    for key in remove:
+        if key in obj:
+            del obj[key]
     return True
 
 def is_features(source: str):
@@ -99,11 +105,23 @@ def is_templates(source: str):
 
 def handle_templates(obj: dict, source: Path):
     refresh_info(obj["cells"], obj["info"])
-    obj["cells"] = []
+    del obj["cells"]
     if "buildings" in obj:
-        obj["buildings"] = []
+        del obj["buildings"]
+    if "pickupables" in obj:
+        del obj["pickupables"]
     if "elementalOres" in obj:
-        obj["elementalOres"] = []
+        del obj["elementalOres"]
+    others=[]
+    if "otherEntities" in obj:
+        keys = ["id", "location_x", "location_y"]
+        for entity in obj["otherEntities"]:
+            copy = {}
+            for k, v in entity.items():
+                if k in keys:
+                    copy[k] = v
+            others.append(copy)
+        obj["otherEntities"] = others
     return True
 
 def handle(obj: dict, source: Path):

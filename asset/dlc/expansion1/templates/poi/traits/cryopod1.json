@@ -10,16 +10,10 @@
       "Y": -4
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "CryoTank",
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

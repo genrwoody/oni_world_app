@@ -10,87 +10,21 @@
     },
     "area": 117
   },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "PrehistoricPacu",
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 303.238403,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "MosquitoBaby",
-      "location_x": 4,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 308.200714,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "FlyTrapPlant",
       "location_x": -1,
-      "location_y": 4,
-      "element": "Creature",
-      "temperature": 291.299683,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.00397813
-        },
-        {
-          "id": "Temperature",
-          "value": 291.249908
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": 4
     },
     {
       "id": "FlyTrapPlant",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 291.299591,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.948627651
-        },
-        {
-          "id": "Temperature",
-          "value": 291.249817
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "GeyserGeneric_filthy_water",
       "location_x": -3,
-      "location_y": 1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     }
   ]
 }

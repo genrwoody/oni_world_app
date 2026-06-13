@@ -10,17 +10,11 @@
     },
     "area": 50
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 265.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

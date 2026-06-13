@@ -11,73 +11,37 @@
     },
     "area": 106
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropLadder",
-      "location_y": 3,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropLadder",
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
-      "location_y": 4,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "PropLadder",
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
+    },
+    {
+      "id": "PropLadder"
     },
     {
       "id": "PropLadder",
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
-    },
-    {
-      "id": "PropLadder",
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

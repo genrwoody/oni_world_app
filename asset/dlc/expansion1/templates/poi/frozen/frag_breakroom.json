@@ -11,70 +11,25 @@
       "Y": -3
     }
   },
-  "cells": [],
-  "buildings": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "ColdWheat",
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 255,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.674070239
-        },
-        {
-          "id": "Temperature",
-          "value": 240.064423
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 11.9854679
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "PropTable",
       "location_x": 4,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "VendingMachine",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLight",
       "location_x": 4,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     }
   ]
 }

@@ -57,7 +57,7 @@ public:
     std::map<std::string, WorldTrait> traits;
     std::map<std::string, WorldMixingSettings> worldMixing;
     std::map<std::string, World> worlds;
-    std::map<std::string, DlcMixingSetting> dlcMixings;
+    //std::map<std::string, DlcMixingSetting> dlcMixings;
     std::map<std::string, TemplateContainer> templates;
 
     std::set<Feature> traitFeatures;

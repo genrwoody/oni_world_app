@@ -1,8 +1,4 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.CERES_BASE_SHATTERED_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.CERES_BASE_SHATTERED_CLUSTER.DESCRIPTION",
-  "welcomeMessage": "STRINGS.UI.WELCOMEMESSAGEBODY_DLC2_CERES",
-  "dlcIdFrom": "DLC2_ID",
   "requiredDlcIds": [
     "DLC2_ID"
   ],
@@ -10,35 +6,10 @@
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "CERS-A",
-  "menuOrder": 10,
   "clusterCategory": "Special",
-  "difficulty": 5,
   "clusterTags": [
     "CeresCluster",
     "GeothermalImperative"
-  ],
-  "clusterAudio": {
-    "musicWelcome": "Music_WattsonMessage_DLC2",
-    "musicFirst": "Ice_Planet",
-    "stingerDay": "Stinger_Day_DLC2",
-    "stingerNight": "Stinger_Loop_Night_DLC2"
-  },
-  "clusterUnlocks": [
-    {
-      "id": "emails",
-      "collection": "dlc2emails",
-      "orderRule": "Prepend"
-    },
-    {
-      "id": "researchnotes",
-      "collection": "dlc2researchnotes",
-      "orderRule": "Prepend"
-    },
-    {
-      "id": "dimensionallore",
-      "collection": "dlc2dimensionallore",
-      "orderRule": "Replace"
-    }
   ],
   "startWorldIndex": 0,
   "worldPlacements": [

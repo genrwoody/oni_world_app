@@ -10,52 +10,30 @@
       "Y": -2
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropLight",
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropClock",
       "location_x": 3,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropDesk",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Steel",
-      "temperature": 293.770996,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropFacilityGlobeDroors",
       "location_x": -3,
-      "location_y": -1,
-      "element": "Granite",
-      "temperature": 293.894135,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropTallPlant",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.139435,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

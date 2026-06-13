@@ -10,59 +10,33 @@
     },
     "area": 86
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropGravitasDeskPodium",
-      "location_y": -2,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
-      "location_x": 2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 2
     },
     {
       "id": "PropClock",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropGravitasShelf",
-      "location_x": 3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 3
     }
   ]
 }

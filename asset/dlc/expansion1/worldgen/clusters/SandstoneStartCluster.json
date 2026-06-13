@@ -1,11 +1,8 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.SANDSTONE_START_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.SANDSTONE_START_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "SNDST-C",
-  "menuOrder": 0,
   "clusterCategory": "SpacedOutStyle",
   "startWorldIndex": 0,
   "numRings": 12,
@@ -429,6 +426,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

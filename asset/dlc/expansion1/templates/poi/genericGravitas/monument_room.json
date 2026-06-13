@@ -10,39 +10,11 @@
       "Y": -4
     }
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "BasicSingleHarvestPlantSeed",
-      "location_x": 3,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 292.999481,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "BasicSingleHarvestPlantSeed",
-      "location_x": -6,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "PropFacilityStatue",
       "location_x": 1,
-      "location_y": -3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

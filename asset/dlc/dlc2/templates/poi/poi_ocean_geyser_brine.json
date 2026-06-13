@@ -10,189 +10,31 @@
     },
     "area": 247
   },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "SeaLettuceSeed",
-      "location_x": -2,
-      "location_y": -6,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "SeaLettuceSeed",
-      "location_x": -7,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "SeaLettuce",
-      "location_x": -10,
-      "element": "Creature",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 9.66279793
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.52639997
-        },
-        {
-          "id": "Temperature",
-          "value": 304.789642
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_x": -10
     },
     {
       "id": "SeaLettuce",
-      "location_x": -8,
-      "element": "Creature",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 10.1542273
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.40281522
-        },
-        {
-          "id": "Temperature",
-          "value": 303.495789
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_x": -8
     },
     {
       "id": "SeaLettuce",
-      "location_x": -6,
-      "element": "Creature",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 10.3649702
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.774219155
-        },
-        {
-          "id": "Temperature",
-          "value": 303.187683
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_x": -6
     },
     {
       "id": "SeaLettuce",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 3.9670651
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "SeaLettuce",
-      "location_x": 6,
-      "element": "Creature",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 10.6898651
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_x": 6
     },
     {
       "id": "GeyserGeneric_slush_salt_water",
-      "location_y": 4,
-      "element": "Katairite",
-      "temperature": 233.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     }
   ]
 }

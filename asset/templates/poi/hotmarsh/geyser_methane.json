@@ -11,112 +11,26 @@
     },
     "area": 136
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "MushroomPlant",
       "location_x": 5,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 300.010071,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.860887229
-        },
-        {
-          "id": "Maturity",
-          "value": 2.1392374
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 300.010071
-        },
-        {
-          "id": "Illumination"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "MushroomPlant",
       "location_x": 6,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 300.023193,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.827088356
-        },
-        {
-          "id": "Maturity",
-          "value": 6.09903288
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 300.023193
-        },
-        {
-          "id": "Illumination"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "BasicFabricPlant",
       "location_x": 3,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 300.000092,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.983091891
-        },
-        {
-          "id": "Maturity",
-          "value": 1.89039755
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 300.000092
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "GeyserGeneric_methane",
       "location_x": -4,
-      "location_y": -1,
-      "element": "IgneousRock",
-      "temperature": 299.999573,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

@@ -10,17 +10,11 @@
       "Y": -5
     }
   },
-  "cells": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_filthy_water",
       "location_x": -1,
-      "location_y": 1,
-      "element": "Katairite",
-      "temperature": 99,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     }
   ]
 }

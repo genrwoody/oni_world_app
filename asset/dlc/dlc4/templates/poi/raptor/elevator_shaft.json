@@ -10,35 +10,21 @@
     },
     "area": 76
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropElevator",
       "location_x": -1,
-      "location_y": -3,
-      "element": "Steel",
-      "temperature": 267.37851,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropTallPlant",
       "location_x": 1,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 292.668793,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "VendingMachine",
       "location_x": 3,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

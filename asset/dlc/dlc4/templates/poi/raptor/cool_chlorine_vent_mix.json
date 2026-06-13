@@ -10,33 +10,15 @@
     },
     "area": 37
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_chlorine_gas_cool",
-      "location_y": -1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "ColdBreather",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Temperature",
-          "value": 292.959839
-        }
-      ]
+      "location_y": -1
     }
   ]
 }

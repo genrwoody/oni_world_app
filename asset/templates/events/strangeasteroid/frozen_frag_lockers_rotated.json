@@ -10,38 +10,21 @@
     },
     "area": 73
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLight",
       "location_x": 2,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": 3
     }
   ]
 }

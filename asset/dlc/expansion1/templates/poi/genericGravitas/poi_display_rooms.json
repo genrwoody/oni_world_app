@@ -10,185 +10,99 @@
       "Y": -6
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropFacilityHangingLight",
-      "location_x": 4,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 4
     },
     {
       "id": "SetLocker",
       "location_x": -2,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "SetLocker",
       "location_x": -4,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -5,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": -6,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropLadder",
-      "location_y": -6,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropLadder",
-      "location_y": -5,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "PropLadder",
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
+    },
+    {
+      "id": "PropLadder"
     },
     {
       "id": "PropLadder",
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLadder",
-      "location_y": 1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
-    },
-    {
-      "id": "PropLadder",
-      "location_y": 2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": 1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLadder",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
-      "location_x": 1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     }
   ]
 }

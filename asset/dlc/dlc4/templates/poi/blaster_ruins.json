@@ -10,115 +10,65 @@
     },
     "area": 522
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropDesk",
       "location_x": 11,
-      "location_y": -5,
-      "element": "Steel",
-      "temperature": 266.637634,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "PropClock",
       "location_x": 7,
-      "location_y": 4,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "PropGravitasDeskPodiumDLC4",
-      "location_x": 5,
-      "element": "Granite",
-      "temperature": 280.843719,
-      "units": 1,
-      "type": "Other"
+      "location_x": 5
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 290.395721,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 269.048523,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -5,
-      "element": "Polypropylene",
-      "temperature": 268.03595,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "MissileSetLocker",
       "location_x": 9,
-      "location_y": -5,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "MissileSetLocker",
       "location_x": 8,
-      "location_y": -5,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "MissileSetLocker",
       "location_x": 7,
-      "location_y": -5,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "MissileSetLocker",
       "location_x": 6,
-      "location_y": -5,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     }
   ]
 }

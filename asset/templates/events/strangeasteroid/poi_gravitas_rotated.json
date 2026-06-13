@@ -11,220 +11,111 @@
     },
     "area": 808
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropFacilityDisplay3",
       "location_x": -5,
-      "location_y": 16,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 16
     },
     {
       "id": "PropFacilityGlobeDroors",
       "location_x": 1,
-      "location_y": -12,
-      "element": "Granite",
-      "temperature": 290.225616,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -12
     },
     {
       "id": "PropFacilityDesk",
       "location_x": 1,
-      "location_y": -15,
-      "element": "Granite",
-      "temperature": 290.225647,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -15
     },
     {
       "id": "PropTallPlant",
       "location_x": -6,
-      "location_y": -19,
-      "element": "Polypropylene",
-      "temperature": 294.016144,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -19
     },
     {
       "id": "PropTallPlant",
       "location_x": -6,
-      "location_y": -22,
-      "element": "Polypropylene",
-      "temperature": 294.014496,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -22
     },
     {
       "id": "PropReceptionDesk",
       "location_x": -6,
-      "location_y": -13,
-      "element": "Steel",
-      "temperature": 288.046295,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -13
     },
     {
       "id": "PropElevator",
       "location_x": 1,
-      "location_y": -20,
-      "element": "Steel",
-      "temperature": 288.046295,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -20
     },
     {
       "id": "PropElevator",
       "location_x": -6,
-      "location_y": -20,
-      "element": "Steel",
-      "temperature": 288.053345,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -20
     },
     {
       "id": "PropFacilityChairFlip",
       "location_x": -8,
-      "location_y": -6,
-      "element": "Granite",
-      "temperature": 290.225677,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -6
     },
     {
       "id": "PropFacilityDisplay2",
       "location_x": -8,
-      "location_y": -3,
-      "element": "Steel",
-      "temperature": 288.046326,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -3
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 3,
-      "location_y": -4,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -4
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 3,
-      "location_y": 14,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 14
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 5,
-      "location_y": -18,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -18
     },
     {
       "id": "PropFacilityChandelier",
       "location_x": 5,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 5
     },
     {
       "id": "PropFacilityTable",
       "location_x": -8,
-      "location_y": 16,
-      "element": "Steel",
-      "temperature": 288.060577,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 16
     },
     {
       "id": "PropFacilityCouch",
       "location_x": -8,
-      "location_y": 12,
-      "element": "Granite",
-      "temperature": 290.225647,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 12
     },
     {
       "id": "PropFacilityChair",
       "location_x": -8,
-      "location_y": 18,
-      "element": "Granite",
-      "temperature": 290.28363,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 18
     },
     {
       "id": "PropFacilityStatue",
       "location_x": -8,
-      "location_y": 5,
-      "element": "Granite",
-      "temperature": 290.194916,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 5
     },
     {
       "id": "PropFacilityDisplay",
       "location_y": 0,
-      "element": "Steel",
-      "temperature": 288.046326,
-      "units": 1,
-      "type": "Other",
-      "location_x": -8,
-      "rotationOrientation": "R90"
+      "location_x": -8
     },
     {
       "id": "PropFacilityWallDegree",
       "location_x": 3,
-      "location_y": -14,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -14
     },
     {
       "id": "PropFacilityPainting",
       "location_x": 5,
-      "location_y": -15,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": -15
     }
   ]
 }

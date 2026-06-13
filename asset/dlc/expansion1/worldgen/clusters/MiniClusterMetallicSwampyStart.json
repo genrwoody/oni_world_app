@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.MINICLUSTER_METALLICSWAMPYSTART.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.MINICLUSTER_METALLICSWAMPYSTART.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "M-SWMP-C",
-  "menuOrder": 30,
   "clusterCategory": "SpacedOutStyle",
-  "difficulty": 2,
   "startWorldIndex": 1,
   "numRings": 14,
   "worldPlacements": [
@@ -448,6 +444,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

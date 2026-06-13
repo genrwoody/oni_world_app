@@ -10,93 +10,26 @@
     },
     "area": 61
   },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "Butterfly",
-      "location_x": 2,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 300.48172,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "GardenFoodPlant",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 1.84195387
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.74861932
-        },
-        {
-          "id": "Temperature",
-          "value": 294.282288
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "ButterflyPlant",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 4
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "GardenForagePlantPlanted",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "POIDlc4TechUnlock",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

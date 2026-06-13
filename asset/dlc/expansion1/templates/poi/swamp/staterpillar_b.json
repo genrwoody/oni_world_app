@@ -10,47 +10,5 @@
       "X": -6,
       "Y": -4
     }
-  },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "SwampForagePlant",
-      "location_x": 4,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293.002502,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Staterpillar",
-      "location_x": 2,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Staterpillar",
-      "location_x": 4,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Staterpillar",
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ]
+  }
 }

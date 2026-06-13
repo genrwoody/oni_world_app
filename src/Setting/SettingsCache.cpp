@@ -141,13 +141,13 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/mixing.json") != nullptr) {
-            if (strstr(stat.m_filename, "dlc/dlc2") != nullptr) {
-                LoadJsonFile(zip, i, dlcMixings["dlc2"]);
-            } else if (strstr(stat.m_filename, "dlc/dlc4") != nullptr) {
-                LoadJsonFile(zip, i, dlcMixings["dlc4"]);
-            } else {
-                LoadJsonFile(zip, i, dlcMixings["dlc3"]);
-            }
+            //if (strstr(stat.m_filename, "dlc/dlc2") != nullptr) {
+            //    LoadJsonFile(zip, i, dlcMixings["dlc2"]);
+            //} else if (strstr(stat.m_filename, "dlc/dlc4") != nullptr) {
+            //    LoadJsonFile(zip, i, dlcMixings["dlc4"]);
+            //} else {
+            //    LoadJsonFile(zip, i, dlcMixings["dlc3"]);
+            //}
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/biomes/") != nullptr) {

@@ -11,44 +11,11 @@
       "Y": -13
     }
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "ColdWheat",
       "location_x": 6,
-      "location_y": -13,
-      "element": "Creature",
-      "temperature": 255,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature",
-          "value": 254.201965
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 13.1049061
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -13
     }
   ]
 }

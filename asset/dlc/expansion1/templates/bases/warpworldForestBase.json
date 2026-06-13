@@ -10,69 +10,39 @@
       "Y": -6
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropGravitasJar1",
       "location_x": 6,
-      "location_y": -3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropGravitasJar2",
       "location_x": -7,
-      "location_y": -3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropGravitasShelf",
-      "location_x": -6,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": -6
     },
     {
       "id": "WarpReceiver",
       "location_x": 9,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "WarpPortal",
       "location_x": -13,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "CryoTank",
       "location_x": -4,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropClock",
-      "location_x": 1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     }
   ]
 }

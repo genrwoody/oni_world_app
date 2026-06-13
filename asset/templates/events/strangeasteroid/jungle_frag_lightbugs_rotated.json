@@ -10,58 +10,16 @@
     },
     "area": 82
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "LightBug",
-      "location_x": 1,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "LightBug",
-      "location_x": 3,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "LightBug",
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": 1,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": -3,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

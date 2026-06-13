@@ -1,12 +1,8 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_VOLCANIC_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_VOLCANIC_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-VOLCA-C",
-  "difficulty": 3,
-  "menuOrder": 70,
   "clusterCategory": "SpacedOutVanillaStyle",
   "startWorldIndex": 0,
   "numRings": 12,
@@ -421,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

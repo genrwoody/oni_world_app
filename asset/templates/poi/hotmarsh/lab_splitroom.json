@@ -11,177 +11,51 @@
     },
     "area": 461
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "MushroomPlant",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 299.533539,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.167388409
-        },
-        {
-          "id": "Maturity",
-          "value": 7.11744452
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 299.543091
-        },
-        {
-          "id": "Illumination"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "MushroomPlant",
       "location_x": 4,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 298.531555,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.167388439
-        },
-        {
-          "id": "Maturity",
-          "value": 4.35880184
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 298.560028
-        },
-        {
-          "id": "Illumination"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "BasicFabricPlant",
       "location_x": 9,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 297.74762,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.148711175
-        },
-        {
-          "id": "Maturity",
-          "value": 0.424871594
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 297.785217
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "BasicFabricPlant",
       "location_x": -8,
-      "location_y": 5,
-      "element": "Creature",
-      "temperature": 297.961548,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.0318444781
-        },
-        {
-          "id": "Maturity",
-          "value": 1.32019496
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 297.990295
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 5
     },
     {
       "id": "SetLocker",
       "location_x": -3,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "SetLocker",
       "location_x": -2,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLight",
       "location_x": -1,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "GeneShuffler",
       "location_x": 12,
-      "location_y": 3,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     }
   ]
 }

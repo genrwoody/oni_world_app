@@ -11,15 +11,10 @@
       "Y": -5
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_slush_salt_water",
-      "location_x": 1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     }
   ]
 }

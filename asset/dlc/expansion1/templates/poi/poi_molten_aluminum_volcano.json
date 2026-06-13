@@ -11,15 +11,10 @@
       "Y": -3
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_molten_aluminum",
-      "location_x": 2,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 2
     }
   ]
 }

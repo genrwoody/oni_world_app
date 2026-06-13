@@ -10,16 +10,11 @@
     },
     "area": 165
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeothermalVentEntity",
       "location_x": 1,
-      "location_y": -2,
-      "element": "Katairite",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

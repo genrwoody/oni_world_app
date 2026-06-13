@@ -11,280 +11,53 @@
     },
     "area": 168
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SpiceVine",
       "location_x": -1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 320.03537,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00849634688
-        },
-        {
-          "id": "Maturity",
-          "value": 10.2212524
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 320.029266
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "SpiceVine",
       "location_x": -5,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 319.957977,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00960723683
-        },
-        {
-          "id": "Maturity",
-          "value": 0.0237822887
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 319.965973
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "SpiceVine",
       "location_x": -7,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 320.001892,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00267381594
-        },
-        {
-          "id": "Maturity",
-          "value": 13.805459
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 319.998932
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "SpiceVine",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 320.065674,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.0147828311
-        },
-        {
-          "id": "Maturity",
-          "value": 11.129756
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 320.052063
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "SpiceVine",
       "location_x": 8,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 319.892761,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00533188134
-        },
-        {
-          "id": "Maturity",
-          "value": 19.5239239
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 319.91507
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "SwampLily",
-      "location_x": -4,
-      "element": "Creature",
-      "temperature": 328.159332,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00774480915
-        },
-        {
-          "id": "Maturity",
-          "value": 3.56279135
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 328.155121
-        }
-      ]
+      "location_x": -4
     },
     {
       "id": "SwampLily",
-      "location_x": -7,
-      "element": "Creature",
-      "temperature": 328.016113,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.00615541777
-        },
-        {
-          "id": "Maturity",
-          "value": 9.03952122
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 328.042725
-        }
-      ]
+      "location_x": -7
     },
     {
       "id": "SwampLily",
       "location_x": -2,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 328.188965,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.0141328555
-        },
-        {
-          "id": "Maturity",
-          "value": 5.28172302
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 328.182953
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "SwampLily",
       "location_x": -1,
-      "location_y": -4,
-      "element": "Creature",
-      "temperature": 328.32785,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.0147828311
-        },
-        {
-          "id": "Maturity",
-          "value": 0.614262938
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 328.291199
-        }
-      ]
+      "location_y": -4
     },
     {
       "id": "GeneShuffler",
-      "location_x": 3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 3
     }
   ]
 }

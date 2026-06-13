@@ -10,80 +10,46 @@
     },
     "area": 288
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropFacilityHangingLight",
       "location_x": -5,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 7,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropDlc2Display1",
       "location_x": -2,
-      "location_y": -4,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropCeresPosterLarge",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropHumanChesterfieldSofa",
       "location_x": -6,
-      "location_y": -4,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropHumanMurphyBed",
       "location_x": 9,
-      "location_y": -4,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropCeresPosterA",
       "location_x": -8,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropCeresPosterB",
       "location_x": -5,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

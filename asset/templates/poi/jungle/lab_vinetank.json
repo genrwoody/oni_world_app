@@ -11,211 +11,56 @@
     },
     "area": 275
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "SpiceVineSeed",
-      "location_x": 8,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 272.004028,
-      "units": 1,
-      "type": "Pickupable"
-    },
-    {
-      "id": "SpiceVineSeed",
-      "location_x": -5,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 271.184204,
-      "units": 1,
-      "type": "Pickupable"
-    }
-  ],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SpiceVine",
       "location_x": -2,
-      "location_y": 4,
-      "element": "Creature",
-      "temperature": 310.015259,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.520049989
-        },
-        {
-          "id": "Maturity",
-          "value": 8.26016712
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 310.015259
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 4
     },
     {
       "id": "SpiceVine",
       "location_x": -3,
-      "location_y": 5,
-      "element": "Creature",
-      "temperature": 310.021973,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.544225037
-        },
-        {
-          "id": "Maturity",
-          "value": 4.01231384
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 310.021973
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 5
     },
     {
       "id": "SpiceVine",
       "location_x": -4,
-      "location_y": 5,
-      "element": "Creature",
-      "temperature": 310.012695,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.55100584
-        },
-        {
-          "id": "Maturity",
-          "value": 11.2502422
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 310.012695
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 5
     },
     {
       "id": "SpiceVine",
       "location_x": -6,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 310.003082,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.553504884
-        },
-        {
-          "id": "Maturity",
-          "value": 18.1935024
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 310.003082
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "PropLight",
       "location_x": 3,
-      "location_y": 3,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropTable",
       "location_x": 3,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "VendingMachine",
       "location_x": 6,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLadder",
       "location_x": -1,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

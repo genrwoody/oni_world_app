@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.OCEANIA.NAME",
-  "description": "STRINGS.WORLDS.OCEANIA.DESCRIPTION",
   "coordinatePrefix": "OCAN-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 1,
-  "menuOrder": 10,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

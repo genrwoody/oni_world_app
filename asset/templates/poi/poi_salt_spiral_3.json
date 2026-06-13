@@ -11,41 +11,11 @@
     },
     "area": 72
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "BeanPlant",
       "location_x": -5,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 279.492157,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature",
-          "value": 279.482758
-        },
-        {
-          "id": "Maturity",
-          "value": 7.15340328
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 1
     }
   ]
 }

@@ -10,14 +10,9 @@
       "Y": -3
     }
   },
-  "cells": [],
   "otherEntities": [
     {
-      "id": "GeyserGeneric_hot_water",
-      "element": "Katairite",
-      "temperature": 99,
-      "units": 1,
-      "type": "Other"
+      "id": "GeyserGeneric_hot_water"
     }
   ]
 }

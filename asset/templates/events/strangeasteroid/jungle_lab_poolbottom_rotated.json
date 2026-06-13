@@ -10,90 +10,36 @@
     },
     "area": 383
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "BasicSingleHarvestPlantSeed",
-      "location_x": -9,
-      "location_y": 6,
-      "element": "Creature",
-      "temperature": 295.976746,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Glom",
-      "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 294.293915,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "GeneShuffler",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.183899,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": -5,
-      "element": "Steel",
-      "temperature": 294.184326,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": -9,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": -9
     },
     {
       "id": "PropLight",
       "location_x": 1,
-      "location_y": -6,
-      "element": "Steel",
-      "temperature": 295.087097,
-      "units": 1,
-      "rotationOrientation": "R90",
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropLight",
       "location_x": 4,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 294.180206,
-      "units": 1,
-      "type": "Other",
-      "rotationOrientation": "R90"
+      "location_y": 3
     }
   ]
 }

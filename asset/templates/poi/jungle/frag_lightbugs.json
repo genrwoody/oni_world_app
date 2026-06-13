@@ -11,53 +11,29 @@
     },
     "area": 82
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "LightBug",
       "location_x": 3,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 300.003174,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "LightBug",
       "location_x": 1,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 300.002716,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "LightBug",
-      "location_x": 2,
-      "element": "Creature",
-      "temperature": 300.004852,
-      "units": 1,
-      "type": "Other"
+      "location_x": 2
     },
     {
       "id": "PropDesk",
       "location_x": 4,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

@@ -11,92 +11,20 @@
       "Y": -4
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "SuperWormPlant",
       "location_x": -1,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature",
-          "value": 318.151093
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 0.000500000024
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 1
     },
     {
       "id": "SuperWormPlant",
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature",
-          "value": 318.150085
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 0.000500000024
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 1
     },
     {
       "id": "Cylindrica",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature",
-          "value": 298.429901
-        }
-      ]
+      "location_y": 2
     }
   ]
 }

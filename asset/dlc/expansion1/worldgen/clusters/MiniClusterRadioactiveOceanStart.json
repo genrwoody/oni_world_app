@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.MINICLUSTER_RADIOACTIVEOCEANSTART.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.MINICLUSTER_RADIOACTIVEOCEANSTART.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "M-RAD-C",
-  "menuOrder": 70,
   "clusterCategory": "SpacedOutStyle",
-  "difficulty": 5,
   "startWorldIndex": 1,
   "numRings": 14,
   "worldPlacements": [
@@ -448,6 +444,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

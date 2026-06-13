@@ -11,27 +11,16 @@
       "Y": -3
     }
   },
-  "cells": [],
-  "buildings": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "TemporalTearAnalyzer",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropDesk",
       "location_x": -2,
-      "location_y": -2,
-      "element": "Steel",
-      "temperature": 286.961578,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

@@ -10,47 +10,16 @@
     },
     "area": 109
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "VineMother",
       "location_x": 5,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 308.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        }
-      ]
+      "location_y": 1
     },
     {
       "id": "GardenDecorPlant",
       "location_x": -4,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 1.36246753
-        },
-        {
-          "id": "Temperature",
-          "value": 293.275391
-        }
-      ]
+      "location_y": -2
     }
   ]
 }

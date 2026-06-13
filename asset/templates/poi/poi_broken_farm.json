@@ -11,19 +11,11 @@
     },
     "area": 36
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropLight",
       "location_x": 2,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     }
   ]
 }

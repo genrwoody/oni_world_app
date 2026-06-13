@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.FOREST_HOT.NAME",
-  "description": "STRINGS.WORLDS.FOREST_HOT.DESCRIPTION",
   "coordinatePrefix": "HTFST-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 5,
-  "menuOrder": 80,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

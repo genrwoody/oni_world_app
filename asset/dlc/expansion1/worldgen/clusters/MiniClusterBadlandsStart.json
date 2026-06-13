@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.MINICLUSTER_BADLANDSSTART.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.MINICLUSTER_BADLANDSSTART.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "M-BAD-C",
-  "menuOrder": 40,
   "clusterCategory": "SpacedOutStyle",
-  "difficulty": 3,
   "startWorldIndex": 0,
   "numRings": 14,
   "worldPlacements": [
@@ -448,6 +444,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

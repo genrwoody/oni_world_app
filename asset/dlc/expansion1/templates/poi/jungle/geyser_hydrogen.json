@@ -10,16 +10,11 @@
       "Y": -6
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_hot_hydrogen",
       "location_x": 2,
-      "location_y": -3,
-      "element": "Katairite",
-      "temperature": 99,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

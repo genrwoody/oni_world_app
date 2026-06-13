@@ -11,19 +11,11 @@
     },
     "area": 238
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_methane",
       "location_x": 1,
-      "location_y": 2,
-      "element": "IgneousRock",
-      "temperature": 300.004181,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     }
   ]
 }

@@ -1,42 +1,13 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.PREHISTORIC_CLASSIC_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.PREHISTORIC_CLASSIC_CLUSTER.DESCRIPTION",
-  "welcomeMessage": "STRINGS.UI.WELCOMEMESSAGEBODY_DLC4_PREHISTORIC",
-  "dlcIdFrom": "DLC4_ID",
   "requiredDlcIds": [
     "EXPANSION1_ID",
     "DLC4_ID"
   ],
   "coordinatePrefix": "V-PRE-C",
-  "menuOrder": 8,
   "clusterCategory": "SpacedOutVanillaStyle",
-  "difficulty": 3,
   "clusterTags": [
     "PrehistoricCluster",
     "DemoliorImperative"
-  ],
-  "clusterAudio": {
-    "musicWelcome": "Music_WattsonMessage_DLC4",
-    "musicFirst": "Prehistoric_Planet",
-    "stingerDay": "Stinger_Day_DLC4",
-    "stingerNight": "Stinger_Loop_Night_DLC4"
-  },
-  "clusterUnlocks": [
-    {
-      "id": "emails",
-      "collection": "dlc4emails",
-      "orderRule": "Prepend"
-    },
-    {
-      "id": "researchnotes",
-      "collection": "dlc4researchnotes",
-      "orderRule": "Prepend"
-    },
-    {
-      "id": "journals",
-      "collection": "dlc4journals",
-      "orderRule": "Prepend"
-    }
   ],
   "startWorldIndex": 0,
   "numRings": 12,
@@ -459,6 +430,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

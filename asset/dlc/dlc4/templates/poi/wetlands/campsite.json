@@ -10,14 +10,9 @@
     },
     "area": 40
   },
-  "cells": [],
   "otherEntities": [
     {
-      "id": "PropTable",
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "id": "PropTable"
     }
   ]
 }

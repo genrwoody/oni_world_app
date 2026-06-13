@@ -10,46 +10,16 @@
     },
     "area": 67
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "DewDripperPlant",
       "location_x": -1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 249.595001,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 0.110751219
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.06708992
-        },
-        {
-          "id": "Temperature",
-          "value": 249.636047
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "GeneShuffler",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

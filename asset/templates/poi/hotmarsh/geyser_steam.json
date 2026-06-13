@@ -11,137 +11,29 @@
     },
     "area": 230
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "BasicFabricPlant",
       "location_x": -3,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.313656032
-        },
-        {
-          "id": "Maturity",
-          "value": 0.4
-        },
-        {
-          "id": "OldAge",
-          "value": 7.31842375
-        },
-        {
-          "id": "Temperature",
-          "value": 300
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "BasicFabricPlant",
       "location_x": -5,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.330001652
-        },
-        {
-          "id": "Maturity",
-          "value": 2
-        },
-        {
-          "id": "OldAge",
-          "value": 7.31842375
-        },
-        {
-          "id": "Temperature",
-          "value": 300
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "BasicFabricPlant",
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 299.999176,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.689397097
-        },
-        {
-          "id": "Maturity",
-          "value": 2
-        },
-        {
-          "id": "OldAge",
-          "value": 7.31842375
-        },
-        {
-          "id": "Temperature",
-          "value": 299.999176
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "BasicFabricPlant",
       "location_x": -9,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 299.98349,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.0831939727
-        },
-        {
-          "id": "Maturity",
-          "value": 2
-        },
-        {
-          "id": "OldAge",
-          "value": 7.31842375
-        },
-        {
-          "id": "Temperature",
-          "value": 299.98349
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "GeyserGeneric_steam",
-      "location_x": 5,
-      "element": "IgneousRock",
-      "temperature": 300.276306,
-      "units": 1,
-      "type": "Other"
+      "location_x": 5
     }
   ]
 }

@@ -10,120 +10,50 @@
       "Y": -4
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "ColdWheat",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 299.992523,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 5.99881411
-        },
-        {
-          "id": "AirPressure",
-          "value": 6.8000576e-05
-        },
-        {
-          "id": "Temperature",
-          "value": 299.994354
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -1
+    },
+    {
+      "id": "PropLadder",
+      "location_x": -6
     },
     {
       "id": "PropLadder",
       "location_x": -6,
-      "element": "Polypropylene",
-      "temperature": 237.330338,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": -6,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 237.32373,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": -6,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 237.131561,
-      "units": 1,
-      "type": "Other"
-    },
-    {
-      "id": "PropLadder",
-      "location_x": -6,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 237.285202,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLight",
       "location_x": 7,
-      "location_y": 4,
-      "element": "Steel",
-      "temperature": 238.28624,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "GeneShuffler",
       "location_x": 1,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 238.006866,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropDesk",
       "location_x": 7,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 238.448151,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "ColdBreather",
       "location_x": -3,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 237.520248,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Temperature",
-          "value": 288.656891
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -3
     }
   ]
 }

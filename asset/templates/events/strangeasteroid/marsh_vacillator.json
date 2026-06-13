@@ -10,44 +10,14 @@
     },
     "area": 129
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "BasicFabricPlant",
-      "location_x": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 0.424871594
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.148711175
-        },
-        {
-          "id": "Temperature",
-          "value": 297.785217
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_x": -2
     },
     {
       "id": "GeneShuffler",
-      "location_x": 1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     }
   ]
 }

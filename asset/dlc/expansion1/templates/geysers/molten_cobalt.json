@@ -11,17 +11,9 @@
       "Y": -3
     }
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
-      "id": "GeyserGeneric_molten_cobalt",
-      "element": "IgneousRock",
-      "temperature": 367.421021,
-      "units": 1,
-      "type": "Other"
+      "id": "GeyserGeneric_molten_cobalt"
     }
   ]
 }

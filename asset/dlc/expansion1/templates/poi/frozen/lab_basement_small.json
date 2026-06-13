@@ -11,132 +11,31 @@
       "Y": -5
     }
   },
-  "cells": [],
-  "buildings": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "ColdWheat",
       "location_x": 8,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 255,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.653857112
-        },
-        {
-          "id": "Temperature",
-          "value": 239.931793
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 9.101717
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "ColdWheat",
       "location_x": 1,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 255,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.662789226
-        },
-        {
-          "id": "Temperature",
-          "value": 239.936127
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 1.13069296
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "ColdWheat",
       "location_x": 2,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 255,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.34397006
-        },
-        {
-          "id": "Temperature",
-          "value": 239.961502
-        },
-        {
-          "id": "YieldBonus"
-        },
-        {
-          "id": "Maturity",
-          "value": 13.102334
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -3
     },
     {
       "id": "PropDesk",
       "location_x": -3,
-      "location_y": -1,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "GeneShuffler",
       "location_x": 4,
-      "location_y": -3,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

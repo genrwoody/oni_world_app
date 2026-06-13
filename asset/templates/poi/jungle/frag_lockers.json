@@ -11,35 +11,19 @@
     },
     "area": 86
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SetLocker",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 312.422394,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "SetLocker",
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 269.00824,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLight",
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 273.19397,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     }
   ]
 }

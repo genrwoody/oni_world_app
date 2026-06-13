@@ -11,56 +11,31 @@
     },
     "area": 108
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropLadder",
       "location_x": 6,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.147034,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": -5,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": -5,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 6,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.147125,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "GeneShuffler",
       "location_x": 2,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 236.576569,
-      "units": 1,
-      "type": "Other",
-      "amounts": []
+      "location_y": 1
     }
   ]
 }

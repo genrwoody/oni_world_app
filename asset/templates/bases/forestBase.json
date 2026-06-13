@@ -10,18 +10,5 @@
       "Y": -2
     },
     "area": 115
-  },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "Hatch",
-      "location_x": -8,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable"
-    }
-  ]
+  }
 }

@@ -10,15 +10,9 @@
     },
     "area": 76
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
-      "id": "GeneShuffler",
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "id": "GeneShuffler"
     }
   ]
 }

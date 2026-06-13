@@ -10,15 +10,10 @@
       "Y": -2
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_liquid_co2",
-      "location_y": 1,
-      "element": "Katairite",
-      "temperature": 218,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     }
   ]
 }

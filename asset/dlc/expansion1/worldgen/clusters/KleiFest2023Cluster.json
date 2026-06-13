@@ -1,12 +1,8 @@
 {
-  "name": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.NAME",
-  "description": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.DESCRIPTION",
-  "welcomeMessage": "STRINGS.UI.WELCOMEMESSAGEBODY_KF23",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "KF23-C",
-  "menuOrder": 0,
   "clusterCategory": "Special",
   "fixedCoordinate": 7,
   "startWorldIndex": 0,
@@ -422,6 +418,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

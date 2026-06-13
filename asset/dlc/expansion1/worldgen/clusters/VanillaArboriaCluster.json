@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_ARBORIA_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_ARBORIA_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-FRST-C",
-  "menuOrder": 60,
   "clusterCategory": "SpacedOutVanillaStyle",
-  "difficulty": 3,
   "startWorldIndex": 0,
   "numRings": 12,
   "worldPlacements": [
@@ -421,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

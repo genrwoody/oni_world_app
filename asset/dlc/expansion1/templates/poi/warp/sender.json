@@ -10,17 +10,11 @@
       "Y": -6
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropLight",
       "location_x": -2,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     }
   ]
 }

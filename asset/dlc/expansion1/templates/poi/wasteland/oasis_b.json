@@ -11,24 +11,11 @@
       "Y": -4
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "Cylindrica",
       "location_x": 3,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        }
-      ]
+      "location_y": 1
     }
   ]
 }

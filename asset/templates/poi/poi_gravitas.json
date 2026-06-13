@@ -11,198 +11,110 @@
     },
     "area": 808
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropFacilityDisplay3",
       "location_x": -16,
-      "location_y": -5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "PropFacilityGlobeDroors",
       "location_x": 12,
-      "location_y": 1,
-      "element": "Granite",
-      "temperature": 290.225616,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropFacilityDesk",
       "location_x": 15,
-      "location_y": 1,
-      "element": "Granite",
-      "temperature": 290.225647,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropTallPlant",
       "location_x": 19,
-      "location_y": -6,
-      "element": "Polypropylene",
-      "temperature": 294.016144,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropTallPlant",
       "location_x": 22,
-      "location_y": -6,
-      "element": "Polypropylene",
-      "temperature": 294.014496,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropReceptionDesk",
       "location_x": 13,
-      "location_y": -6,
-      "element": "Steel",
-      "temperature": 288.046295,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropElevator",
       "location_x": 20,
-      "location_y": 1,
-      "element": "Steel",
-      "temperature": 288.046295,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropElevator",
       "location_x": 20,
-      "location_y": -6,
-      "element": "Steel",
-      "temperature": 288.053345,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "PropFacilityChairFlip",
       "location_x": 6,
-      "location_y": -8,
-      "element": "Granite",
-      "temperature": 290.225677,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityDisplay2",
       "location_x": 3,
-      "location_y": -8,
-      "element": "Steel",
-      "temperature": 288.046326,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 4,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": -14,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropFacilityHangingLight",
       "location_x": 18,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropFacilityChandelier",
       "location_x": -5,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropFacilityTable",
       "location_x": -16,
-      "location_y": -8,
-      "element": "Steel",
-      "temperature": 288.060577,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityCouch",
       "location_x": -12,
-      "location_y": -8,
-      "element": "Granite",
-      "temperature": 290.225647,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityChair",
       "location_x": -18,
-      "location_y": -8,
-      "element": "Granite",
-      "temperature": 290.28363,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityStatue",
       "location_x": -5,
-      "location_y": -8,
-      "element": "Granite",
-      "temperature": 290.194916,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityDisplay",
-      "location_y": -8,
-      "element": "Steel",
-      "temperature": 288.046326,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropFacilityWallDegree",
       "location_x": 14,
-      "location_y": 3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropFacilityPainting",
       "location_x": 15,
-      "location_y": 5,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     }
   ]
 }

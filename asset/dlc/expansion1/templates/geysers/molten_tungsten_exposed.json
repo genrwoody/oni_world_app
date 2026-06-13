@@ -10,14 +10,9 @@
       "Y": -2
     }
   },
-  "cells": [],
   "otherEntities": [
     {
-      "id": "GeyserGeneric_molten_tungsten",
-      "element": "Katairite",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "id": "GeyserGeneric_molten_tungsten"
     }
   ]
 }

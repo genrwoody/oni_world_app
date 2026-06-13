@@ -10,39 +10,11 @@
     },
     "area": 75
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "Chameleon",
-      "location_x": 1,
-      "location_y": 6,
-      "element": "Creature",
-      "temperature": 267.546112,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Chameleon",
-      "location_x": -2,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 267.329102,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "PropGravitasLabTable",
       "location_x": -2,
-      "location_y": -2,
-      "element": "Granite",
-      "temperature": 274.964264,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

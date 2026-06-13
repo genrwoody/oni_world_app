@@ -171,33 +171,6 @@ struct SubworldMixingSettings {
     std::vector<TemplateSpawnRules> additionalWorldTemplateRules;
 };
 
-struct SpaceMapPOIPlacement {
-    std::vector<std::string> pois;
-    int numToSpawn{};
-    MinMax allowedRings = {0, 9999};
-    bool avoidClumping{};
-    bool canSpawnDuplicates{};
-    bool guarantee{};
-};
-
-struct LoreCollectionOverride {
-    std::string id;
-    std::string collection;
-    OrderRule orderRule{};
-};
-
-struct SpaceDestinationMix {
-    int minTier = 0;
-    int maxTier = 99;
-    std::string type;
-};
-
-struct DlcMixingSetting {
-    std::vector<SpaceDestinationMix> spaceDesinations;
-    std::vector<SpaceMapPOIPlacement> spacePois;
-    std::vector<LoreCollectionOverride> globalLoreUnlocks;
-};
-
 struct ModifyLayoutTagsRule {
     std::vector<std::string> addTags;
     std::vector<std::string> removeTags;

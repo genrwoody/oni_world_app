@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.FOREST_LUSH.NAME",
-  "description": "STRINGS.WORLDS.FOREST_LUSH.DESCRIPTION",
   "coordinatePrefix": "LUSH-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 2,
-  "menuOrder": 40,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

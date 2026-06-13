@@ -11,210 +11,75 @@
     },
     "area": 458
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "ColdWheat",
       "location_x": -5,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 244.429565,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.280924082
-        },
-        {
-          "id": "Maturity",
-          "value": 11.9894199
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 244.443176
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 1
     },
     {
       "id": "ColdWheat",
       "location_x": -9,
-      "location_y": -8,
-      "element": "Creature",
-      "temperature": 240.064423,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.674070239
-        },
-        {
-          "id": "Maturity",
-          "value": 11.9854679
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 240.064423
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": -8
     },
     {
       "id": "ColdWheat",
       "location_x": 5,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 299.992523,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 6.8000576e-05
-        },
-        {
-          "id": "Maturity",
-          "value": 5.99881411
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 299.994354
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 1
     },
     {
       "id": "PropLadder",
       "location_x": -2,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
       "location_x": -2,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 237.452576,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
+    },
+    {
+      "id": "PropLadder",
+      "location_x": -2
     },
     {
       "id": "PropLadder",
       "location_x": -2,
-      "element": "Unobtanium",
-      "temperature": 237.285202,
-      "units": 1,
-      "type": "Other"
-    },
-    {
-      "id": "PropLadder",
-      "location_x": -2,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 237.285202,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLight",
       "location_x": -5,
-      "location_y": -5,
-      "element": "Unobtanium",
-      "temperature": 240.600021,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "PropLight",
       "location_x": 11,
-      "location_y": 6,
-      "element": "Unobtanium",
-      "temperature": 238.287201,
-      "units": 1,
-      "type": "Other"
+      "location_y": 6
     },
     {
       "id": "GeneShuffler",
       "location_x": 5,
-      "location_y": 3,
-      "element": "Unobtanium",
-      "temperature": 236.576569,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropDesk",
       "location_x": 11,
-      "location_y": 4,
-      "element": "Unobtanium",
-      "temperature": 238.290207,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "ColdBreather",
       "location_x": 1,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 288.64679,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Temperature",
-          "value": 288.656891
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "VendingMachine",
       "location_x": -8,
-      "location_y": -8,
-      "element": "Unobtanium",
-      "temperature": 241.341568,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     },
     {
       "id": "PropTable",
       "location_x": -5,
-      "location_y": -8,
-      "element": "Unobtanium",
-      "temperature": 242.391617,
-      "units": 1,
-      "type": "Other"
+      "location_y": -8
     }
   ]
 }

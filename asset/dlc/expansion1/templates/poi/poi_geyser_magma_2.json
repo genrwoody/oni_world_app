@@ -11,15 +11,10 @@
       "Y": -2
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_small_volcano",
-      "location_y": -1,
-      "element": "Katairite",
-      "temperature": 99,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

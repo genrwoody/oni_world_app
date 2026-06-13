@@ -10,36 +10,15 @@
     },
     "area": 46
   },
-  "cells": [],
-  "buildings": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropClothesHanger",
-      "location_x": 1,
-      "element": "Cinnabar",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     },
     {
       "id": "IceFlower",
       "location_x": -2,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 243.499268,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.610183418
-        },
-        {
-          "id": "Temperature",
-          "value": 243.417679
-        }
-      ]
+      "location_y": 1
     }
   ]
 }

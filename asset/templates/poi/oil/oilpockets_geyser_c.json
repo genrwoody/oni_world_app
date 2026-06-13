@@ -11,19 +11,11 @@
     },
     "area": 171
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "OilWell",
       "location_x": -1,
-      "location_y": -3,
-      "element": "SedimentaryRock",
-      "temperature": 372.149628,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     }
   ]
 }

@@ -10,115 +10,49 @@
     },
     "area": 260
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "Puft",
-      "location_x": -1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 293.189911,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Puft",
-      "location_x": 2,
-      "location_y": 4,
-      "element": "Creature",
-      "temperature": 297.552826,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "PropLadder",
       "location_x": 2,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": 4,
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLight",
       "location_x": 2,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropLight",
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropLight",
       "location_x": -2,
-      "location_y": 5,
-      "element": "Steel",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "SapTree",
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Temperature",
-          "value": 307.490082
-        }
-      ]
+      "location_y": -1
     }
   ]
 }

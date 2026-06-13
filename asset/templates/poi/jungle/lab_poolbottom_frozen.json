@@ -10,74 +10,41 @@
     },
     "area": 471
   },
-  "cells": [],
-  "buildings": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropLight",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 236.009857,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLight",
       "location_x": 10,
-      "location_y": 1,
-      "element": "Steel",
-      "temperature": 236,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "SetLocker",
       "location_x": 12,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 236,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "SetLocker",
       "location_x": 13,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 236,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
       "location_x": 9,
-      "location_y": -1,
-      "element": "Steel",
-      "temperature": 236.002258,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Steel",
-      "temperature": 236.020493,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "GeneShuffler",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 236,
-      "units": 1,
-      "diseaseName": "SlimeLung",
-      "diseaseCount": 22,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

@@ -10,42 +10,25 @@
     },
     "area": 4938
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_big_volcano",
       "location_x": -14,
-      "location_y": 12,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 12
     },
     {
       "id": "GeyserGeneric_big_volcano",
       "location_x": 33,
-      "location_y": -5,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -5
     },
     {
       "id": "GeyserGeneric_molten_iron",
-      "location_y": -23,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -23
     },
     {
       "id": "GeyserGeneric_hot_hydrogen",
       "location_x": 20,
-      "location_y": 1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     }
   ]
 }

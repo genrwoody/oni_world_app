@@ -10,26 +10,16 @@
     },
     "area": 164
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropGravitasToolCrate",
       "location_x": 3,
-      "location_y": -2,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "GeothermalVentEntity",
       "location_x": 1,
-      "location_y": -2,
-      "element": "Katairite",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

@@ -1,12 +1,8 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_SANDSTONE_FROZEN_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_SANDSTONE_FROZEN_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-SFRZ-C",
-  "menuOrder": 40,
-  "difficulty": 2,
   "clusterCategory": "SpacedOutVanillaStyle",
   "startWorldIndex": 0,
   "numRings": 12,
@@ -421,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

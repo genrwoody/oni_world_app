@@ -1,11 +1,8 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.FOREST_START_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.FOREST_START_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "FRST-C",
-  "menuOrder": 20,
   "clusterCategory": "SpacedOutStyle",
   "startWorldIndex": 0,
   "numRings": 12,
@@ -429,6 +426,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

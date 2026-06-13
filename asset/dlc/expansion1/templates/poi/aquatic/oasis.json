@@ -10,36 +10,10 @@
       "Y": -4
     }
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "ForestTree",
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 298.154572,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 0.000166666679
-        },
-        {
-          "id": "AirPressure"
-        },
-        {
-          "id": "Temperature"
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": -1
     }
   ]
 }

@@ -1,11 +1,8 @@
 {
-  "name": "STRINGS.CLUSTER_NAMES.VANILLA_SANDSTONE_CLUSTER.NAME",
-  "description": "STRINGS.CLUSTER_NAMES.VANILLA_SANDSTONE_CLUSTER.DESCRIPTION",
   "requiredDlcIds": [
     "EXPANSION1_ID"
   ],
   "coordinatePrefix": "V-SNDST-C",
-  "menuOrder": 0,
   "clusterCategory": "SpacedOutVanillaStyle",
   "startWorldIndex": 0,
   "numRings": 12,
@@ -420,6 +417,5 @@
         ]
       }
     }
-  ],
-  "poiPlacements": []
+  ]
 }

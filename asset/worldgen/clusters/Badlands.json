@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.BADLANDS.NAME",
-  "description": "STRINGS.WORLDS.BADLANDS.DESCRIPTION",
   "coordinatePrefix": "BAD-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 4,
-  "menuOrder": 70,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

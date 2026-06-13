@@ -10,60 +10,21 @@
     },
     "area": 107
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "Dinofern",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 253.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 0.00375000038
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.601458251
-        },
-        {
-          "id": "Temperature",
-          "value": 253.305725
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": -2
     },
     {
       "id": "GeyserGeneric_chlorine_gas_cool",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "ColdBreather",
       "location_x": 5,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Temperature",
-          "value": 292.959839
-        }
-      ]
+      "location_y": -1
     }
   ]
 }

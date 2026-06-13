@@ -11,41 +11,22 @@
     },
     "area": 62
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SetLocker",
-      "location_x": 4,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_x": 4
     },
     {
       "id": "SetLocker",
-      "location_x": 3,
-      "element": "Unobtanium",
-      "temperature": 300,
-      "units": 1,
-      "type": "Other"
+      "location_x": 3
     },
     {
       "id": "PropLadder",
-      "location_y": -2,
-      "element": "SandStone",
-      "temperature": 306.983521,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
-      "location_y": -1,
-      "element": "SandStone",
-      "temperature": 307.306976,
-      "type": "Other",
-      "other_values": []
+      "location_y": -1
     }
   ]
 }

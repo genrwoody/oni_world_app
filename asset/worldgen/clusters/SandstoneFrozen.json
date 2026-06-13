@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.SANDSTONE_FROZEN.NAME",
-  "description": "STRINGS.WORLDS.SANDSTONE_FROZEN.DESCRIPTION",
   "coordinatePrefix": "S-FRZ",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 2,
-  "menuOrder": 20,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

@@ -11,115 +11,26 @@
     },
     "area": 218
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SpiceVine",
       "location_x": 4,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 299.960175,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 1
-        },
-        {
-          "id": "Maturity",
-          "value": 13.2110929
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 299.96283
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "SpiceVine",
       "location_x": -5,
-      "location_y": 7,
-      "element": "Creature",
-      "temperature": 299.969818,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 1
-        },
-        {
-          "id": "Maturity",
-          "value": 16.5325928
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 299.971985
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 7
     },
     {
       "id": "SpiceVine",
       "location_x": -1,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 319.443756,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 1
-        },
-        {
-          "id": "Maturity",
-          "value": 15.7462816
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 319.476166
-        },
-        {
-          "id": "Irrigation"
-        },
-        {
-          "id": "Fertilization"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "GeyserGeneric_steam",
       "location_x": -3,
-      "location_y": 4,
-      "element": "IgneousRock",
-      "temperature": 299.997498,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     }
   ]
 }

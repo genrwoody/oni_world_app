@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.FOREST_DEFAULT.NAME",
-  "description": "STRINGS.WORLDS.FOREST_DEFAULT.DESCRIPTION",
   "coordinatePrefix": "FRST-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 3,
-  "menuOrder": 50,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

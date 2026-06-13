@@ -10,154 +10,26 @@
     },
     "area": 89
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [
-    {
-      "id": "SaltPlantSeed",
-      "location_x": 3,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "artifact_robotarm",
-      "location_x": -3,
-      "location_y": -2,
-      "element": "Creature",
-      "temperature": 295.454071,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "MosquitoBaby",
-      "location_x": 1,
-      "location_y": -3,
-      "element": "Creature",
-      "temperature": 300.56543,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "MosquitoBaby",
-      "location_x": 2,
-      "location_y": -4,
-      "element": "Creature",
-      "temperature": 301.375763,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "MosquitoBaby",
-      "location_y": -4,
-      "element": "Creature",
-      "temperature": 300.936615,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "MosquitoBaby",
-      "location_x": 1,
-      "location_y": -4,
-      "element": "Creature",
-      "temperature": 300.531616,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": -1,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 307.930084,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": 1,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 307.945099,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": 2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 307.955597,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": -2,
-      "element": "Creature",
-      "temperature": 308.100494,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Mosquito",
-      "location_x": -2,
-      "location_y": 1,
-      "element": "Creature",
-      "temperature": 308.108978,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "FossilBitsSmall",
       "location_x": 2,
-      "location_y": -4,
-      "element": "Fossil",
-      "temperature": 315,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropGravitasCeilingRobot",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
       "location_x": -1,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

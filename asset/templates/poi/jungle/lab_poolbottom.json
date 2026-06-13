@@ -11,116 +11,51 @@
     },
     "area": 471
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "SpiceVine",
       "location_x": -1,
-      "location_y": 3,
-      "element": "Creature",
-      "temperature": 300.21109,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "AirPressure",
-          "value": 0.937941551
-        },
-        {
-          "id": "Maturity",
-          "value": 5.84115076
-        },
-        {
-          "id": "OldAge"
-        },
-        {
-          "id": "Temperature",
-          "value": 300.196381
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "Irrigation"
-        }
-      ]
+      "location_y": 3
     },
     {
       "id": "Glom",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 300.016418,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "GeneShuffler",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 315.578796,
-      "units": 1,
-      "diseaseName": "SlimeLung",
-      "diseaseCount": 196,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 316.80658,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropDesk",
       "location_x": 9,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 316.634125,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "SetLocker",
       "location_x": 13,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 317.009125,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "SetLocker",
       "location_x": 12,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 316.217285,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLight",
       "location_x": 10,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 314.912903,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLight",
       "location_x": 1,
-      "location_y": 2,
-      "element": "Unobtanium",
-      "temperature": 317.957367,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     }
   ]
 }

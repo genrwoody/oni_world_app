@@ -11,17 +11,9 @@
     },
     "area": 38
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
-      "id": "GeyserGeneric_slush_water",
-      "element": "IgneousRock",
-      "temperature": 367.421021,
-      "units": 1,
-      "type": "Other"
+      "id": "GeyserGeneric_slush_water"
     }
   ]
 }

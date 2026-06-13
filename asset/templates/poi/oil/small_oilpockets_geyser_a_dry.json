@@ -10,14 +10,9 @@
     },
     "area": 62
   },
-  "cells": [],
   "otherEntities": [
     {
-      "id": "OilWell",
-      "element": "SedimentaryRock",
-      "temperature": 372.147186,
-      "units": 1,
-      "type": "Other"
+      "id": "OilWell"
     }
   ]
 }

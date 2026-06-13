@@ -11,60 +11,34 @@
     },
     "area": 35
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropLight",
-      "location_y": 5,
-      "element": "Cuprite",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropLadder",
-      "location_y": -1,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropLadder",
-      "location_y": 1,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropLadder",
-      "location_y": -4,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
-      "location_y": 2,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropLadder",
-      "location_y": 3,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "PropLadder",
-      "location_y": -2,
-      "element": "SandStone",
-      "temperature": 293.149994,
-      "type": "Other",
-      "other_values": []
+      "location_y": -2
     }
   ]
 }

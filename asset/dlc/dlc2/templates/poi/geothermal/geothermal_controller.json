@@ -10,132 +10,74 @@
     },
     "area": 386
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropGravitasHandScanner",
       "location_x": 8,
-      "location_y": 2,
-      "element": "Granite",
-      "temperature": 294.150238,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropGravitasToolShelf",
       "location_x": -7,
-      "location_y": -1,
-      "element": "Granite",
-      "temperature": 294.150299,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     },
     {
       "id": "PropClock",
       "location_x": 8,
-      "location_y": 4,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "PropLight",
       "location_x": -7,
-      "location_y": 2,
-      "element": "Steel",
-      "temperature": 294.149902,
-      "units": 1,
-      "type": "Other"
+      "location_y": 2
     },
     {
       "id": "PropGravitasDeskPodiumGeothermalPlant",
       "location_x": 6,
-      "location_y": 1,
-      "element": "Granite",
-      "temperature": 294.14801,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     },
     {
       "id": "PropExoSetLocker",
       "location_x": -7,
-      "location_y": -4,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropDlc2GeothermalCart",
       "location_x": -6,
-      "location_y": -4,
-      "element": "Granite",
-      "temperature": 294.152466,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -3,
-      "element": "Polypropylene",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -3
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -2,
-      "element": "Polypropylene",
-      "temperature": 294.150116,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "location_y": -1,
-      "element": "Polypropylene",
-      "temperature": 294.150269,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
+    },
+    {
+      "id": "PropLadder",
+      "location_x": -4
     },
     {
       "id": "PropLadder",
       "location_x": -4,
-      "element": "Polypropylene",
-      "temperature": 294.150238,
-      "units": 1,
-      "type": "Other"
-    },
-    {
-      "id": "PropLadder",
-      "location_x": -4,
-      "location_y": -4,
-      "element": "Polypropylene",
-      "temperature": 294.150085,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "PropGravitasFloorRobot",
       "location_x": 4,
-      "location_y": -4,
-      "element": "Granite",
-      "temperature": 294.149597,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     },
     {
       "id": "GeothermalControllerEntity",
-      "location_y": -4,
-      "element": "Unobtanium",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -4
     }
   ]
 }

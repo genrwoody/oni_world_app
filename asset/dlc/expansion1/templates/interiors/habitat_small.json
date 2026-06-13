@@ -10,17 +10,11 @@
       "Y": -3
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "ClustercraftInteriorDoor",
       "location_x": -3,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

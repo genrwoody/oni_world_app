@@ -10,47 +10,11 @@
     },
     "area": 53
   },
-  "cells": [],
-  "pickupables": [
-    {
-      "id": "RaptorBaby",
-      "location_x": 2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 273.13382,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Warm_Vest",
-      "location_y": -1,
-      "element": "Carbon",
-      "temperature": 291.20047,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    },
-    {
-      "id": "Warm_Vest",
-      "location_x": -1,
-      "location_y": -1,
-      "element": "Carbon",
-      "temperature": 276.71994,
-      "units": 1,
-      "type": "Pickupable",
-      "rottable": {}
-    }
-  ],
   "otherEntities": [
     {
       "id": "PropExoSetLocker",
       "location_x": -2,
-      "location_y": -1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

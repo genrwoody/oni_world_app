@@ -10,58 +10,32 @@
       "Y": -9
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "PropGravitasCeilingRobot",
-      "location_y": 5,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": 5
     },
     {
       "id": "PropGravitasFloorRobot",
-      "location_x": -3,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": -3
     },
     {
       "id": "PropGravitasDisplay4",
-      "location_x": 4,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 4
     },
     {
       "id": "PropGravitasRobitcTable",
       "location_x": -2,
-      "location_y": -6,
-      "element": "Granite",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "WarpReceiver",
       "location_x": 2,
-      "location_y": -6,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -6
     },
     {
       "id": "WarpPortal",
-      "location_x": 1,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_x": 1
     }
   ]
 }

@@ -11,17 +11,11 @@
       "Y": -2
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "SetLocker",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Cuprite",
-      "temperature": 303,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

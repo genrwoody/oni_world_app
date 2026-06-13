@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.VOLCANIC.NAME",
-  "description": "STRINGS.WORLDS.VOLCANIC.DESCRIPTION",
   "coordinatePrefix": "VOLCA",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 3,
-  "menuOrder": 60,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

@@ -10,77 +10,21 @@
     },
     "area": 67
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "BlueGrass",
       "location_x": 2,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 240,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 2
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.699999988
-        },
-        {
-          "id": "Temperature",
-          "value": 240
-        },
-        {
-          "id": "OldAge",
-          "value": 1.40000021
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "BlueGrass",
       "location_x": 3,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 240,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity",
-          "value": 2
-        },
-        {
-          "id": "Fertilization"
-        },
-        {
-          "id": "AirPressure",
-          "value": 0.699999988
-        },
-        {
-          "id": "Temperature",
-          "value": 240
-        },
-        {
-          "id": "OldAge",
-          "value": 1.40000021
-        }
-      ]
+      "location_y": -1
     },
     {
       "id": "POICeresTechUnlock",
       "location_x": -1,
-      "location_y": -1,
-      "element": "Creature",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

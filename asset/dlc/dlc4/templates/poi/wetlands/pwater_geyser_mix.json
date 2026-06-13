@@ -10,40 +10,15 @@
     },
     "area": 40
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "FlyTrapPlant",
       "location_x": 2,
-      "location_y": 2,
-      "element": "Creature",
-      "temperature": 291.149994,
-      "units": 1,
-      "type": "Other",
-      "amounts": [
-        {
-          "id": "Maturity"
-        },
-        {
-          "id": "AirPressure",
-          "value": 1.00397813
-        },
-        {
-          "id": "Temperature",
-          "value": 291.249908
-        },
-        {
-          "id": "OldAge"
-        }
-      ]
+      "location_y": 2
     },
     {
       "id": "GeyserGeneric_filthy_water",
-      "location_y": -1,
-      "element": "Katairite",
-      "temperature": 372.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -1
     }
   ]
 }

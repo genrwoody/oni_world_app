@@ -10,25 +10,16 @@
     },
     "area": 474
   },
-  "cells": [],
   "otherEntities": [
     {
       "id": "GeyserGeneric_molten_gold",
       "location_x": -6,
-      "location_y": 4,
-      "element": "Katairite",
-      "temperature": 1573.15002,
-      "units": 1,
-      "type": "Other"
+      "location_y": 4
     },
     {
       "id": "GeyserGeneric_molten_gold",
       "location_x": 6,
-      "location_y": -2,
-      "element": "Katairite",
-      "temperature": 1573.15002,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     }
   ]
 }

@@ -1,13 +1,9 @@
 {
-  "name": "STRINGS.WORLDS.OASIS.NAME",
-  "description": "STRINGS.WORLDS.OASIS.DESCRIPTION",
   "coordinatePrefix": "OASIS-A",
   "forbiddenDlcIds": [
     "EXPANSION1_ID"
   ],
   "clusterCategory": "Vanilla",
-  "difficulty": 5,
-  "menuOrder": 90,
   "startWorldIndex": 0,
   "worldPlacements": [
     {

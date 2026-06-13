@@ -11,18 +11,10 @@
     },
     "area": 178
   },
-  "cells": [],
-  "buildings": [],
-  "pickupables": [],
-  "elementalOres": [],
   "otherEntities": [
     {
       "id": "PropSurfaceSatellite1",
-      "location_y": -11,
-      "element": "Unobtanium",
-      "temperature": 294.149994,
-      "units": 1,
-      "type": "Other"
+      "location_y": -11
     }
   ]
 }

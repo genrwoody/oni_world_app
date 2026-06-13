@@ -11,53 +11,31 @@
       "Y": -3
     }
   },
-  "cells": [],
-  "buildings": [],
   "otherEntities": [
     {
       "id": "WarpPortal",
       "location_x": -10,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "CryoTank",
       "location_x": -3,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropLight",
       "location_x": -2,
-      "location_y": 3,
-      "element": "Steel",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": 3
     },
     {
       "id": "WarpReceiver",
       "location_x": 9,
-      "location_y": -2,
-      "element": "Unobtanium",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": -2
     },
     {
       "id": "PropClock",
       "location_x": 2,
-      "location_y": 1,
-      "element": "Unobtanium",
-      "temperature": 293,
-      "units": 1,
-      "type": "Other"
+      "location_y": 1
     }
   ]
 }
