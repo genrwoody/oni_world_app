@@ -1,6 +1,12 @@
 #pragma once
 
+#include <vector>
+#include <map>
+#include <variant>
+
 #include "SampleDescriber.hpp"
+
+using Variant = std::variant<bool, float, std::string>;
 
 struct BaseLocation {
     int left{};
@@ -28,10 +34,4 @@ struct WeightedSimHash {
     std::string element;
     float weight{};
     Override overrides;
-};
-
-// for temperatures.json
-struct Temperature {
-    float min{};
-    float max{};
 };

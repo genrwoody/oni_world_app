@@ -51,6 +51,18 @@ def refresh_info(cells: list, info: dict):
     if "discover_tags" in info:
         del info["discover_tags"]
 
+def is_temperatures(source: str):
+    return str(Path("/worldgen/temperatures")) in source
+
+def handle_temperatures(obj: dict, source: Path):
+    if "remove" in obj and obj["remove"]:
+        print("error: unsupported temperatures.yaml")
+        return False
+    add = obj["add"]
+    obj.clear()
+    obj.update(add)
+    return True
+
 def is_clusters(source: str):
     return str(Path("/worldgen/clusters/")) in source
 
@@ -133,6 +145,7 @@ def handle_templates(obj: dict, source: Path):
 
 def handle(obj: dict, source: Path):
     dispatcher = [
+        (is_temperatures, handle_temperatures),
         (is_clusters, handle_clusters),
         (is_features, handle_features),
         (is_traits, handle_traits),

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DefaultSettings.hpp"
+#include "Utils/Vector2f.hpp"
 
 struct Feature {
     std::string type;

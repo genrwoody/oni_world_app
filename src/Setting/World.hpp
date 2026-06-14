@@ -3,6 +3,8 @@
 #include "DefaultSettings.hpp"
 #include "WorldGenClasses.hpp"
 
+class SettingsCache;
+
 struct SubWorld {
     std::string name;
     PointSelectionMethod selectMethod{};
@@ -109,7 +111,7 @@ struct World {
     std::vector<const TemplateSpawnRules *> worldTemplateRules2;
     std::vector<WeightedSubworldName> mixingSubworlds;
 
-    void ApplayMixings(std::vector<MixingConfig *> &mixings);
+    void ApplayMixings(std::vector<struct MixingConfig *> &mixings);
     void ApplayTraits(const WorldTrait &traits, const SettingsCache &settings);
     void ClearMixingsAndTraits();
 };

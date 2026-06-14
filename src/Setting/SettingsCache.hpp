@@ -1,5 +1,6 @@
 #pragma once
 
+#include <set>
 #include <string_view>
 
 #include "Utils/Log.hpp"
@@ -40,7 +41,7 @@ public:
 
 public:
     DefaultSettings defaults;
-    std::map<Range, Temperature> temperatures;
+    std::map<Range, MinMax> temperatures;
 
     std::map<std::string, ClusterLayout> clusters;
     std::map<std::string, FeatureSettings> features;

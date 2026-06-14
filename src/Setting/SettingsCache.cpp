@@ -28,6 +28,25 @@ inline bool string_view_to_number(const std::string_view& str, Ty& out)
     return err == std::errc{};
 }
 
+namespace Setting
+{
+template<>
+bool deserialize(const Json::Value &json, std::map<Range, MinMax> &obj)
+{
+    for (auto itr = json.begin(); itr != json.end(); ++itr) {
+        Range key;
+        MinMax value;
+        if (!Deserializer<Range>::deserialize(itr.name(), key) ||
+            !Deserializer<MinMax>::deserialize(*itr, value)) {
+            LogE("object std::map<Range, MinMax> parse failed.");
+            return false;
+        }
+        obj[key] = value;
+    }
+    return true;
+}
+} // namespace Setting
+
 template<typename T>
 static bool LoadJsonFile(mz_zip_archive &zip, int index, T &result)
 {
@@ -116,14 +135,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/temperatures.json") != nullptr) {
-            ComposableDictionary<Temperature> temperatureDict;
-            LoadJsonFile(zip, i, temperatureDict);
-            for (auto &pair : temperatureDict.add) {
-                Range range;
-                if (Setting::deserialize<Range>(pair.first, range)) {
-                    temperatures.emplace(range, pair.second);
-                }
-            }
+            LoadJsonFile(zip, i, temperatures);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/clusters/") != nullptr) {

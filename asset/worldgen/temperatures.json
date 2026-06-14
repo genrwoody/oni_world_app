@@ -1,57 +1,54 @@
 {
-  "remove": [],
-  "add": {
-    "ExtremelyCold": {
-      "min": 60.0,
-      "max": 150.0
-    },
-    "VeryVeryCold": {
-      "min": 183,
-      "max": 200
-    },
-    "VeryCold": {
-      "min": 200.0,
-      "max": 227.0
-    },
-    "Cold": {
-      "min": 227.0,
-      "max": 240.0
-    },
-    "Chilly": {
-      "min": 240.0,
-      "max": 257.0
-    },
-    "Cool": {
-      "min": 257.0,
-      "max": 280.0
-    },
-    "Mild": {
-      "min": 280.0,
-      "max": 293.0
-    },
-    "Room": {
-      "min": 293.0,
-      "max": 298.0
-    },
-    "HumanWarm": {
-      "min": 298.0,
-      "max": 313.0
-    },
-    "HumanHot": {
-      "min": 313.0,
-      "max": 323.0
-    },
-    "Hot": {
-      "min": 323.0,
-      "max": 373.0
-    },
-    "VeryHot": {
-      "min": 373.0,
-      "max": 570.0
-    },
-    "ExtremelyHot": {
-      "min": 1500.0,
-      "max": 1800.0
-    }
+  "ExtremelyCold": {
+    "min": 60.0,
+    "max": 150.0
+  },
+  "VeryVeryCold": {
+    "min": 183,
+    "max": 200
+  },
+  "VeryCold": {
+    "min": 200.0,
+    "max": 227.0
+  },
+  "Cold": {
+    "min": 227.0,
+    "max": 240.0
+  },
+  "Chilly": {
+    "min": 240.0,
+    "max": 257.0
+  },
+  "Cool": {
+    "min": 257.0,
+    "max": 280.0
+  },
+  "Mild": {
+    "min": 280.0,
+    "max": 293.0
+  },
+  "Room": {
+    "min": 293.0,
+    "max": 298.0
+  },
+  "HumanWarm": {
+    "min": 298.0,
+    "max": 313.0
+  },
+  "HumanHot": {
+    "min": 313.0,
+    "max": 323.0
+  },
+  "Hot": {
+    "min": 323.0,
+    "max": 373.0
+  },
+  "VeryHot": {
+    "min": 373.0,
+    "max": 570.0
+  },
+  "ExtremelyHot": {
+    "min": 1500.0,
+    "max": 1800.0
   }
 }

@@ -9,7 +9,8 @@
 
 #include <json/value.h>
 
-#include "ComposableDictionary.hpp"
+#include "Utils/Vector2f.hpp"
+#include "Utils/Log.hpp"
 
 template<typename T>
 struct Deserializer {
@@ -142,27 +143,6 @@ struct Deserializer<Vector2f> {
 
         if ((int)value.size() != count) {
             LogE("object Vector2f parse failed.");
-            return false;
-        }
-        return true;
-    }
-};
-
-template<typename T>
-struct Deserializer<ComposableDictionary<T>> {
-    static bool deserialize(const Json::Value &value,
-                            ComposableDictionary<T> &obj)
-    {
-        value.find("ff");
-        int count = 0;
-        const Json::Value *ptr = nullptr;
-        if ((ptr = value.find("add")) != nullptr)
-            count += Setting::deserialize(*ptr, obj.add) ? 1 : 0;
-        if ((ptr = value.find("remove")) != nullptr)
-            count += Setting::deserialize(*ptr, obj.remove) ? 1 : 0;
-
-        if ((int)value.size() != count) {
-            LogE("object ComposableDictionary parse failed.");
             return false;
         }
         return true;
