@@ -157,6 +157,7 @@ enum class Range {
     Room,
     HumanWarm,
     HumanHot,
+    SomewhatHot,
     Hot,
     VeryHot,
     ExtremelyHot

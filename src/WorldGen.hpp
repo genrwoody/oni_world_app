@@ -66,8 +66,8 @@ inline std::string ZoneTypeToString(ZoneType zone)
 inline std::string TempRangeToString(Range range)
 {
     const char *dict[] = {
-        "ExtremelyCold", "VeryVeryCold", "VeryCold",    "Cold",      "Chilly",
-        "Cool",          "Mild",         "Room",        "HumanWarm", "HumanHot",
-        "Hot",           "VeryHot",      "ExtremelyHot"};
+        "ExtremelyCold", "VeryVeryCold", "VeryCold", "Cold",        "Chilly",
+        "Cool",          "Mild",         "Room",     "HumanWarm",   "HumanHot",
+        "SomewhatHot",   "Hot",          "VeryHot",  "ExtremelyHot"};
     return dict[(int)range];
 }

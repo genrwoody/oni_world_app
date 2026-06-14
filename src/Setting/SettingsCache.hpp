@@ -54,7 +54,7 @@ public:
     std::map<std::string, TemplateContainer> templates;
 
     std::set<Feature> traitFeatures;
-    std::vector<MixingConfig> mixConfigs;
+    std::array<MixingConfig, 17> mixConfigs;
 
 private:
     static Variant m_nil;
@@ -63,6 +63,7 @@ private:
     ClusterLayout *m_cluster = nullptr;
 
 public:
+    SettingsCache();
     int Seed() const { return m_seed; }
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text);
@@ -74,7 +75,7 @@ public:
     void SetSeedWithTraits(const std::vector<World *> &worlds, int traitsFlag,
                            KRandom &random);
     void DoSubworldMixing(std::vector<World *> worlds);
-    static uint32_t Base36ToBinary(const std::string_view &input);
+    static uint64_t Base36ToBinary(const std::string_view &input);
     static std::string BinaryToBase36(uint32_t input);
 
     template<typename T>
@@ -96,5 +97,5 @@ public:
 
 private:
     bool InitializeCluster(const std::string_view &coord);
-    void ParseAndApplyMixingSettingsCode(uint32_t num);
+    void ParseAndApplyMixingSettingsCode(uint64_t num);
 };

@@ -71,7 +71,7 @@ def handle_clusters(obj: dict, source: Path):
         return False
     remove = ["poiPlacements", "name", "description", "welcomeMessage", \
               "clusterAudio", "clusterUnlocks", "dlcIdFrom", "difficulty", \
-              "menuOrder", "mixedPoiPlacements"]
+              "menuOrder", "mixedPoiPlacements", "startingMinions"]
     for key in remove:
         if key in obj:
             del obj[key]

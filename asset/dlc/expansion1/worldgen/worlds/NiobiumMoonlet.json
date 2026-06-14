@@ -72,7 +72,10 @@
     {
       "name": "(CoreMixing)",
       "minCount": 2,
-      "maxCount": 2
+      "maxCount": 2,
+      "forbiddenTags": [
+        "LargePOIs"
+      ]
     }
   ],
   "fixedTraits": [

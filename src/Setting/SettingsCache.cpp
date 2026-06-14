@@ -104,6 +104,29 @@ static std::string GenerateKey(const char *filename)
     return key;
 }
 
+SettingsCache::SettingsCache()
+    : mixConfigs{{
+          {"DLC2_ID", MixingType::Dlc},
+          {"dlc2::subworldMixing/IceCavesMixingSettings"},
+          {"dlc2::subworldMixing/CarrotQuarryMixingSettings"},
+          {"dlc2::subworldMixing/SugarWoodsMixingSettings"},
+          {"dlc2::worldMixing/CeresMixingSettings", MixingType::World},
+          {"DLC3_ID", MixingType::Dlc},
+          {"DLC4_ID", MixingType::Dlc},
+          {"dlc4::subworldMixing/GardenMixingSettings"},
+          {"dlc4::subworldMixing/RaptorMixingSettings"},
+          {"dlc4::subworldMixing/WetlandsMixingSettings"},
+          {"dlc4::worldMixing/PrehistoricMixingSettings", MixingType::World},
+          {"DLC5_ID", MixingType::Dlc},
+          {"dlc5::subworldMixing/BeachMixingSettings"},
+          {"dlc5::subworldMixing/ReefMixingSettings"},
+          {"dlc5::subworldMixing/KelpForestMixingSettings"},
+          {"dlc5::subworldMixing/AbyssMixingSettings"},
+          {"dlc5::worldMixing/AquaticMixingSettings", MixingType::World},
+      }}
+{
+}
+
 bool SettingsCache::LoadSettingsCache(const std::string_view &content)
 {
     if (!defaults.data.empty()) {
@@ -114,7 +137,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         LogE("wrong content");
         return false;
     }
-    size_t mixConfigsCount = 0;
     std::map<std::string, std::vector<std::string>> Asubworlds;
     auto count = mz_zip_reader_get_num_files(&zip);
     for (unsigned i = 0; i < count; ++i) {
@@ -149,7 +171,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/subworldMixing/") != nullptr) {
-            mixConfigsCount++;
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, subworldMixing[key]);
             continue;
@@ -173,7 +194,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/worldMixing/") != nullptr) {
-            mixConfigsCount++;
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, worldMixing[key]);
             continue;
@@ -203,31 +223,17 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             }
         }
     }
-    mixConfigs.reserve(mixConfigsCount + 3);
-    mixConfigs = {
-        {"DLC2_ID", MixingType::Dlc},
-        {"dlc2::subworldMixing/IceCavesMixingSettings"},
-        {"dlc2::subworldMixing/CarrotQuarryMixingSettings"},
-        {"dlc2::subworldMixing/SugarWoodsMixingSettings"},
-        {"dlc2::worldMixing/CeresMixingSettings", MixingType::World},
-        {"DLC3_ID", MixingType::Dlc},
-        {"DLC4_ID", MixingType::Dlc},
-        {"dlc4::subworldMixing/GardenMixingSettings"},
-        {"dlc4::subworldMixing/RaptorMixingSettings"},
-        {"dlc4::subworldMixing/WetlandsMixingSettings"},
-        {"dlc4::worldMixing/PrehistoricMixingSettings", MixingType::World},
-    };
     return true;
 }
 
-uint32_t SettingsCache::Base36ToBinary(const std::string_view &input)
+uint64_t SettingsCache::Base36ToBinary(const std::string_view &input)
 {
     uint8_t dict[] = {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  // 0-9
                       0,  0,  0,  0,  0,  0,  0,              // 3A-40
                       10, 11, 12, 13, 14, 15, 16, 17, 18, 19, // A-J
                       20, 21, 22, 23, 24, 25, 26, 27, 28, 29, // K-T
                       30, 31, 32, 33, 34, 35};                // U-Z
-    uint32_t result = 0;
+    uint64_t result = 0;
     for (auto itr = input.rbegin(); itr != input.rend(); ++itr) {
         result *= 36;
         result += dict[*itr - '0'];
@@ -287,7 +293,7 @@ bool SettingsCache::CoordinateChanged(const std::string &text)
         LogE("can not convert seed code to number.");
         return false;
     }
-    uint32_t mix = Base36ToBinary(codes[5]);
+    uint64_t mix = Base36ToBinary(codes[5]);
     ParseAndApplyMixingSettingsCode(mix);
     return InitializeCluster(codes[1]);
 }
@@ -350,7 +356,7 @@ bool SettingsCache::InitializeWorlds(std::vector<World *> &chosenWorlds)
     return true;
 }
 
-void SettingsCache::ParseAndApplyMixingSettingsCode(uint32_t num)
+void SettingsCache::ParseAndApplyMixingSettingsCode(uint64_t num)
 {
     for (auto itr = mixConfigs.rbegin(); itr != mixConfigs.rend(); ++itr) {
         itr->level = (MixingLevel)(num % 5);
