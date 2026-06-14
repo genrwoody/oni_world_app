@@ -39,26 +39,17 @@ public:
     using WorldTraitArray = std::inplace_vector<const WorldTrait *, 4>;
 
 public:
-    // ComposableDictionary<std::vector<WeightedSimHash>> borders;
     DefaultSettings defaults;
-    // LevelLayerSettings layers;
-    // MobSettings mobs;
-    // ComposableDictionary<River> rivers;
-    // ComposableDictionary<Room> rooms;
     std::map<Range, Temperature> temperatures;
 
-    // std::map<std::string, std::vector<ElementGradient>> biomes;
     std::map<std::string, ClusterLayout> clusters;
     std::map<std::string, FeatureSettings> features;
-    // std::map<std::string, NoiseTree> noise;
-    // std::map<std::string, WorldTrait> storytraits;
     std::map<std::string, SubworldMixingSettings> subworldMixing;
     std::map<std::string, SubWorld> subworlds;
     std::map<std::string, std::vector<SubWorld *>> orderedSubworlds;
     std::map<std::string, WorldTrait> traits;
     std::map<std::string, WorldMixingSettings> worldMixing;
     std::map<std::string, World> worlds;
-    //std::map<std::string, DlcMixingSetting> dlcMixings;
     std::map<std::string, TemplateContainer> templates;
 
     std::set<Feature> traitFeatures;

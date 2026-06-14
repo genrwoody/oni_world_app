@@ -150,17 +150,6 @@ struct FeatureSettings {
     std::vector<std::string> excludeTags;
 };
 
-struct ElementGradient {
-    std::string content;
-    float bandSize{};
-    float maxValue{};
-    Override overrides;
-};
-
-struct BiomeSettings {
-    ComposableDictionary<std::vector<ElementGradient>> TerrainBiomeLookupTable;
-};
-
 struct SubworldMixingSettings {
     std::string name;
     std::string description;

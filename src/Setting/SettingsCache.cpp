@@ -115,18 +115,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             LoadJsonFile(zip, i, defaults);
             continue;
         }
-        if (strstr(stat.m_filename, "worldgen/layers.json") != nullptr) {
-            // LoadJsonFile(zip, i, layers);
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/rooms.json") != nullptr) {
-            // LoadJsonFile(zip, i, rooms);
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/rivers.json") != nullptr) {
-            // LoadJsonFile(zip, i, rivers);
-            continue;
-        }
         if (strstr(stat.m_filename, "worldgen/temperatures.json") != nullptr) {
             ComposableDictionary<Temperature> temperatureDict;
             LoadJsonFile(zip, i, temperatureDict);
@@ -138,39 +126,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             }
             continue;
         }
-        if (strstr(stat.m_filename, "worldgen/borders.json") != nullptr) {
-            // ComposableDictionary<std::vector<WeightedSimHash>> borders2;
-            // LoadJsonFile(zip, i, borders2);
-            // borders.Merge(borders2);
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/mobs.json") != nullptr) {
-            // MobSettings mobs2;
-            // LoadJsonFile(zip, i, mobs2);
-            // mobs.MobLookupTable.Merge(mobs2.MobLookupTable);
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/mixing.json") != nullptr) {
-            mixConfigsCount++;
-            //if (strstr(stat.m_filename, "dlc/dlc2") != nullptr) {
-            //    LoadJsonFile(zip, i, dlcMixings["dlc2"]);
-            //} else if (strstr(stat.m_filename, "dlc/dlc4") != nullptr) {
-            //    LoadJsonFile(zip, i, dlcMixings["dlc4"]);
-            //} else {
-            //    LoadJsonFile(zip, i, dlcMixings["dlc3"]);
-            //}
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/biomes/") != nullptr) {
-            // std::string key = GenerateKey(stat.m_filename);
-            // BiomeSettings biomes2;
-            // LoadJsonFile(zip, i, biomes2);
-            // for (auto &pair : biomes2.TerrainBiomeLookupTable.add) {
-            //     std::string name = key + "/" + pair.first;
-            //     biomes.emplace(name, std::move(pair.second));
-            // }
-            continue;
-        }
         if (strstr(stat.m_filename, "worldgen/clusters/") != nullptr) {
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, clusters[key]);
@@ -179,14 +134,6 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
         if (strstr(stat.m_filename, "worldgen/features/") != nullptr) {
             std::string key = GenerateKey(stat.m_filename);
             LoadJsonFile(zip, i, features[key]);
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/noise/") != nullptr) {
-            continue;
-        }
-        if (strstr(stat.m_filename, "worldgen/storytraits/") != nullptr) {
-            // std::string key = GenerateKey(stat.m_filename);
-            // LoadJsonFile(zip, i, storytraits[key]);
             continue;
         }
         if (strstr(stat.m_filename, "worldgen/subworldMixing/") != nullptr) {
@@ -244,7 +191,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             }
         }
     }
-    mixConfigs.reserve(mixConfigsCount);
+    mixConfigs.reserve(mixConfigsCount + 3);
     mixConfigs = {
         {"DLC2_ID", MixingType::Dlc},
         {"dlc2::subworldMixing/IceCavesMixingSettings"},

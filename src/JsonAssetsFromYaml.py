@@ -5,6 +5,13 @@ import re
 from pathlib import Path
 
 excludes = [
+    Path("/worldgen/layers"),
+    Path("/worldgen/rooms"),
+    Path("/worldgen/rivers"),
+    Path("/worldgen/borders"),
+    Path("/worldgen/mobs"),
+    Path("/worldgen/mixing"),
+    Path("/worldgen/biomes"),
     Path("/worldgen/noise/"),
     Path("/worldgen/storytraits/"),
     Path("/templates/storytraits/"),

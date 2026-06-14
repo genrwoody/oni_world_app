@@ -162,13 +162,6 @@ enum class Range {
     ExtremelyHot
 };
 
-enum class Type {
-    Building, //
-    Ore,
-    Pickupable,
-    Other
-};
-
 enum class Orientation {
     Neutral, //
     R90,
