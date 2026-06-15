@@ -2,6 +2,8 @@ import sys
 import yaml
 import json
 import re
+import heapq
+import hashlib
 from pathlib import Path
 
 excludes = [
@@ -19,6 +21,8 @@ excludes = [
     Path("/templates/rough unused poi/"),
 ]
 
+heap = [] # show the top ten files by size.
+sha1 = hashlib.sha1() # calculate the sha1 of all files(with path).
 float_regex = re.compile(r"^[+-]?\.\d+$")
 
 # fix float number like: -.1, +.2
@@ -157,12 +161,11 @@ def handle(obj: dict, source: Path):
             return function(obj, source)
     return True
 
-def convert_yaml_to_json(source: Path, target: Path):
+def convert_yaml_to_json(source: Path, target: Path, destpath: Path):
     for exclude in excludes:
         if str(exclude) in str(source):
             print(f"skip: {source}")
             return
-    target.parent.mkdir(parents = True, exist_ok = True)
     with open(source, "r") as stm:
         obj = yaml.safe_load(stm)
         if not handle(obj, source):
@@ -170,11 +173,21 @@ def convert_yaml_to_json(source: Path, target: Path):
             return
         if target.name == "GeoDormant.json":
             target = target.parent / "Geodormant.json"
-        with open(target, "w", newline="") as out:
+        sha1.update(bytes(target))
+        fullpath = destpath / target
+        fullpath.parent.mkdir(parents = True, exist_ok = True)
+        with open(fullpath, "w", newline="") as out:
             chunk = json.dumps(obj, indent = 2)
             out.write(chunk)
+            sha1.update(chunk.encode("utf-8"))
+            if len(heap) < 10:
+                heapq.heappush(heap, (len(chunk), str(target)))
+            elif len(chunk) > heap[0][0]:
+                heapq.heappop(heap)
+                heapq.heappush(heap, (len(chunk), str(target)))
             if chunk.endswith("}"):
                 out.write("\n")
+                sha1.update(b"\n")
 
 def main():
     if len(sys.argv) < 2:
@@ -187,9 +200,15 @@ def main():
     destpath = Path(sys.argv[0] + "/../../asset").resolve()
     for subdir in ["dlc", "templates", "worldgen"]:
         for source in (basepath / subdir).rglob("*.yaml"):
-            target = destpath / source.relative_to(basepath)
+            target = source.relative_to(basepath)
             target = target.with_suffix(".json")
-            convert_yaml_to_json(source, target)
+            convert_yaml_to_json(source, target, destpath)
+    with open(destpath / "sha1.txt", "w", newline="") as out:
+        out.write(sha1.hexdigest())
+    print("\nthe top ten files by size:")
+    top10 = sorted(heap, reverse = True)
+    for size, file in top10:
+        print(f"file: {file}, size: {size}")
 
 if __name__ == "__main__":
     main()
