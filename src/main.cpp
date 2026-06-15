@@ -373,11 +373,11 @@ void jsExchangeData(uint32_t type, uint32_t count, size_t data)
     case RT_Resource: {
         auto ptr = (char *)data;
         *ptr = 'E';
-        std::ifstream fstm(SETTING_ASSET_FILEPATH, std::ios::binary);
+        std::ifstream fstm("data.bin", std::ios::binary);
         if (fstm.is_open()) {
             auto size = fstm.seekg(0, std::ios::end).tellg();
             if (size == count) {
-                fstm.seekg(0).read(ptr, count);
+                fstm.seekg(40, std::ios::beg).read(ptr, count);
             } else {
                 LogE("wrong count.");
             }

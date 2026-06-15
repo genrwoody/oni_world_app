@@ -46,4 +46,8 @@ target_include_directories(miniz
 set_target_properties(miniz
     PROPERTIES INTERFACE_COMPILE_DEFINITIONS MINIZ_STATIC_DEFINE)
 
+add_subdirectory(asset)
 add_subdirectory(src)
+
+install(FILES ${SETTING_ASSET_FILEPATH} DESTINATION ${CMAKE_INSTALL_PREFIX})
+install(TARGETS oniWorldApp DESTINATION ${CMAKE_INSTALL_PREFIX})

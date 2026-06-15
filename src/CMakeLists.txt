@@ -16,26 +16,26 @@ add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/JsonDeserializeGen.hpp"
     VERBATIM
 )
 
-if(NOT EXISTS "${CMAKE_CURRENT_BINARY_DIR}/data.bin")
-execute_process(COMMAND ${CMAKE_COMMAND} -E echo_append "keep"
-    OUTPUT_FILE "${CMAKE_CURRENT_BINARY_DIR}/keep.txt"
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/gen_config.cmake" "
+file(SIZE \${SETTING_ASSET_FILEPATH} SETTING_ASSET_FILESIZE)
+file(READ ${CMAKE_CURRENT_SOURCE_DIR}/config.h.in CONFIG_H_IN_FILE)
+file(CONFIGURE OUTPUT \${CMAKE_CURRENT_BINARY_DIR}/config.h
+               CONTENT \${CONFIG_H_IN_FILE}
+               @ONLY)"
 )
-execute_process(
-    COMMAND ${CMAKE_COMMAND} -E tar cf "${CMAKE_CURRENT_BINARY_DIR}/data.zip"
-                --format=zip dlc templates worldgen Asubworlds.json
-    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/asset"
-)
-execute_process(COMMAND ${CMAKE_COMMAND} -E cat "keep.txt" "data.zip"
-    OUTPUT_FILE "${CMAKE_CURRENT_BINARY_DIR}/data.bin"
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-)
-endif()
 
-file(SIZE "${CMAKE_CURRENT_BINARY_DIR}/data.zip" SETTING_ASSET_FILESIZE)
+add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/config.h"
+    COMMAND ${CMAKE_COMMAND} -DSETTING_ASSET_FILEPATH=${SETTING_ASSET_FILEPATH}
+                             -P ${CMAKE_CURRENT_BINARY_DIR}/gen_config.cmake
+    DEPENDS ${SETTING_ASSET_FILEPATH} asset "config.h.in"
+    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+    VERBATIM
+)
 
 add_executable(oniWorldApp
     ${SETTING_HEADER_FILES}
     "${CMAKE_CURRENT_BINARY_DIR}/JsonDeserializeGen.hpp"
+    "${CMAKE_CURRENT_BINARY_DIR}/config.h"
     "Setting/JsonDeserialize.hpp"
     "Setting/SettingsCache.hpp"
     "Setting/WorldGenClasses.cpp"
@@ -97,5 +97,3 @@ target_include_directories(oniWorldApp
     PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/miniz"
 )
 target_link_libraries(oniWorldApp PUBLIC clipper jsoncpp miniz)
-
-configure_file("config.h.in" "config.h")
