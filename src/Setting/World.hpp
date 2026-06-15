@@ -62,6 +62,10 @@ struct WorldTrait {
     std::vector<std::string> removeWorldTemplateRulesById;
     std::vector<ElementBandModifier> elementBandModifiers;
 
+    // ignore lines
+
+    int index{};
+
     bool IsValid(const struct World &world) const;
     bool ForbiddenSpaceOut() const;
 };

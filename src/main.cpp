@@ -1,314 +1,41 @@
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
 #else
+#include <ctime>
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <iomanip>
 #define EMSCRIPTEN_KEEPALIVE
 #endif
 
-#include <stack>
-#include <ranges>
-#include <algorithm>
+#include "App.hpp"
 
-#include <clipper.hpp>
-
-#include "config.h"
-#include "Utils/Log.hpp"
-#include "Setting/SettingsCache.hpp"
-#include "WorldGen.hpp"
-
-// I defined only one function for exchanging data between c++ and js,
-// it get resource from js and set result to js.
-extern "C" void jsExchangeData(uint32_t type, uint32_t count, size_t data);
-
-enum ResultType {
-    RT_Starting,
-    RT_Trait,
-    RT_Geyser,
-    RT_Polygon,
-    RT_WorldSize,
-    RT_Resource
-};
-
-static void SerializeSite(const Site &site, std::vector<uint32_t> &data)
-{
-    data.push_back(site.idx);
-    data.push_back(*(uint32_t *)&site.x);
-    data.push_back(*(uint32_t *)&site.y);
-    int count = (int)site.polygon.Vertices.size();
-    if (count != 0) {
-        data.push_back(count);
-        for (auto &point : site.polygon.Vertices) {
-            data.push_back(*(uint32_t *)&point.x);
-            data.push_back(*(uint32_t *)&point.y);
-        }
-    }
-    if (site.children && !site.children->empty()) {
-        for (auto &child : *site.children) {
-            data.push_back(child.idx);
-            data.push_back(*(uint32_t *)&child.x);
-            data.push_back(*(uint32_t *)&child.y);
-            int count2 = (int)child.polygon.Vertices.size();
-            if (count2 != 0) {
-                data.push_back(count2);
-                for (auto &point : child.polygon.Vertices) {
-                    data.push_back(*(uint32_t *)&point.x);
-                    data.push_back(*(uint32_t *)&point.y);
-                }
-            }
-        }
-    }
+extern "C" {
+void EMSCRIPTEN_KEEPALIVE app_init(int seed);
+// the max mix is 5^17, bigger than 2^31 and smaller than 2^53, use double.
+bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, double mix);
 }
 
-// for debug
-void WriteToBinary(const std::vector<Site> &sites)
-{
-    static int index = 10;
-    std::vector<uint32_t> data;
-    for (auto &site : sites) {
-        SerializeSite(site, data);
-    }
-    jsExchangeData(index++, (uint32_t)data.size(), (uint32_t)data.data());
-}
+static App app;
 
-// for debug
-void WriteToBinary(const std::vector<Site *> &sites)
-{
-    static int index = 10;
-    std::vector<uint32_t> data;
-    for (auto *site : sites) {
-        SerializeSite(*site, data);
-    }
-    jsExchangeData(index++, (uint32_t)data.size(), (uint32_t)data.data());
-}
+void app_init(int seed) { app.Initialize(seed); }
 
-class App
-{
-private:
-    SettingsCache m_settings;
-    KRandom m_random{0};
-
-    App() = default;
-
-public:
-    static App *Instance()
-    {
-        static App inst;
-        return &inst;
-    }
-
-    void Initialize(int seed)
-    {
-        uint32_t count = SETTING_ASSET_FILESIZE;
-        auto data = std::make_unique<char[]>(count);
-        jsExchangeData(RT_Resource, count, (size_t)data.get());
-        std::string_view content(data.get(), count);
-        m_settings.LoadSettingsCache(content);
-        m_random = KRandom(seed);
-    }
-
-    bool Generate(const std::string &code, int traits);
-    bool Generate(int type, int seed, int mix, int traits);
-
-private:
-    bool GenerateInternal(int traitsFlag);
-    void SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites);
-    void SetResultTraits(const SettingsCache::WorldTraitArray &traits);
-    void SetResultGeysers(int seed, const WorldGen &worldGen);
-    void SetResultPolygons(World *world, std::vector<Site> &sites);
-    // union sites with the same zone type. if result has hole return true.
-    static bool GetZonePolygon(Site &site, Polygon &polygon);
-};
-
-bool App::Generate(int type, int seed, int mix, int traitsFlag)
-{
-    if (!m_settings.CoordinateChanged(type, seed, mix)) {
-        return false;
-    }
-    return GenerateInternal(traitsFlag);
-}
-
-bool App::Generate(const std::string &code, int traitsFlag)
-{
-    if (!m_settings.CoordinateChanged(code)) {
-        return false;
-    }
-    return GenerateInternal(traitsFlag);
-}
-
-bool App::GenerateInternal(int traitsFlag)
-{
-    std::vector<World *> worlds;
-    if (!m_settings.InitializeWorlds(worlds)) {
-        return false;
-    }
-    if (traitsFlag != 0) { // roll seed for preset traits
-        m_settings.SetSeedWithTraits(worlds, traitsFlag, m_random);
-    }
-    int seed = m_settings.Seed();
-    std::vector<SettingsCache::WorldTraitArray> allWorldTraits;
-    allWorldTraits.reserve(worlds.size());
-    for (size_t i = 0; i < worlds.size(); ++i) {
-        auto world = worlds[i];
-        world->ClearMixingsAndTraits();
-        auto traits = m_settings.GetRandomTraits(*world, seed + i);
-        for (auto trait : traits) {
-            world->ApplayTraits(*trait, m_settings);
-        }
-        allWorldTraits.emplace_back(traits);
-    }
-    m_settings.DoSubworldMixing(worlds);
-    bool genWarpWorld = m_settings.IsMiniCluster();
-    for (size_t i = 0; i < worlds.size(); ++i) {
-        auto world = worlds[i];
-        if (world->locationType == LocationType::Cluster) {
-            continue;
-        } else if (world->locationType == LocationType::StartWorld) {
-            // go on;
-        } else if (!world->startingBaseTemplate.contains("::bases/warpworld")) {
-            continue; // other inner cluster
-        } else if (!genWarpWorld) {
-            continue;
-        }
-        WorldGen worldGen(*world, m_settings, seed + i);
-        std::vector<Site> sites;
-        if (!worldGen.GenerateOverworld(sites)) {
-            LogE("generate overworld failed.");
-            return false;
-        }
-        SetResultWorldInfo(seed, world, sites);
-        SetResultTraits(allWorldTraits[i]);
-        SetResultGeysers(seed + (int)worlds.size() - 1, worldGen);
-        SetResultPolygons(world, sites);
-    }
-    return true;
-}
-
-void App::SetResultWorldInfo(int seed, World *world, std::vector<Site> &sites)
-{
-    Vector2i starting = {sites[0].x, sites[0].y};
-    Vector2i worldSize = world->worldsize;
-    starting.y = worldSize.y - starting.y;
-    int worldType = (world->locationType == LocationType::StartWorld) ? 0 : 1;
-    jsExchangeData(RT_Starting, worldType, (size_t)&starting);
-    jsExchangeData(RT_WorldSize, seed, (size_t)&worldSize);
-}
-
-void App::SetResultTraits(const SettingsCache::WorldTraitArray &traits)
-{
-    std::vector<int> result;
-    result.reserve(traits.size());
-    for (auto *item : traits) {
-        uint32_t index = 0;
-        for (auto &pair : m_settings.traits) {
-            if (item == &pair.second) {
-                result.push_back(index);
-                break;
-            } else {
-                index++;
-            }
-        }
-    }
-    jsExchangeData(RT_Trait, (uint32_t)result.size(), (size_t)result.data());
-}
-
-void App::SetResultGeysers(int seed, const WorldGen &worldGen)
-{
-    auto geysers = worldGen.GetGeysers(seed);
-    std::vector<int> result;
-    result.reserve(geysers.size() * 3);
-    for (auto &item : geysers) {
-        result.insert(result.end(), {item.z, item.x, item.y}); // z is type
-    }
-    jsExchangeData(RT_Geyser, (uint32_t)result.size(), (size_t)result.data());
-}
-
-void App::SetResultPolygons(World *world, std::vector<Site> &sites)
-{
-    std::vector<int> result;
-    std::ranges::for_each(sites, [](Site &site) { site.visited = false; });
-    for (auto &item : sites) {
-        if (item.visited) {
-            continue;
-        }
-        Polygon polygon;
-        bool hasHole = GetZonePolygon(item, polygon);
-        result.push_back(hasHole ? 1 : 0);
-        result.push_back((int)item.subworld->zoneType);
-        result.push_back((int)polygon.Vertices.size());
-        for (auto &vex : polygon.Vertices) {
-            result.push_back(vex.x);
-            result.push_back(world->worldsize.y - vex.y);
-        }
-    }
-    jsExchangeData(RT_Polygon, (uint32_t)result.size(), (size_t)result.data());
-}
-
-bool App::GetZonePolygon(Site &site, Polygon &polygon)
-{
-    ZoneType zoneType = site.subworld->zoneType;
-    ClipperLib::Clipper clipper;
-    std::stack<const Site *> stack;
-    stack.push(&site);
-    while (!stack.empty()) {
-        auto top = stack.top();
-        stack.pop();
-        if (top->visited) {
-            continue;
-        }
-        ClipperLib::Path path;
-        for (Vector2f point : top->polygon.Vertices) {
-            point *= 10000.0f;
-            path.emplace_back((int)point.x, (int)point.y);
-        }
-        clipper.AddPath(path, ClipperLib::ptSubject, true);
-        top->visited = true;
-        for (auto neighbour : top->neighbours) {
-            if (neighbour->visited) {
-                continue;
-            }
-            if (neighbour->subworld->zoneType != zoneType) {
-                continue;
-            }
-            stack.push(neighbour);
-        }
-    }
-    ClipperLib::PolyTree polytree;
-    ClipperLib::Paths paths;
-    clipper.Execute(ClipperLib::ctUnion, polytree, ClipperLib::pftEvenOdd);
-    ClipperLib::PolyTreeToPaths(polytree, paths);
-    if (!paths.empty()) {
-        auto &path = paths[0];
-        for (auto &item : path) {
-            Vector2f point{(float)item.X, (float)item.Y};
-            polygon.Vertices.emplace_back(point * 0.0001f);
-        }
-    }
-    return paths.size() > 1;
-}
-
-extern "C" void EMSCRIPTEN_KEEPALIVE app_init(int seed)
-{
-    App::Instance()->Initialize(seed);
-}
-
-extern "C" bool EMSCRIPTEN_KEEPALIVE app_generate(int type, int seed, int mix)
+bool app_generate(int type, int seed, double mix1)
 {
     int traits = 0;
     if (seed < 0) {
         traits = -seed;
         seed = 0;
     }
-    return App::Instance()->Generate(type, seed, mix, traits);
+    uint64_t mix = static_cast<uint64_t>(mix1);
+    return app.Generate(type, seed, mix, traits);
 }
 
 #ifndef __EMSCRIPTEN__
 
 int main()
 {
-    int type, seed, mixing;
+    int type, seed;
+    double mixing;
     app_init(time(nullptr));
     while (true) {
         std::cout << "input type, seed, mixing: ";
@@ -317,7 +44,7 @@ int main()
             break;
         }
         if (!app_generate(type, seed, mixing)) {
-            LogE("generate failed.");
+            std::cout << "generate failed." << std::endl;
         }
     }
     return 0;
@@ -352,7 +79,7 @@ void jsExchangeData(uint32_t type, uint32_t count, size_t data)
         auto end = ptr + count;
         while (ptr < end) {
             auto index = *ptr++;
-            LogI("%s", traits[index]);
+            std::cout << traits[index] << std::endl;
         }
         break;
     }
@@ -363,7 +90,7 @@ void jsExchangeData(uint32_t type, uint32_t count, size_t data)
             auto index = *ptr++;
             auto x = *ptr++;
             auto y = *ptr++;
-            LogI("%s: %d, %d", geysers[index], x, y);
+            std::cout << geysers[index] << ": " << x << ", " << y << std::endl;
         }
         break;
     }
@@ -372,17 +99,17 @@ void jsExchangeData(uint32_t type, uint32_t count, size_t data)
         break;
     case RT_Resource: {
         auto ptr = (char *)data;
-        *ptr = 'E';
+        *ptr = 'E'; // if open file failed, it leads miniz to failed.
         std::ifstream fstm("data.bin", std::ios::binary);
         if (fstm.is_open()) {
             auto size = fstm.seekg(0, std::ios::end).tellg();
             if (size == count) {
                 fstm.seekg(40, std::ios::beg).read(ptr, count);
             } else {
-                LogE("wrong count.");
+                std::cout << "wrong count." << std::endl;
             }
         } else {
-            LogE("can not open file.");
+            std::cout << "can not open file." << std::endl;
         }
         break;
     }

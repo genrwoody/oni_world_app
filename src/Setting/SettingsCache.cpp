@@ -2,7 +2,7 @@
 
 #include <cstring>
 #include <string_view>
-#include <set>
+#include <charconv>
 #include <algorithm>
 #include <filesystem>
 #include <ranges>
@@ -188,6 +188,7 @@ bool SettingsCache::LoadSettingsCache(const std::string_view &content)
             WorldTrait &trait = traits[key];
             LoadJsonFile(zip, i, trait);
             trait.filePath = key;
+            trait.index = (int)traits.size();
             for (auto &item : trait.globalFeatureMods) {
                 traitFeatures.emplace(item.first);
             }
@@ -350,7 +351,7 @@ bool SettingsCache::InitializeWorlds(std::vector<World *> &chosenWorlds)
         itr->second.locationType = worldPlacement.locationType;
         chosenWorlds.push_back(&itr->second);
     }
-    if (worlds.size() == 1) {
+    if (chosenWorlds.size() == 1) {
         chosenWorlds[0]->locationType = LocationType::StartWorld;
     }
     return true;

@@ -32,7 +32,7 @@ add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/config.h"
     VERBATIM
 )
 
-add_executable(oniWorldApp
+add_library(libOniWorldApp STATIC
     ${SETTING_HEADER_FILES}
     "${CMAKE_CURRENT_BINARY_DIR}/JsonDeserializeGen.hpp"
     "${CMAKE_CURRENT_BINARY_DIR}/config.h"
@@ -65,10 +65,22 @@ add_executable(oniWorldApp
     "WorldGen.hpp"
     "WorldGen.cpp"
     "TemplateSpawning.cpp"
-    "main.cpp"
+    "App.hpp"
+    "App.cpp"
 )
+target_include_directories(libOniWorldApp
+    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}"
+    PRIVATE "${CMAKE_CURRENT_BINARY_DIR}"
+    PRIVATE "${CMAKE_SOURCE_DIR}/3rdparty/clipper"
+    PRIVATE "${CMAKE_SOURCE_DIR}/3rdparty/jsoncpp"
+    PRIVATE "${CMAKE_SOURCE_DIR}/3rdparty/miniz"
+)
+
+add_executable(oniWorldApp "main.cpp")
+target_link_libraries(oniWorldApp PUBLIC libOniWorldApp clipper jsoncpp miniz)
+
 if(EMSCRIPTEN)
-target_compile_options(oniWorldApp PUBLIC "-Wall" "-Wextra" "-Werror")
+target_compile_options(libOniWorldApp PUBLIC "-Wall" "-Wextra" "-Werror")
 target_link_options(oniWorldApp
     PUBLIC "-sALLOW_MEMORY_GROWTH" "-sINITIAL_HEAP=33554432"
     PUBLIC "-sMINIMAL_RUNTIME=1" "-sEXPORTED_RUNTIME_METHODS=[HEAP32,HEAPU8]"
@@ -86,14 +98,8 @@ list(APPEND WASM_LINK_DEPENDS
 )
 set_target_properties(oniWorldApp PROPERTIES LINK_DEPENDS "${WASM_LINK_DEPENDS}")
 elseif(MSVC)
+target_compile_options(libOniWorldApp PUBLIC /MP /W4 /WX /wd4244)
 target_compile_options(oniWorldApp
-    PUBLIC "/source-charset:utf-8" "/execution-charset:GBK" /MP /W4 /WX /wd4244)
-endif()
-target_include_directories(oniWorldApp
-    PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}"
-    PUBLIC "${CMAKE_CURRENT_BINARY_DIR}"
-    PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/clipper"
-    PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/jsoncpp"
-    PUBLIC "${CMAKE_SOURCE_DIR}/3rdparty/miniz"
+    PUBLIC "/source-charset:utf-8" "/execution-charset:GBK"
 )
-target_link_libraries(oniWorldApp PUBLIC clipper jsoncpp miniz)
+endif()
