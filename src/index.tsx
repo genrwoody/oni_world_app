@@ -18,6 +18,7 @@ import ToolBar from "./jsUtils/toolbar";
 import NavRight from "./jsUtils/navright";
 import { updateWorld, ThemeContext } from "./jsUtils";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./jsUtils/index.css";
 import zonesImageUrl from "../asset/zones.png";
 
@@ -88,6 +89,10 @@ const Biomes = () => {
         "Garden Biome",
         "Feather Biome",
         "Wetlands Biome",
+        "Kelp Forest Biome",
+        "Reef Biome",
+        "Abyss Biome",
+        "Beach Biome",
     ];
     const translation = useTranslation();
     return (
@@ -103,7 +108,7 @@ const Biomes = () => {
                                 <span>{translation(item)}</span>
                             </Card.Body>
                         </Card>
-                    )
+                    ),
             )}
         </Row>
     );
@@ -112,7 +117,7 @@ const Biomes = () => {
 const createSprite = (e: Event) => {
     const promises = [];
     const image = e.target as HTMLImageElement;
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         for (let j = 0; j < 5; j++) {
             const promise = createImageBitmap(image, j * 32, i * 32, 32, 32);
             promises.push(promise);
@@ -150,24 +155,19 @@ const App = ({ onSetLanguage, onSetTheme }: AppProps) => {
             const response = await fetch(url, { credentials: "same-origin" });
             return response.arrayBuffer();
         };
-        (process.env.NODE_ENV === "development"
-            ? import("../out/build/wasm-debug/src/WasmFiles")
-            : import("../out/build/wasm-release/src/WasmFiles")
-        ).then((module) => {
-            Promise.all([
-                load(module.WasmFiles.data),
-                load(module.WasmFiles.wasm),
-            ])
-                .then((buffers) => {
-                    Module.data = new Uint8Array(buffers[0], 4);
-                    Module.wasm = new Uint8Array(buffers[1]);
-                    const script = document.createElement("script");
-                    script.src = module.WasmFiles.launcher;
-                    script.async = true;
-                    document.body.appendChild(script);
-                })
-                .catch((reason) => console.log("fetch error: " + reason));
-        });
+        Promise.all([
+            load("./data.bin"),
+            load("./wasm.bin"),
+        ])
+            .then((buffers) => {
+                Module.data = new Uint8Array(buffers[0], 40);
+                Module.wasm = new Uint8Array(buffers[1]);
+                const script = document.createElement("script");
+                script.src = "./oniWorldApp.js";
+                script.async = true;
+                document.body.appendChild(script);
+            })
+            .catch((reason) => console.log("fetch error: " + reason));
         const image = new Image();
         image.onload = createSprite;
         image.src = zonesImageUrl;
@@ -290,7 +290,7 @@ if (process.env.NODE_ENV === "development") {
     root.render(
         <React.StrictMode>
             <Main />
-        </React.StrictMode>
+        </React.StrictMode>,
     );
 } else {
     root.render(<Main />);

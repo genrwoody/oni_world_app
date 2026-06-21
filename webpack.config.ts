@@ -8,9 +8,9 @@ export default (
     _env: any,
     argv: webpack.WebpackOptionsNormalized
 ): webpack.Configuration => {
-    var wasmpath = "out/build/wasm-release/src";
+    var wasmBuildPath = "out/build/wasm-release";
     if (argv.mode === "development") {
-        wasmpath = "out/build/wasm-debug/src";
+        wasmBuildPath = "out/build/wasm-debug";
     }
     const config: webpack.Configuration = {
         entry: "./src/index.tsx",
@@ -55,8 +55,9 @@ export default (
             }),
             new CopyWebpackPlugin({
                 patterns: [
-                    { from: "oniWorldApp.js", context: wasmpath },
-                    { from: "*.bin", context: wasmpath },
+                    { from: "oniWorldApp.js", context: wasmBuildPath + "/src"},
+                    { from: "wasm.bin", context: wasmBuildPath + "/src"},
+                    { from: "data.bin", context: wasmBuildPath + "/asset"},
                     { from: "*", context: "public" },
                 ],
             }),

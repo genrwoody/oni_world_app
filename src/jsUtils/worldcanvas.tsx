@@ -62,6 +62,7 @@ export const WorldCanvas = ({ worlds, focus }: WorldCanvasProps) => {
             });
             offset += world.size.y * scale;
         });
+        ctx.strokeStyle = "black";
         ctx.fillStyle = "black";
         ctx.font = "16px sans-serif";
         ctx.textAlign = "center";
@@ -70,16 +71,25 @@ export const WorldCanvas = ({ worlds, focus }: WorldCanvasProps) => {
         let count = 0;
         offset = 0;
         worlds.forEach((world) => {
-            let point = world.starting;
-            let text = translation(startBaseName.at(world.type)!);
             ctx.fillStyle = "black";
-            ctx.fillText(text, point.x * scale, point.y * scale + offset);
+            ctx.lineWidth = 1;
             world.geysers.forEach((item) => {
                 const w = 5 * scale;
                 const h = 5 * scale;
                 const x = item.pos.x * scale;
                 const y = item.pos.y * scale + offset;
                 ctx.strokeRect(x - w / 2, y - h, w, h);
+            });
+            let point = world.starting;
+            let text = translation(startBaseName.at(world.type)!);
+            ctx.fillStyle = "white";
+            ctx.lineWidth = 3;
+            ctx.strokeText(text, point.x * scale, point.y * scale + offset);
+            ctx.fillText(text, point.x * scale, point.y * scale + offset);
+            world.geysers.forEach((item) => {
+                const x = item.pos.x * scale;
+                const y = item.pos.y * scale + offset;
+                ctx.strokeText(translation(item.desc.name), x, y);
                 ctx.fillText(translation(item.desc.name), x, y);
             });
             if (count <= focus && focus < count + world.geysers.length) {
@@ -87,11 +97,10 @@ export const WorldCanvas = ({ worlds, focus }: WorldCanvasProps) => {
                 const x = item.pos.x * scale;
                 const y = item.pos.y * scale + offset;
                 ctx.fillStyle = "red";
-                ctx.lineWidth = 3;
                 ctx.strokeText(translation(item.desc.name), x, y);
                 ctx.fillText(translation(item.desc.name), x, y);
-                ctx.lineWidth = 1;
             }
+            ctx.lineWidth = 1;
             count += world.geysers.length;
             if (world.type === 0) {
                 ctx.fillStyle = "lightgray";

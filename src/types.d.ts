@@ -1,3 +1,5 @@
+declare module "*.css";
+
 declare module "*.png" {
     const value: string;
     export default value;
@@ -47,7 +49,6 @@ interface Geyser {
 
 interface Cluster {
     type: number;
-    index: number;
     max: number;
     prefix: string;
     name: string;

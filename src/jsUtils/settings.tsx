@@ -7,7 +7,7 @@ import useTranslation from "./language";
 import Mixings from "./mixings";
 
 interface SettingsProps {
-    cluster: Cluster;
+    cluster: number;
     mixings: number;
     traits: string;
     onChange: (cluster: number, mixings: number, traits: string) => void;
@@ -61,7 +61,7 @@ const Settings = ({ cluster, mixings, traits, onChange }: SettingsProps) => {
         return traits;
     };
     const fillTraitOptions = (traits: Array<string>) => {
-        return getTraits(cluster.index).map((item, index1) => {
+        return getTraits(cluster).map((item, index1) => {
             traits.forEach((trait, index2) => {
                 if (trait !== "Z" && index1 !== index2) {
                     item = filterTraits(item, trait);
@@ -69,12 +69,12 @@ const Settings = ({ cluster, mixings, traits, onChange }: SettingsProps) => {
             });
             return item;
         });
-    }
+    };
     const initOptions = fillTraitOptions(traits.split(""));
     const [traitOptions, setTraitOptions] = useState(initOptions);
     const translation = useTranslation();
     const onCategoryChange = (value: number) => {
-        const cluster = value === 0 ? 0 : value === 1 ? 13 : 27;
+        const cluster = value === 0 ? 0 : value === 1 ? 14 : 29;
         setTraitOptions(getTraits(cluster));
         onChange(cluster, mixings, "ZZZZ");
     };
@@ -83,23 +83,24 @@ const Settings = ({ cluster, mixings, traits, onChange }: SettingsProps) => {
         onChange(value, mixings, "ZZZZ");
     };
     const onMixingsChange = (value: number) => {
-        onChange(cluster.index, value, traits);
+        onChange(cluster, value, traits);
     };
     const onTraitsChange = (enable: string, index: number) => {
         const traitsArray = traits.split("");
         traitsArray[index] = enable;
         const options = fillTraitOptions(traitsArray);
         setTraitOptions(options);
-        onChange(cluster.index, mixings, traitsArray.join(""));
+        onChange(cluster, mixings, traitsArray.join(""));
     };
     const labels = ["Asteroid", "Planetoid Cluster", "Moonlet Cluster"];
+    const clusterType = configuration.cluster[cluster].type;
     return (
         <Form>
             <Form.Group className="mb-3" controlId="mode">
                 <Form.Label>{translation("Game Mode")}</Form.Label>
                 <Form.Select
                     aria-label="Game Mode"
-                    defaultValue={cluster.type}
+                    defaultValue={clusterType}
                     onChange={(e) => {
                         onCategoryChange(parseInt(e.target.value));
                     }}
@@ -112,21 +113,23 @@ const Settings = ({ cluster, mixings, traits, onChange }: SettingsProps) => {
                 </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3" controlId="cluster">
-                <Form.Label>{translation(labels[cluster.type])}</Form.Label>
+                <Form.Label>{translation(labels[clusterType])}</Form.Label>
                 <Form.Select
-                    aria-label={cluster.name}
-                    value={cluster.index}
+                    aria-label={configuration.cluster[cluster].name}
+                    value={cluster}
                     onChange={(e) => {
                         onClusterChange(parseInt(e.target.value));
                     }}
                 >
                     {configuration.cluster
-                        .filter((item) => item.type === cluster.type)
+                        .map((item, index) => ({ index: index, ...item }))
+                        .filter((item) => item.type == clusterType)
                         .map((item, index) => (
                             <option key={index} value={item.index}>
                                 {translation(item.name)}
                             </option>
                         ))}
+                    ;
                 </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
@@ -148,7 +151,7 @@ const Settings = ({ cluster, mixings, traits, onChange }: SettingsProps) => {
                 .map((item, index) => (
                     <Mixings
                         key={index}
-                        index={cluster.type}
+                        index={clusterType}
                         name={item.key}
                         active={mixings}
                         onSetActive={(active) => {

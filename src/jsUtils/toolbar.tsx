@@ -22,7 +22,7 @@ const ToolBar = ({ onSetAppConfig, onSetWorld }: ToolBarProps) => {
     const [drawer, setDrawer] = useState(true);
     const [cluster, setCluster] = useState(0);
     const [traits, setTraits] = useState("ZZZZ");
-    const [mixings, setMixings] = useState(9769375);
+    const [mixings, setMixings] = useState(152646487500);
     const [seed, setSeed] = useState("");
     const translation = useTranslation();
     const toBase36 = (num: number) => {
@@ -122,7 +122,7 @@ const ToolBar = ({ onSetAppConfig, onSetWorld }: ToolBarProps) => {
                 </Navbar>
                 <Offcanvas.Body>
                     <Settings
-                        cluster={configuration.cluster[cluster]}
+                        cluster={cluster}
                         mixings={mixings}
                         traits={traits}
                         onChange={(cluster, mixings, traits) => {

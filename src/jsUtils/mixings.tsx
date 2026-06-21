@@ -8,7 +8,7 @@ import configuration from "./configuration";
 import useTranslation from "./language";
 
 const toBase5 = (num: number) => {
-    const result = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const result: number[] = new Array(configuration.mixing.length).fill(0);
     let index = 0;
     while (num > 0) {
         result[index] = num % 5;
