@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.LUSH_CORE.NAME",
-  "description": "STRINGS.WORLD_TRAITS.LUSH_CORE.DESCRIPTION",
-  "colorHex": "52A247",
   "exclusiveWithTags": [
     "CoreTrait"
   ],

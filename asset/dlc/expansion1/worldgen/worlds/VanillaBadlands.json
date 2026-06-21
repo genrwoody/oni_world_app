@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLABADLANDS.NAME",
-  "description": "STRINGS.WORLDS.VANILLABADLANDS.DESCRIPTION",
-  "nameTables": [
-    "TERRA"
-  ],
-  "asteroidIcon": "asteroid_vanilla_badlands_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -118,10 +113,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaBadlandsMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

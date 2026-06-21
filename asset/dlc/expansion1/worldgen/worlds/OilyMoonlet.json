@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.OILYMOONLET.NAME",
-  "description": "STRINGS.WORLDS.OILYMOONLET.DESCRIPTION",
-  "nameTables": [
-    "OILY"
-  ],
-  "asteroidIcon": "asteroid_oil_planet_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.06,
   "worldsize": {

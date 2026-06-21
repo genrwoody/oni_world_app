@@ -1,0 +1,39 @@
+{
+  "info": {
+    "size": {
+      "X": 13,
+      "Y": 16
+    },
+    "min": {
+      "X": -6,
+      "Y": -7
+    },
+    "area": 153
+  },
+  "otherEntities": [
+    {
+      "id": "TubeWorm",
+      "location_x": -4,
+      "location_y": -3
+    },
+    {
+      "id": "Bulbloom",
+      "location_x": 2,
+      "location_y": -5
+    },
+    {
+      "id": "Bulbloom",
+      "location_x": 5,
+      "location_y": -2
+    },
+    {
+      "id": "MinnowImperativePOIC",
+      "location_x": -1,
+      "location_y": -3
+    },
+    {
+      "id": "AbyssVista",
+      "location_y": -5
+    }
+  ]
+}

@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.FORESTMOONLET.NAME",
-  "description": "STRINGS.WORLDS.FORESTMOONLET.DESCRIPTION",
-  "nameTables": [
-    "FOREST"
-  ],
-  "asteroidIcon": "asteroid_forest_start_kanim",
   "worldTraitScale": 0.44,
   "worldsize": {
     "X": 160,
@@ -62,10 +57,6 @@
   "fixedTraits": [
     "sunlightVeryLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleStartMeteorShowers",
-    "ForestMoonletMeteorShowers"
   ],
   "subworldFiles": [
     {

@@ -46,6 +46,8 @@ class JsonSerializeGenerater:
 }};
 """.format(self.name)
             self.scope = 0
+        elif self.ignore:
+            return
         elif words[0] == "struct":
             self.scope = 1
             self.name = words[1]
@@ -60,8 +62,6 @@ struct Deserializer<{}>
         int count = 0;
 """
         elif self.scope == 1 and len(words) > 1:
-            if self.ignore:
-                return
             member = ""
             if words[0].startswith("std::map"):
                 member = words[2]
@@ -93,8 +93,6 @@ struct Deserializer<{}>
         static std::map<std::string, {}> dict = {{
 """.format(self.name, self.name, self.name, self.name)
         elif self.scope == 2 and len(words) >= 1:
-            if self.ignore:
-                return
             member = words[0]
             if member.endswith(","):
                 member = member[:-1]

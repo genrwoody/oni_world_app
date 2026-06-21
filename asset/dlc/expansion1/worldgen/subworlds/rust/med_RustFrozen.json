@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldRust",
   "temperatureRange": "Cold",
   "density": {
     "min": 10,

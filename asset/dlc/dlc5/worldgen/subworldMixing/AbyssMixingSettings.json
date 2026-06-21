@@ -1,0 +1,49 @@
+{
+  "name": "STRINGS.SUBWORLDS.ABYSS.NAME",
+  "description": "STRINGS.SUBWORLDS.ABYSS.DESC",
+  "icon": "biomeIconAbyss",
+  "mixingTags": [
+    "Aquatic",
+    "LargePOIs"
+  ],
+  "forbiddenClusterTags": [
+    "AquaticCluster"
+  ],
+  "subworld": {
+    "name": "dlc5::subworlds/abyss/AbyssMixing"
+  },
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "dlc5::poi/abyss/abyss_geyser"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/abyss/murky_vent_small"
+      ],
+      "listRule": "TryOne",
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    }
+  ]
+}

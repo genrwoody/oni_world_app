@@ -61,7 +61,13 @@ enum class ZoneType {
     SugarWoods,
     PrehistoricGarden,
     PrehistoricRaptor,
-    PrehistoricWetlands
+    PrehistoricWetlands,
+    KelpForest,
+    Reef,
+    Abyss,
+    Beach,
+    // ignore lines
+    MaxZoneType
 };
 
 enum class LocationType {
@@ -73,14 +79,6 @@ enum class LocationType {
 enum class WorldCategory {
     Asteroid, //
     Moon
-};
-
-enum class Skip {
-    Never = 0,
-    False = Never,
-    Always = 99,
-    True = Always,
-    EditorOnly = 100
 };
 
 enum class LayoutMethod {
@@ -160,7 +158,9 @@ enum class Range {
     SomewhatHot,
     Hot,
     VeryHot,
-    ExtremelyHot
+    ExtremelyHot,
+    // ignore lines
+    MaxRange
 };
 
 enum class Orientation {
@@ -180,10 +180,10 @@ enum class ClusterCategory {
     Special
 };
 
+// ignore lines
 enum class ClusterType {
     // Base Game
     Terra,
-    // ignore lines
     Oceania,
     Rime,
     Verdante,
@@ -196,6 +196,7 @@ enum class ClusterType {
     Blasted_Ceres,
     Relica,
     RelicAAAAGH,
+    Marinea,
     // Classic
     Terra_Cluster,
     Oceania_Cluster,
@@ -211,8 +212,10 @@ enum class ClusterType {
     Blasted_Ceres_Cluster,
     Relica_Cluster,
     RelicAAAAGH_Cluster,
+    Marinea_Cluster,
     // Space Out!
     Terrania_Cluster,
+    Marinea_Minor_Cluster,
     Relica_Minor_Cluster,
     Ceres_Minor_Cluster,
     Folia_Cluster,
@@ -224,4 +227,3 @@ enum class ClusterType {
     Radioactive_Ocean_Moonlet,
     Ceres_Mantle_Moonlet
 };
-

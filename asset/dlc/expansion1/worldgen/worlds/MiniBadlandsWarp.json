@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINIBADLANDS.NAME",
-  "description": "STRINGS.WORLDS.MINIBADLANDS.DESCRIPTION",
-  "nameTables": [
-    "TERRA"
-  ],
-  "asteroidIcon": "asteroid_mini_badlands_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -65,9 +60,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationMedLow"
-  ],
-  "seasons": [
-    "MiniBadlandsMeteorShowers"
   ],
   "subworldFiles": [
     {

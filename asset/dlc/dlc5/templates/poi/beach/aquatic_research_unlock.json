@@ -1,0 +1,29 @@
+{
+  "info": {
+    "size": {
+      "X": 9,
+      "Y": 6
+    },
+    "min": {
+      "X": -4,
+      "Y": -2
+    },
+    "area": 50
+  },
+  "otherEntities": [
+    {
+      "id": "SeaLettuce",
+      "location_x": 3,
+      "location_y": -1
+    },
+    {
+      "id": "MusselSprout",
+      "location_x": -2,
+      "location_y": -1
+    },
+    {
+      "id": "POIDlc5TechUnlock",
+      "location_y": -1
+    }
+  ]
+}

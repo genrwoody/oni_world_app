@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TINYMAGMA.NAME",
-  "description": "STRINGS.WORLDS.TINYMAGMA.DESCRIPTION",
   "disableWorldTraits": true,
   "worldTraitScale": 0.04,
   "worldsize": {

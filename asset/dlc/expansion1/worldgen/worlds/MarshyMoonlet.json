@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MARSHYMOONLET.NAME",
-  "description": "STRINGS.WORLDS.MARSHYMOONLET.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_marshy_moonlet_kanim",
   "worldTraitScale": 0.06,
   "worldsize": {
     "X": 64,
@@ -58,9 +53,6 @@
   "fixedTraits": [
     "sunlightMedHigh",
     "cosmicRadiationMedLow"
-  ],
-  "seasons": [
-    "MarshyMoonletMeteorShowers"
   ],
   "subworldFiles": [
     {

@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MOOMOONLET.NAME",
-  "description": "STRINGS.WORLDS.MOOMOONLET.DESCRIPTION",
-  "nameTables": [
-    "MOO"
-  ],
-  "asteroidIcon": "asteroid_moo_planet_kanim",
   "worldTraitScale": 0.08,
   "worldsize": {
     "X": 96,
@@ -55,9 +50,6 @@
   "fixedTraits": [
     "sunlightVeryHigh",
     "cosmicRadiationMedHigh"
-  ],
-  "seasons": [
-    "GassyMooteorShowers"
   ],
   "subworldFiles": [
     {

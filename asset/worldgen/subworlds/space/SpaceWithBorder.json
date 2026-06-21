@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
   "temperatureRange": "VeryCold",
   "minChildCount": 1,
   "density": {

@@ -1,0 +1,19 @@
+{
+  "info": {
+    "size": {
+      "X": 7,
+      "Y": 7
+    },
+    "min": {
+      "X": -3,
+      "Y": -3
+    },
+    "area": 49
+  },
+  "otherEntities": [
+    {
+      "id": "DewPalm",
+      "location_y": -2
+    }
+  ]
+}

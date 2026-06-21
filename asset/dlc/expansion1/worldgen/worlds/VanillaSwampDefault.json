@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLASWAMPDEFAULT.NAME",
-  "description": "STRINGS.WORLDS.VANILLASWAMPDEFAULT.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_vanilla_swamp_start_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -64,10 +59,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaSwampDefaultMeteorShowers"
   ],
   "subworldFiles": [
     {

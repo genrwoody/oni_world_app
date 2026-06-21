@@ -1,0 +1,18 @@
+{
+  "info": {
+    "size": {
+      "X": 7,
+      "Y": 6
+    },
+    "min": {
+      "X": -3,
+      "Y": -2
+    },
+    "area": 25
+  },
+  "otherEntities": [
+    {
+      "id": "SmallReefGeyser"
+    }
+  ]
+}

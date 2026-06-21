@@ -1,0 +1,34 @@
+{
+  "info": {
+    "size": {
+      "X": 17,
+      "Y": 14
+    },
+    "min": {
+      "X": -7,
+      "Y": -6
+    },
+    "area": 215
+  },
+  "otherEntities": [
+    {
+      "id": "TubeWorm",
+      "location_x": 3,
+      "location_y": -4
+    },
+    {
+      "id": "TubeWorm",
+      "location_x": 4,
+      "location_y": -4
+    },
+    {
+      "id": "TubeWorm",
+      "location_x": 5,
+      "location_y": -4
+    },
+    {
+      "id": "UnderwaterVent",
+      "location_y": -3
+    }
+  ]
+}

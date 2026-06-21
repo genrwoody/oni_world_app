@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMRADIOACTIVEVANILLAWARPPLANET.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMRADIOACTIVEVANILLAWARPPLANET.DESCRIPTION",
-  "nameTables": [
-    "SWAMP",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_vanilla_sandstone_warp_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -54,10 +48,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumRadioactiveVanillaWarpPlanetMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/swamp/SwampWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldSwampBase",

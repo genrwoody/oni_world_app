@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.CERESBASEGAME.NAME",
-  "description": "STRINGS.WORLDS.CERESBASEGAME.DESCRIPTION",
-  "nameTables": [
-    "CERES"
-  ],
-  "asteroidIcon": "asteroid_classic_base",
   "worldTags": [
     "Ceres"
   ],
@@ -63,9 +58,6 @@
   "fixedTraits": [
     "sunlightVeryVeryLow",
     "northernLightsOn"
-  ],
-  "seasons": [
-    "CeresMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

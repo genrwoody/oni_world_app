@@ -1,0 +1,66 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 3,
+    "max": 5
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 0.5,
+          "overrides": {
+            "massOverride": 1
+          }
+        },
+        {
+          "element": "Sand",
+          "weight": 0.5
+        },
+        {
+          "element": "Water",
+          "weight": 1,
+          "overrides": {
+            "massOverride": 1000
+          }
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Water",
+          "weight": 2
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Algae",
+          "weight": 1
+        },
+        {
+          "element": "Dirt",
+          "weight": 0.25
+        },
+        {
+          "element": "SiltStone",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

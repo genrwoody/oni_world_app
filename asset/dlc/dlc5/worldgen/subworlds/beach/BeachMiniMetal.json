@@ -1,0 +1,40 @@
+{
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 7,
+    "max": 14
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 12,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/Beach/Metal",
+      "weight": 4,
+      "tags": [
+        "BeachCrab",
+        "MusselSprout",
+        "SaltySticksPlant",
+        "SaltySticksSeedBuried",
+        "Snail"
+      ]
+    }
+  ],
+  "subworldTemplateRules": [
+    {
+      "names": [
+        "dlc5::poi/beach/snail_oxy_palm_cave"
+      ],
+      "listRule": "TryOne"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Beach"
+}

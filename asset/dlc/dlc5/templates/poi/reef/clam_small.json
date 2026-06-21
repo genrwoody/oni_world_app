@@ -1,0 +1,20 @@
+{
+  "info": {
+    "size": {
+      "X": 11,
+      "Y": 13
+    },
+    "min": {
+      "X": -5,
+      "Y": -5
+    },
+    "area": 125
+  },
+  "otherEntities": [
+    {
+      "id": "Clam",
+      "location_x": -2,
+      "location_y": -2
+    }
+  ]
+}

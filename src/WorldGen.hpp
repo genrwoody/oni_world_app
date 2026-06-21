@@ -57,8 +57,9 @@ inline std::string ZoneTypeToString(ZoneType zone)
         "Ocean",        "Rust",              "Forest",         "Radioactive",
         "Swamp",        "Wasteland",         "RocketInterior", "Metallic",
         "Barren",       "Moo",               "IceCaves",       "CarrotQuarry",
-        "SugarWoods",   "PrehistoricGarden", "PrehistoricRaptor",
-        "PrehistoricWetlands"};
+        "SugarWoods",   "PrehistoricGarden", "PrehistoricRaptor", "PrehistoricWetlands",
+        "KelpForest",   "Reef",              "Abyss",          "Beach"};
+    static_assert((int)ZoneType::MaxZoneType == std::size(dict));
     return dict[(int)zone];
 }
 // clang-format on
@@ -69,5 +70,6 @@ inline std::string TempRangeToString(Range range)
         "ExtremelyCold", "VeryVeryCold", "VeryCold", "Cold",        "Chilly",
         "Cool",          "Mild",         "Room",     "HumanWarm",   "HumanHot",
         "SomewhatHot",   "Hot",          "VeryHot",  "ExtremelyHot"};
+    static_assert((int)Range::MaxRange == std::size(dict));
     return dict[(int)range];
 }

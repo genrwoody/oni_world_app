@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.METAL_RICH.NAME",
-  "description": "STRINGS.WORLD_TRAITS.METAL_RICH.DESCRIPTION",
-  "colorHex": "DAA932",
   "exclusiveWith": [
     "traits/MetalPoor"
   ],

@@ -637,19 +637,30 @@ size_t WorldGen::GenerateChildren(Site &site, KRandom &externRrandom, int seed,
     return (int)site.children->size();
 }
 
-std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
+static std::map<std::string_view, int> GenerateGeysersDict()
 {
     const char *configs[] = {
-        "steam",           "hot_steam",       "hot_water",
-        "slush_water",     "filthy_water",    "slush_salt_water",
-        "salt_water",      "small_volcano",   "big_volcano",
-        "liquid_co2",      "hot_co2",         "hot_hydrogen",
-        "hot_po2",         "slimy_po2",       "chlorine_gas",
-        "methane",         "molten_copper",   "molten_iron",
-        "molten_gold",     "molten_aluminum", "molten_cobalt",
-        "oil_drip",        "liquid_sulfur",   "chlorine_gas_cool",
-        "molten_tungsten", "molten_niobium",
-    };
+        "steam", "hot_steam", "hot_water", "slush_water", "filthy_water",
+        "slush_salt_water", "salt_water", "small_volcano", "big_volcano",
+        "liquid_co2", "hot_co2", "hot_hydrogen", "hot_po2", "slimy_po2",
+        "chlorine_gas", "methane", "molten_copper", "molten_iron",
+        "molten_gold", "molten_aluminum", "molten_cobalt", "oil_drip",
+        "liquid_sulfur", "chlorine_gas_cool", "molten_tungsten",
+        "molten_niobium", "murky_brine",
+        // special geyser
+        "OilWell", "SmallReefGeyser", "UnderwaterVent",
+        // important buildings
+        "receiver", "sender", "teleporter", "cryopod", "printpod"};
+    std::map<std::string_view, int> result;
+    for (int i = 0; i < std::size(configs); ++i) {
+        result.emplace(configs[i], i);
+    }
+    return result;
+}
+
+std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
+{
+    static std::map<std::string_view, int> configs = GenerateGeysersDict();
     std::vector<Vector3i> result;
     result.reserve(m_templates.size());
     int count = m_settings.IsSpaceOutEnabled() ? 23 : 20;
@@ -664,29 +675,30 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
                 index = 21;
             }
             result.emplace_back(pos.x, pos.y, index);
-        } else if (name.starts_with("poi/oil/")) {
-            result.emplace_back(pos.x, pos.y, std::size(configs) + 1);
         } else if (name.starts_with("expansion1::poi/warp/receiver")) {
-            result.emplace_back(pos.x, pos.y, std::size(configs) + 2);
+            result.emplace_back(pos.x, pos.y, configs["receiver"]);
         } else if (name.starts_with("expansion1::poi/warp/sender")) {
-            result.emplace_back(pos.x, pos.y, std::size(configs) + 3);
+            result.emplace_back(pos.x, pos.y, configs["sender"]);
         } else if (name.starts_with("expansion1::poi/warp/teleporter")) {
-            result.emplace_back(pos.x, pos.y, std::size(configs) + 4);
+            result.emplace_back(pos.x, pos.y, configs["teleporter"]);
         } else if (name.starts_with("expansion1::poi/traits/cryopod")) {
-            result.emplace_back(pos.x, pos.y, std::size(configs) + 5);
+            result.emplace_back(pos.x, pos.y, configs["cryopod"]);
         } else if (!templt.container->otherEntities.empty()) {
             for (auto &item : templt.container->otherEntities) {
-                if (item.id.find("GeyserGeneric_") == item.id.npos) {
+                if (item.id == "OilWell" ||
+                    item.id == "SmallReefGeyser" ||
+                    item.id == "UnderwaterVent") {
+                    pos.x += item.location_x;
+                    pos.y -= item.location_y;
+                    result.emplace_back(pos.x, pos.y, configs[item.id]);
+                } else if (item.id.find("GeyserGeneric_") == item.id.npos) {
                     continue;
                 }
-                std::string geyser = item.id.substr(14);
-                for (int index = 0; index < (int)std::size(configs); ++index) {
-                    if (geyser == configs[index]) {
-                        pos.x += item.location_x;
-                        pos.y -= item.location_y;
-                        result.emplace_back(pos.x, pos.y, index);
-                        break;
-                    }
+                auto itr = configs.find(item.id.substr(14));
+                if (itr != configs.end()) {
+                    pos.x += item.location_x;
+                    pos.y -= item.location_y;
+                    result.emplace_back(pos.x, pos.y, itr->second);
                 }
             }
         }

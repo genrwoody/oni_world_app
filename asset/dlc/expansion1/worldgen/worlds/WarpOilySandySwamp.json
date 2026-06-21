@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.WARPOILYSANDYSWAMP.NAME",
-  "description": "STRINGS.WORLDS.WARPOILYSANDYSWAMP.DESCRIPTION",
-  "nameTables": [
-    "SWAMP",
-    "OILY"
-  ],
-  "asteroidIcon": "asteroid_swamp_sandyoil_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -47,10 +41,6 @@
       "minCount": 2,
       "maxCount": 3
     }
-  ],
-  "seasons": [
-    "SpacedOutStyleWarpMeteorShowers",
-    "WarpOilySwampMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/swamp/SwampWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldSwampBase",

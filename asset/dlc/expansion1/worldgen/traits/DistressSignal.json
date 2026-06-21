@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.DISTRESS_SIGNAL.NAME",
-  "description": "STRINGS.WORLD_TRAITS.DISTRESS_SIGNAL.DESCRIPTION",
-  "colorHex": "8494A1",
   "traitTags": [
     "NonStartWorld"
   ],

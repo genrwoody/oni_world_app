@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.SPACESHIPINTERIOR.NAME",
-  "description": "STRINGS.WORLDS.SPACESHIPINTERIOR.DESCRIPTION",
   "disableWorldTraits": true,
   "moduleInterior": true,
   "worldsize": {

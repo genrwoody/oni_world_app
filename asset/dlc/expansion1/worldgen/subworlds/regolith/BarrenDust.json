@@ -1,7 +1,5 @@
 {
-  "biomeNoise": "expansion1::noise/LayeredNoise",
   "temperatureRange": "HumanWarm",
-  "borderOverride": "regolith",
   "minChildCount": 2,
   "pdWeight": 2,
   "density": {

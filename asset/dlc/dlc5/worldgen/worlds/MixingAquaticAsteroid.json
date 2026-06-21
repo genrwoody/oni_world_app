@@ -1,0 +1,258 @@
+{
+  "name": "STRINGS.WORLDS.AQUATICMIXING.NAME",
+  "worldTags": [
+    "Mixing",
+    "SmallWorld",
+    "AquaticWorld",
+    "AquaticStart"
+  ],
+  "dlcIdFrom": "DLC5_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC5_ID"
+  ],
+  "worldTraitScale": 0.08,
+  "worldsize": {
+    "X": 64,
+    "Y": 128
+  },
+  "layoutMethod": "PowerTree",
+  "defaultsOverrides": {
+    "data": {
+      "DrawWorldBorderForce": false,
+      "DrawWorldBorder": true,
+      "WorldBorderThickness": 4,
+      "WorldBorderRange": 2,
+      "OverworldDensityMin": 15,
+      "OverworldDensityMax": 15,
+      "OverworldAvoidRadius": 5,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "worldTraitRules": [
+    {
+      "min": 0,
+      "max": 2,
+      "forbiddenTags": [
+        "StartWorldOnly",
+        "Geodes",
+        "Oil",
+        "GenericGeysers",
+        "StartChange",
+        "LargeWorld",
+        "Surface"
+      ],
+      "forbiddenTraits": [
+        "traits/MagmaVents",
+        "expansion1::traits/Volcanoes",
+        "expansion1::traits/MetalCaves",
+        "expansion1::traits/CrashedSatellites"
+      ]
+    }
+  ],
+  "fixedTraits": [
+    "sunlightVeryLow",
+    "cosmicRadiationVeryLow",
+    "largeImpactorFragmentsAllowed"
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3,
+      "forbiddenTags": [
+        "Aquatic"
+      ]
+    }
+  ],
+  "subworldFiles": [
+    {
+      "name": "dlc5::subworlds/space/SpaceWithBeachBorder"
+    },
+    {
+      "name": "dlc5::subworlds/beach/BeachBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc5::subworlds/reef/ReefBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc5::subworlds/kelpforest/KelpForestBasic",
+      "minCount": 2
+    },
+    {
+      "name": "dlc5::subworlds/abyss/AbyssBasic",
+      "minCount": 2
+    }
+  ],
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/beach/BeachBasic",
+        "dlc5::subworlds/reef/ReefBasic",
+        "dlc5::subworlds/kelpforest/KelpForestBasic",
+        "dlc5::subworlds/abyss/AbyssBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/space/SpaceWithBeachBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/beach/BeachBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 3,
+      "maxDistance": 3,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/beach/BeachBasic",
+        "dlc5::subworlds/reef/ReefBasic",
+        "dlc5::subworlds/kelpforest/KelpForestBasic",
+        "dlc5::subworlds/abyss/AbyssBasic",
+        "(Mixing1)"
+      ]
+    },
+    {
+      "tagcommand": "AtTag",
+      "tag": "AtDepths",
+      "command": "UnionWith",
+      "sortOrder": 100,
+      "subworldNames": [
+        "(Mixing1)"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "geysers/generic"
+      ],
+      "listRule": "TryOne",
+      "times": 4,
+      "allowDuplicates": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "NotAtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtSurface",
+          "minDistance": 0,
+          "maxDistance": 3
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/beach/simplepalm1",
+        "dlc5::poi/beach/simplepalm2",
+        "dlc5::poi/beach/simplepalm3",
+        "dlc5::poi/beach/simplepalm4",
+        "dlc5::poi/beach/simplepalm5"
+      ],
+      "listRule": "GuaranteeSomeTryMore",
+      "someCount": 1,
+      "moreCount": 3,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Beach"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/smallReefGeyser"
+      ],
+      "listRule": "TryOne",
+      "times": 10,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/clam_small",
+        "dlc5::poi/reef/clam_large"
+      ],
+      "listRule": "TryAll",
+      "priority": 100,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/abyss/abyss_geyser"
+      ],
+      "listRule": "TryOne",
+      "times": 4,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/abyss/murky_vent_large",
+        "dlc5::poi/abyss/murky_vent_small"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 200,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    }
+  ]
+}

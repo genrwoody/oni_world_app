@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.GEOACTIVE.NAME",
-  "description": "STRINGS.WORLD_TRAITS.GEOACTIVE.DESCRIPTION",
-  "colorHex": "F8A22E",
   "exclusiveWith": [
     "traits/Geodormant"
   ],

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.MISALIGNED_START.NAME",
-  "description": "STRINGS.WORLD_TRAITS.MISALIGNED_START.DESCRIPTION",
-  "colorHex": "E9DC96",
   "traitTags": [
     "StartChange",
     "StartWorldOnly"

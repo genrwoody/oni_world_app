@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.PREHISTORICCLASSIC.NAME",
-  "description": "STRINGS.WORLDS.PREHISTORICCLASSIC.DESCRIPTION",
-  "nameTables": [
-    "PREHISTORIC"
-  ],
-  "asteroidIcon": "prehistoric_asteroid_classic_kanim",
   "worldTags": [
     "Prehistoric"
   ],
@@ -70,10 +65,6 @@
     "sunlightMed",
     "cosmicRadiationVeryLow",
     "largeImpactorFragmentsAllowed"
-  ],
-  "seasons": [
-    "LargeImpactor",
-    "PrehistoricMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

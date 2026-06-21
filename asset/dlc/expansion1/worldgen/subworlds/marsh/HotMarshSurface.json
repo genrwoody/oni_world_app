@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldHotMarsh",
   "temperatureRange": "HumanWarm",
   "density": {
     "min": 20,
@@ -8,7 +7,6 @@
   "avoidRadius": 40.0,
   "minChildCount": 4,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "softRock",
   "features": [
     {
       "type": "features/hotmarsh/TallRoom"

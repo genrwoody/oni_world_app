@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "expansion1::noise/SmallCaves",
   "temperatureRange": "HumanWarm",
   "minChildCount": 2,
   "density": {

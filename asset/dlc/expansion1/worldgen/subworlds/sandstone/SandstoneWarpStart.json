@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/SandstoneStart",
   "temperatureRange": "Room",
   "density": {
     "min": 10,

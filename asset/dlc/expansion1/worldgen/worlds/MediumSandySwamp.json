@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMSANDYSWAMP.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMSANDYSWAMP.DESCRIPTION",
-  "nameTables": [
-    "TERRA",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_vanilla_mediumsandyswamp_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -54,10 +48,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumSandySwampMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/sandstone/SandstoneWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldBase",

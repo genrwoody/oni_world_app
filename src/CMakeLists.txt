@@ -16,7 +16,7 @@ add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/JsonDeserializeGen.hpp"
     VERBATIM
 )
 
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/gen_config.cmake" "
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/GenConfig.cmake" "
 file(SIZE \${SETTING_ASSET_FILEPATH} SETTING_ASSET_FILESIZE)
 file(READ ${CMAKE_CURRENT_SOURCE_DIR}/config.h.in CONFIG_H_IN_FILE)
 file(CONFIGURE OUTPUT \${CMAKE_CURRENT_BINARY_DIR}/config.h
@@ -26,7 +26,7 @@ file(CONFIGURE OUTPUT \${CMAKE_CURRENT_BINARY_DIR}/config.h
 
 add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/config.h"
     COMMAND ${CMAKE_COMMAND} -DSETTING_ASSET_FILEPATH=${SETTING_ASSET_FILEPATH}
-                             -P ${CMAKE_CURRENT_BINARY_DIR}/gen_config.cmake
+                             -P ${CMAKE_CURRENT_BINARY_DIR}/GenConfig.cmake
     DEPENDS ${SETTING_ASSET_FILEPATH} asset "config.h.in"
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
     VERBATIM
@@ -86,15 +86,15 @@ target_link_options(oniWorldApp
     PUBLIC "-sMINIMAL_RUNTIME=1" "-sEXPORTED_RUNTIME_METHODS=[HEAP32,HEAPU8]"
     PUBLIC "--pre-js" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
     PUBLIC "--js-library" "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js")
+# the neocities can not upload .wasm file, so rename it.
 add_custom_command(TARGET oniWorldApp POST_BUILD
-    COMMAND ${PYTHON_CMD} "${CMAKE_CURRENT_SOURCE_DIR}/JoinWasmFilesHash.py"
+    COMMAND ${CMAKE_COMMAND} -E copy oniWorldApp.wasm wasm.bin
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
     VERBATIM
 )
 list(APPEND WASM_LINK_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/prefix.js"
     "${CMAKE_CURRENT_SOURCE_DIR}/jsUtils/getresult.js"
-    "${CMAKE_CURRENT_SOURCE_DIR}/JoinWasmFilesHash.py"
 )
 set_target_properties(oniWorldApp PROPERTIES LINK_DEPENDS "${WASM_LINK_DEPENDS}")
 elseif(MSVC)

@@ -1,0 +1,29 @@
+{
+  "info": {
+    "size": {
+      "X": 10,
+      "Y": 8
+    },
+    "min": {
+      "X": -4,
+      "Y": -3
+    },
+    "area": 78
+  },
+  "otherEntities": [
+    {
+      "id": "DewPalm",
+      "location_x": -1,
+      "location_y": -2
+    },
+    {
+      "id": "MusselSprout",
+      "location_x": 2,
+      "location_y": -1
+    },
+    {
+      "id": "WaterCups",
+      "location_x": 3
+    }
+  ]
+}

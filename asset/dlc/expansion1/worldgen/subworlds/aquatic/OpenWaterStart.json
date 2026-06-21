@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Default",
   "temperatureRange": "HumanHot",
   "minChildCount": 1,
   "density": {
@@ -8,7 +7,6 @@
   },
   "avoidRadius": 20,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "NONE",
   "biomes": [
     {
       "name": "biomes/Misc/Empty",

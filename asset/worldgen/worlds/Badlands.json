@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.BADLANDS.NAME",
-  "description": "STRINGS.WORLDS.BADLANDS.DESCRIPTION",
-  "asteroidIcon": "Asteroid_badlands",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -56,9 +54,6 @@
     "min": 0.45,
     "max": 0.55
   },
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

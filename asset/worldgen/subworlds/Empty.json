@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
   "temperatureRange": "Room",
   "density": {
     "min": 10,

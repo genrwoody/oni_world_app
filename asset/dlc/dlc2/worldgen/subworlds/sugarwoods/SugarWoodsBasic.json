@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldForest",
   "temperatureRange": "VeryCold",
   "density": {
     "min": 10,

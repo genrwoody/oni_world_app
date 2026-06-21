@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Default",
   "temperatureRange": "HumanHot",
   "minChildCount": 4,
   "pdWeight": 1,
@@ -9,7 +8,6 @@
   },
   "avoidRadius": 50.0,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "NONE",
   "biomes": [
     {
       "name": "expansion1::biomes/Barren/FullereneOre",

@@ -1,0 +1,22 @@
+{
+  "info": {
+    "size": {
+      "X": 10,
+      "Y": 8
+    },
+    "min": {
+      "X": -4,
+      "Y": -3
+    },
+    "area": 60
+  },
+  "otherEntities": [
+    {
+      "id": "MusselSprout",
+      "location_x": -4
+    },
+    {
+      "id": "PropDrySuitHanger"
+    }
+  ]
+}

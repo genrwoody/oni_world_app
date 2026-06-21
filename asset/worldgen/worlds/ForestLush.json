@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.FOREST_LUSH.NAME",
-  "description": "STRINGS.WORLDS.FOREST_LUSH.DESCRIPTION",
-  "asteroidIcon": "Asteroid_lushforest",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -65,9 +63,6 @@
   ],
   "startSubworldName": "subworlds/forest/ForestStart",
   "startingBaseTemplate": "bases/forestBase",
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

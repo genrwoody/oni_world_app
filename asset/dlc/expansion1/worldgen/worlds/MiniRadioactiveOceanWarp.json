@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINIRADIOACTIVEOCEAN.NAME",
-  "description": "STRINGS.WORLDS.MINIRADIOACTIVEOCEAN.DESCRIPTION",
-  "nameTables": [
-    "WATER",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_mini_radiation_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -66,9 +60,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationHigh"
-  ],
-  "seasons": [
-    "MiniRadioactiveOceanMeteorShowers"
   ],
   "subworldFiles": [
     {

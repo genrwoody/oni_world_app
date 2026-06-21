@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Sandstone",
   "temperatureRange": "Cool",
   "pdWeight": 0.5,
   "density": {
@@ -10,7 +9,6 @@
   "doAvoidPoints": false,
   "dontRelaxChildren": true,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "rocky",
   "biomes": [
     {
       "name": "biomes/Sedimentary/Metal_CO2",

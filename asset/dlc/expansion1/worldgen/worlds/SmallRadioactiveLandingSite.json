@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.IDEALLANDINGSITE.NAME",
-  "description": "STRINGS.WORLDS.IDEALLANDINGSITE.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_swamp_rocket_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.12,
   "worldsize": {

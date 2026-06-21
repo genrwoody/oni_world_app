@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TUNDRAMOONLET.NAME",
-  "description": "STRINGS.WORLDS.TUNDRAMOONLET.DESCRIPTION",
-  "nameTables": [
-    "TUNDRA"
-  ],
-  "asteroidIcon": "asteroid_ice_planet_kanim",
   "worldTraitScale": 0.08,
   "worldsize": {
     "X": 64,
@@ -117,9 +112,6 @@
   "fixedTraits": [
     "sunlightVeryVeryLow",
     "cosmicRadiationMed"
-  ],
-  "seasons": [
-    "TundraMoonletMeteorShowers"
   ],
   "worldTemplateRules": [
     {

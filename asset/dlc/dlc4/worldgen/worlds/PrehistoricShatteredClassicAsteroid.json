@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.PREHISTORICSHATTERED.NAME",
-  "description": "STRINGS.WORLDS.PREHISTORICSHATTERED.DESCRIPTION",
-  "nameTables": [
-    "PREHISTORIC"
-  ],
-  "asteroidIcon": "prehistoric_lab_so_kanim",
   "worldTags": [
     "Prehistoric"
   ],
@@ -79,10 +74,6 @@
     "sunlightMed",
     "cosmicRadiationVeryLow",
     "largeImpactorFragmentsAllowed"
-  ],
-  "seasons": [
-    "LargeImpactor",
-    "PrehistoricMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

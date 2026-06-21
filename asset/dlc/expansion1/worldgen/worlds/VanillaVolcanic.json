@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLAVOLCANIC.NAME",
-  "description": "STRINGS.WORLDS.VANILLAVOLCANIC.DESCRIPTION",
-  "nameTables": [
-    "MAGMA"
-  ],
-  "asteroidIcon": "asteroid_vanilla_volcanic_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -128,10 +123,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaVolcanicMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.SANDSTONE_DEFAULT.NAME",
-  "description": "STRINGS.WORLDS.SANDSTONE_DEFAULT.DESCRIPTION",
-  "asteroidIcon": "Asteroid_sandstone",
   "disableWorldTraits": true,
   "worldTraitScale": 1,
   "worldsize": {
@@ -59,9 +57,6 @@
   ],
   "startSubworldName": "subworlds/sandstone/SandstoneStart",
   "startingBaseTemplate": "bases/sandstoneBase",
-  "seasons": [
-    "MeteorShowers"
-  ],
   "subworldMixingRules": [
     {
       "name": "(Mixing1)",

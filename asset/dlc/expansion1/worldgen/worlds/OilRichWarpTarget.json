@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.OILRICHWARPTARGET.NAME",
-  "description": "STRINGS.WORLDS.OILRICHWARPTARGET.DESCRIPTION",
-  "nameTables": [
-    "TERRA",
-    "OILY"
-  ],
-  "asteroidIcon": "asteroid_swamp_teleport_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -48,10 +42,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleWarpMeteorShowers",
-    "OilRichWarpTargetMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/sandstone/SandstoneWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldSandstoneBase",

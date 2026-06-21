@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/OilField",
   "temperatureRange": "Hot",
   "minChildCount": 2,
   "density": {

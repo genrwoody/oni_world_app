@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldFrozen",
   "temperatureRange": "ExtremelyCold",
   "minChildCount": 12,
   "density": {

@@ -1,0 +1,47 @@
+{
+  "info": {
+    "size": {
+      "X": 13,
+      "Y": 12
+    },
+    "min": {
+      "X": -6,
+      "Y": -5
+    },
+    "area": 124
+  },
+  "otherEntities": [
+    {
+      "id": "BasicFabricPlant",
+      "location_x": -4,
+      "location_y": -1
+    },
+    {
+      "id": "KelpVista",
+      "location_y": -4
+    },
+    {
+      "id": "MinnowImperativePOIB",
+      "location_y": -1
+    },
+    {
+      "id": "SeaTree",
+      "location_x": 5
+    },
+    {
+      "id": "SeaTree",
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "id": "SeaTree",
+      "location_x": 3,
+      "location_y": -2
+    },
+    {
+      "id": "BulbPlant",
+      "location_x": -2,
+      "location_y": -3
+    }
+  ]
+}

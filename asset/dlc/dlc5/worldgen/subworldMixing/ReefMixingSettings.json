@@ -1,0 +1,50 @@
+{
+  "name": "STRINGS.SUBWORLDS.REEF.NAME",
+  "description": "STRINGS.SUBWORLDS.REEF.DESC",
+  "icon": "biomeIconReef",
+  "mixingTags": [
+    "Aquatic"
+  ],
+  "forbiddenClusterTags": [
+    "AquaticCluster"
+  ],
+  "subworld": {
+    "name": "dlc5::subworlds/reef/ReefMixing"
+  },
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "dlc5::poi/reef/smallReefGeyser"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/clam_small",
+        "dlc5::poi/reef/clam_large"
+      ],
+      "listRule": "TryOne",
+      "priority": 101,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    }
+  ]
+}

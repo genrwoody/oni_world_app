@@ -20,7 +20,7 @@
 Variant SettingsCache::m_nil;
 
 template<typename Ty>
-inline bool string_view_to_number(const std::string_view& str, Ty& out)
+inline bool string_view_to_number(const std::string_view &str, Ty &out)
 {
     auto begin = str.data();
     auto end = str.data() + str.size();
@@ -92,6 +92,9 @@ static std::string GenerateKey(const char *filename)
         offset = 9;
     } else if (strstr(filename, "dlc/dlc4") != nullptr) {
         key = "dlc4::";
+        offset = 9;
+    } else if (strstr(filename, "dlc/dlc5") != nullptr) {
+        key = "dlc5::";
         offset = 9;
     }
     if (strstr(filename, "templates/") != nullptr) {
@@ -259,14 +262,15 @@ std::string SettingsCache::BinaryToBase36(uint32_t input)
 bool SettingsCache::CoordinateChanged(int type, int seed, int mix)
 {
     const char *clusterPrefix[] = {
-        "SNDST-A",  "OCAN-A",    "S-FRZ",     "LUSH-A",    "FRST-A",
-        "VOLCA",    "BAD-A",     "HTFST-A",   "OASIS-A",   "CER-A",
-        "CERS-A",   "PRE-A",     "PRES-A",    "V-SNDST-C", "V-OCAN-C",
-        "V-SWMP-C", "V-SFRZ-C",  "V-LUSH-C",  "V-FRST-C",  "V-VOLCA-C",
-        "V-BAD-C",  "V-HTFST-C", "V-OASIS-C", "V-CER-C",   "V-CERS-C",
-        "V-PRE-C",  "V-PRES-C",  "SNDST-C",   "PRE-C",     "CER-C",
-        "FRST-C",   "SWMP-C",    "M-SWMP-C",  "M-BAD-C",   "M-FRZ-C",
-        "M-FLIP-C", "M-RAD-C",   "M-CERS-C"};
+        "SNDST-A",   "OCAN-A",   "S-FRZ",     "LUSH-A",    "FRST-A",
+        "VOLCA",     "BAD-A",    "HTFST-A",   "OASIS-A",   "CER-A",
+        "CERS-A",    "PRE-A",    "PRES-A",    "AQU-A",     "V-SNDST-C",
+        "V-OCAN-C",  "V-SWMP-C", "V-SFRZ-C",  "V-LUSH-C",  "V-FRST-C",
+        "V-VOLCA-C", "V-BAD-C",  "V-HTFST-C", "V-OASIS-C", "V-CER-C",
+        "V-CERS-C",  "V-PRE-C",  "V-PRES-C",  "V-AQU-C",   "SNDST-C",
+        "AQU-C",     "PRE-C",    "CER-C",     "FRST-C",    "SWMP-C",
+        "M-SWMP-C",  "M-BAD-C",  "M-FRZ-C",   "M-FLIP-C",  "M-RAD-C",
+        "M-CERS-C"};
     if (type < 0 || (int)std::size(clusterPrefix) <= type) {
         return false;
     }
@@ -326,14 +330,20 @@ bool SettingsCache::InitializeCluster(const std::string_view &coord)
             m_dlcState |= 4;
         } else if (id == "DLC4_ID") {
             m_dlcState |= 8;
+        } else if (id == "DLC5_ID") {
+            m_dlcState |= 16;
         }
     }
+    MinMax mixIndex;
     if (coord.contains("CER")) {
-        mixConfigs[0].level = mixConfigs[1].level = mixConfigs[2].level =
-            mixConfigs[3].level = mixConfigs[4].level = MixingLevel::Disabled;
+        mixIndex = {0, 5};
     } else if (coord.contains("PRE")) {
-        mixConfigs[6].level = mixConfigs[7].level = mixConfigs[8].level =
-            mixConfigs[9].level = mixConfigs[10].level = MixingLevel::Disabled;
+        mixIndex = {6, 11};
+    } else if (coord.contains("AQU")) {
+        mixIndex = {11, 17};
+    }
+    for (int i = mixIndex.min; i < mixIndex.max; ++i) {
+        mixConfigs[i].level = MixingLevel::Disabled;
     }
     return true;
 }

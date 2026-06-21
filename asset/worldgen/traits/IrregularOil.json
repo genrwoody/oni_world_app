@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.NAME",
-  "description": "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.DESCRIPTION",
-  "colorHex": "6C6C6C",
   "forbiddenDLCIds": [
     "EXPANSION1_ID"
   ],

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.OASIS.NAME",
-  "description": "STRINGS.WORLDS.OASIS.DESCRIPTION",
-  "asteroidIcon": "Asteroid_oasis",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -62,9 +60,6 @@
   ],
   "startSubworldName": "subworlds/forest/ForestStart",
   "startingBaseTemplate": "bases/forestBase",
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

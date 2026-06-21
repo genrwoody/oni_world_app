@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.SUBSURFACE_OCEAN.NAME",
-  "description": "STRINGS.WORLD_TRAITS.SUBSURFACE_OCEAN.DESCRIPTION",
-  "colorHex": "12D1F4",
   "forbiddenDLCIds": [
     "EXPANSION1_ID"
   ],

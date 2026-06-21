@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.MAGMA_VENTS.NAME",
-  "description": "STRINGS.WORLD_TRAITS.MAGMA_VENTS.DESCRIPTION",
-  "colorHex": "FA4545",
   "traitTags": [
     "VeryHot",
     "AboveCore",

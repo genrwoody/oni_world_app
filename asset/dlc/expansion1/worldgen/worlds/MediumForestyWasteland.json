@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMFORESTYWASTELAND.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMFORESTYWASTELAND.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_vanilla_mediumforestywasteland_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -54,10 +48,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumForestyWastelandMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/forest/ForestWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldForestBase",

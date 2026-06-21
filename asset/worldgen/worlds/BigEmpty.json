@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.BIGEMPTY.NAME",
-  "description": "STRINGS.WORLDS.BIGEMPTY.DESCRIPTION",
   "disableWorldTraits": true,
   "worldTraitScale": 1,
   "worldsize": {

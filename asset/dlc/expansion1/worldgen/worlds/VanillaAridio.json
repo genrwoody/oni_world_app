@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLAARIDIO.NAME",
-  "description": "STRINGS.WORLDS.VANILLAARIDIO.DESCRIPTION",
-  "nameTables": [
-    "FOREST"
-  ],
-  "asteroidIcon": "asteroid_vanilla_foresthot_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -131,10 +126,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaAridioMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

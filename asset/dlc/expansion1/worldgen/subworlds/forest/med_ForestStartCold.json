@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldForest",
   "temperatureRange": "Mild",
   "pdWeight": 4,
   "density": {
@@ -11,7 +10,6 @@
   "doAvoidPoints": false,
   "dontRelaxChildren": true,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "rocky",
   "biomes": [
     {
       "name": "biomes/Forest/BasicOxy",

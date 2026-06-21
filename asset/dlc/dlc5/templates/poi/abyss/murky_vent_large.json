@@ -1,0 +1,38 @@
+{
+  "info": {
+    "size": {
+      "X": 10,
+      "Y": 13
+    },
+    "min": {
+      "X": -4,
+      "Y": -6
+    },
+    "area": 110
+  },
+  "otherEntities": [
+    {
+      "id": "TubeWorm",
+      "location_y": -4
+    },
+    {
+      "id": "TubeWorm",
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "id": "TubeWorm",
+      "location_x": 2,
+      "location_y": -4
+    },
+    {
+      "id": "TubeWorm",
+      "location_x": 3,
+      "location_y": -3
+    },
+    {
+      "id": "GeyserGeneric_murky_brine",
+      "location_y": 2
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TINYICE.NAME",
-  "description": "STRINGS.WORLDS.TINYICE.DESCRIPTION",
   "disableWorldTraits": true,
   "worldTraitScale": 0.04,
   "worldsize": {

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.FROZEN_CORE.NAME",
-  "description": "STRINGS.WORLD_TRAITS.FROZEN_CORE.DESCRIPTION",
-  "colorHex": "91D8F0",
   "exclusiveWithTags": [
     "CoreTrait"
   ],

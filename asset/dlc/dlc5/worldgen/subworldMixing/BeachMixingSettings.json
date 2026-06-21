@@ -1,0 +1,38 @@
+{
+  "name": "STRINGS.SUBWORLDS.BEACH.NAME",
+  "description": "STRINGS.SUBWORLDS.BEACH.DESC",
+  "icon": "biomeIconBeach",
+  "mixingTags": [
+    "Aquatic",
+    "LargePOIs"
+  ],
+  "forbiddenClusterTags": [
+    "AquaticCluster"
+  ],
+  "subworld": {
+    "name": "dlc5::subworlds/beach/BeachMixing"
+  },
+  "additionalWorldTemplateRules": [
+    {
+      "names": [
+        "dlc5::poi/beach/simplepalm1",
+        "dlc5::poi/beach/simplepalm2",
+        "dlc5::poi/beach/simplepalm3",
+        "dlc5::poi/beach/simplepalm4",
+        "dlc5::poi/beach/simplepalm5",
+        "dlc5::poi/beach/tiny_palm"
+      ],
+      "listRule": "TrySome",
+      "someCount": 2,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Beach"
+          ]
+        }
+      ]
+    }
+  ]
+}

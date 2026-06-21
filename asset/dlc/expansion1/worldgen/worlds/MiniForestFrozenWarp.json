@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINIFORESTFROZEN.NAME",
-  "description": "STRINGS.WORLDS.MINIFORESTFROZEN.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "TUNDRA"
-  ],
-  "asteroidIcon": "asteroid_mini_forestfrozen_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -65,9 +59,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationLow"
-  ],
-  "seasons": [
-    "MiniForestFrozenMeteorShowers"
   ],
   "subworldFiles": [
     {

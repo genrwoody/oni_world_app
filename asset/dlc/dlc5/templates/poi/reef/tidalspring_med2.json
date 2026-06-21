@@ -1,0 +1,34 @@
+{
+  "info": {
+    "size": {
+      "X": 11,
+      "Y": 11
+    },
+    "min": {
+      "X": -4,
+      "Y": -4
+    },
+    "area": 102
+  },
+  "otherEntities": [
+    {
+      "id": "SeaLettuce",
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "id": "SeaLettuce",
+      "location_x": -3,
+      "location_y": -1
+    },
+    {
+      "id": "PlanktonCoral",
+      "location_x": 1,
+      "location_y": 3
+    },
+    {
+      "id": "SmallReefGeyser",
+      "location_x": 1
+    }
+  ]
+}

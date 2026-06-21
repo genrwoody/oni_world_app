@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLAOASIS.NAME",
-  "description": "STRINGS.WORLDS.VANILLAOASIS.DESCRIPTION",
-  "asteroidIcon": "asteroid_vanilla_oasis_kanim",
-  "nameTables": [
-    "FOREST"
-  ],
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -121,10 +116,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaOasisMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/OilPockets",
   "temperatureRange": "VeryCold",
   "pdWeight": 0.5,
   "minChildCount": 2,

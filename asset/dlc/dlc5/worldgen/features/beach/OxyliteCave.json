@@ -1,0 +1,45 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1
+  ],
+  "blobSize": {
+    "min": 1,
+    "max": 3
+  },
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 10.0
+        },
+        {
+          "element": "OxyRock",
+          "weight": 1.0
+        },
+        {
+          "element": "Salt",
+          "weight": 2.0
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "OxyRock",
+          "weight": 1.0
+        },
+        {
+          "element": "SiltStone",
+          "weight": 2.0
+        }
+      ]
+    }
+  }
+}

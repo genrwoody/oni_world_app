@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.SWAMPMOONLET.NAME",
-  "description": "STRINGS.WORLDS.SWAMPMOONLET.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_swamp_start_kanim",
   "worldTraitScale": 0.44,
   "worldsize": {
     "X": 160,
@@ -63,10 +58,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleStartMeteorShowers",
-    "SwampMoonletMeteorShowers"
   ],
   "subworldFiles": [
     {

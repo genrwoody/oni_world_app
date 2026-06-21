@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.NIOBIUMMOONLET.NAME",
-  "description": "STRINGS.WORLDS.NIOBIUMMOONLET.DESCRIPTION",
-  "nameTables": [
-    "MAGMA"
-  ],
-  "asteroidIcon": "asteroid_niobium_planet_kanim",
   "worldTraitScale": 0.06,
   "worldsize": {
     "X": 64,
@@ -81,9 +76,6 @@
   "fixedTraits": [
     "sunlightVeryVeryHigh",
     "cosmicRadiationHigh"
-  ],
-  "seasons": [
-    "NiobiumMoonletMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

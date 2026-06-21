@@ -1,7 +1,5 @@
 {
-  "biomeNoise": "expansion1::noise/SmallCaves",
   "temperatureRange": "HumanWarm",
-  "borderOverride": "regolith",
   "minChildCount": 2,
   "density": {
     "min": 35,

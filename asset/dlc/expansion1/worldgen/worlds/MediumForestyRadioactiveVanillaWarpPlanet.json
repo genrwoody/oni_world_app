@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMFORESTYRADIOACTIVEVANILLAWARPPLANET.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMFORESTYRADIOACTIVEVANILLAWARPPLANET.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_vanilla_swamp_warp_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -54,10 +48,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumForestyRadioactiveVanillaWarpPlanetMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/forest/ForestWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldForestBase",

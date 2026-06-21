@@ -1,0 +1,28 @@
+{
+  "temperatureRange": "SomewhatHot",
+  "density": {
+    "min": 5,
+    "max": 7
+  },
+  "avoidRadius": 5.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "extraBiomeChildren": 5,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/Abyss/Basic",
+      "weight": 1,
+      "tags": [
+        "TubeWorm",
+        "Squid",
+        "UrchinPlant",
+        "Bulbloom"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Abyss"
+}

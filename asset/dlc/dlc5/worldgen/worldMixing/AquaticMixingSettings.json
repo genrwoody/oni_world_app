@@ -1,0 +1,9 @@
+{
+  "name": "STRINGS.WORLDS.AQUATICMIXING.NAME",
+  "description": "STRINGS.WORLDS.AQUATICMIXING.DESCRIPTION",
+  "forbiddenClusterTags": [
+    "AquaticCluster"
+  ],
+  "icon": "aquatic_asteroid_mixing_kanim",
+  "world": "dlc5::worlds/MixingAquaticAsteroid"
+}

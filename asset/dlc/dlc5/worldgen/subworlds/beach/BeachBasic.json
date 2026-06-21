@@ -1,0 +1,44 @@
+{
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 2,
+  "density": {
+    "min": 7,
+    "max": 14
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 12,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/Beach/Basic",
+      "weight": 4,
+      "tags": [
+        "BeachCrab",
+        "WaterCups",
+        "MusselSprout",
+        "SaltySticksPlant",
+        "DewPalm"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "dlc5::features/beach/AirPocket"
+    },
+    {
+      "type": "dlc5::features/beach/AirPocket"
+    },
+    {
+      "type": "dlc5::features/beach/TinyFreshWaterLake"
+    },
+    {
+      "type": "dlc5::features/beach/OxyliteCave"
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Beach"
+}

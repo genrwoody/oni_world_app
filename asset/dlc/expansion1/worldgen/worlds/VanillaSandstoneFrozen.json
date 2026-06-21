@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLASANDSTONEFROZEN.NAME",
-  "description": "STRINGS.WORLDS.VANILLASANDSTONEFROZEN.DESCRIPTION",
-  "nameTables": [
-    "TUNDRA"
-  ],
-  "asteroidIcon": "asteroid_vanilla_sandstonefrozen_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -14,10 +9,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaSandstoneFrozenMeteorShowers"
   ],
   "startSubworldName": "subworlds/sandstone/SandstoneStartCold",
   "startingBaseTemplate": "bases/sandstoneBase",

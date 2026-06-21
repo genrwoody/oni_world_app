@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "expansion1::noise/subworldMooOuter",
   "temperatureRange": "Cold",
   "density": {
     "min": 10,
@@ -9,7 +8,6 @@
   "doAvoidPoints": false,
   "dontRelaxChildren": true,
   "extraBiomeChildren": 0,
-  "borderOverride": "mooWorld",
   "sampleBehaviour": "PoissonDisk",
   "biomes": [
     {

@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Sandstone",
   "temperatureRange": "Room",
   "density": {
     "min": 10,
@@ -7,7 +6,6 @@
   },
   "avoidRadius": 20.0,
   "minChildCount": 4,
-  "borderOverride": "rocky",
   "sampleBehaviour": "PoissonDisk",
   "biomes": [
     {

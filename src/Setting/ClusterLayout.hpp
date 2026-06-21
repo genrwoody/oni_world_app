@@ -44,7 +44,6 @@ struct ClusterLayout {
     std::vector<std::string> forbiddenDlcIds;
     bool disableStoryTraits{};
     int fixedCoordinate{};
-    Skip skip{};
     ClusterCategory clusterCategory{};
     int startWorldIndex{};
     int width{};

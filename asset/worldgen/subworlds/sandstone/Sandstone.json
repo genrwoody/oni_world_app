@@ -1,8 +1,4 @@
 {
-  "nameKey": "STRINGS.SUBWORLDS.SANDSTONE.NAME",
-  "descriptionKey": "STRINGS.SUBWORLDS.SANDSTONE.DESCRIPTION",
-  "utilityKey": "STRINGS.SUBWORLDS.SANDSTONE.UTILITY",
-  "biomeNoise": "noise/Sandstone",
   "temperatureRange": "Room",
   "tags": [
     "IgnoreCaveOverride"

@@ -1,0 +1,24 @@
+{
+  "info": {
+    "size": {
+      "X": 10,
+      "Y": 11
+    },
+    "min": {
+      "X": -4,
+      "Y": -4
+    },
+    "area": 88
+  },
+  "otherEntities": [
+    {
+      "id": "PlanktonCoral",
+      "location_x": 1,
+      "location_y": 2
+    },
+    {
+      "id": "SmallReefGeyser",
+      "location_y": -2
+    }
+  ]
+}

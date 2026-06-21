@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMSANDYRADIOACTIVEVANILLAWARPPLANET.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMSANDYRADIOACTIVEVANILLAWARPPLANET.DESCRIPTION",
-  "nameTables": [
-    "TERRA",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_vanilla_forest_warp_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -53,10 +47,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumSandyRadioactiveVanillaWarpPlanetMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/sandstone/SandstoneWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldBase",

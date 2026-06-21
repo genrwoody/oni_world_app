@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLAOCEANIA.NAME",
-  "description": "STRINGS.WORLDS.VANILLAOCEANIA.DESCRIPTION",
-  "nameTables": [
-    "WATER"
-  ],
-  "asteroidIcon": "asteroid_vanilla_oceania_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -128,10 +123,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaOceaniaMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

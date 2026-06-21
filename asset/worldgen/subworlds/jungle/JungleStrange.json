@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldJungle",
   "temperatureRange": "HumanHot",
   "density": {
     "min": 10,

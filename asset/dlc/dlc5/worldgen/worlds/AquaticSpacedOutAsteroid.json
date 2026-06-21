@@ -1,0 +1,529 @@
+{
+  "name": "STRINGS.WORLDS.AQUATICSPACEDOUT.NAME",
+  "worldTags": [
+    "Aquatic"
+  ],
+  "dlcIdFrom": "DLC5_ID",
+  "requiredDlcIds": [
+    "EXPANSION1_ID",
+    "DLC5_ID"
+  ],
+  "worldTraitScale": 0.44,
+  "worldsize": {
+    "X": 160,
+    "Y": 274
+  },
+  "layoutMethod": "PowerTree",
+  "worldTraitRules": [
+    {
+      "min": 2,
+      "max": 4,
+      "forbiddenTags": [
+        "Surface",
+        "Oil",
+        "Core",
+        "NonStartWorld"
+      ],
+      "forbiddenTraits": [
+        "traits/MisalignedStart",
+        "traits/Geodormant",
+        "traits/MagmaVents",
+        "expansion1::traits/Volcanoes"
+      ]
+    }
+  ],
+  "subworldMixingRules": [
+    {
+      "name": "(Mixing1)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing2)",
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "name": "(Mixing3)",
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ],
+  "fixedTraits": [
+    "sunlightLow",
+    "cosmicRadiationVeryLow"
+  ],
+  "defaultsOverrides": {
+    "data": {
+      "OverworldDensityMin": 18,
+      "OverworldDensityMax": 18,
+      "OverworldSampleBehaviour": "PoissonDisk",
+      "POIPadding": 1
+    }
+  },
+  "subworldFiles": [
+    {
+      "name": "dlc5::subworlds/beach/BeachStart",
+      "overridePower": 2
+    },
+    {
+      "name": "dlc5::subworlds/beach/BeachMiniAlgae",
+      "overridePower": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "name": "dlc5::subworlds/beach/BeachMiniWater",
+      "overridePower": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "name": "dlc5::subworlds/beach/BeachMiniMetal",
+      "overridePower": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "name": "dlc5::subworlds/reef/ReefBasic",
+      "minCount": 5
+    },
+    {
+      "name": "dlc5::subworlds/kelpforest/KelpForestBasic",
+      "minCount": 5
+    },
+    {
+      "name": "dlc5::subworlds/abyss/AbyssBasic",
+      "minCount": 6
+    },
+    {
+      "name": "subworlds/ocean/OceanDeepSlush",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/rust/Rust",
+      "minCount": 3
+    },
+    {
+      "name": "subworlds/forest/Forest",
+      "minCount": 3
+    },
+    {
+      "name": "expansion1::subworlds/space/SpaceWithNoBorder"
+    },
+    {
+      "name": "dlc5::subworlds/space/SpaceWithBeachBorder"
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_Radioactive",
+      "minCount": 2
+    },
+    {
+      "name": "expansion1::subworlds/radioactive/med_UraniumFields"
+    }
+  ],
+  "startSubworldName": "dlc5::subworlds/beach/BeachStart",
+  "startingBaseTemplate": "dlc5::bases/beachBaseVista",
+  "startingBasePositionHorizontal": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "startingBasePositionVertical": {
+    "min": 0.5,
+    "max": 0.5
+  },
+  "unknownCellsAllowedSubworlds": [
+    {
+      "tagcommand": "Default",
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/reef/ReefBasic",
+        "subworlds/ocean/OceanDeepSlush",
+        "subworlds/rust/Rust",
+        "subworlds/forest/Forest",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/beach/BeachMiniAlgae",
+        "dlc5::subworlds/beach/BeachMiniWater",
+        "dlc5::subworlds/beach/BeachMiniMetal",
+        "dlc5::subworlds/reef/ReefBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 2,
+      "maxDistance": 2,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/reef/ReefBasic",
+        "dlc5::subworlds/kelpforest/KelpForestBasic"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtStart",
+      "minDistance": 3,
+      "maxDistance": 4,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/kelpforest/KelpForestBasic",
+        "subworlds/ocean/OceanDeepSlush",
+        "subworlds/rust/Rust",
+        "subworlds/forest/Forest",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtDepths",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "expansion1::subworlds/radioactive/med_UraniumFields",
+        "expansion1::subworlds/radioactive/med_Radioactive",
+        "dlc5::subworlds/abyss/AbyssBasic",
+        "(Mixing1)",
+        "(Mixing2)",
+        "(Mixing3)"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "command": "Replace",
+      "minDistance": 0,
+      "maxDistance": 1,
+      "subworldNames": [
+        "expansion1::subworlds/space/SpaceWithNoBorder"
+      ]
+    },
+    {
+      "tagcommand": "DistanceFromTag",
+      "tag": "AtSurface",
+      "minDistance": 1,
+      "maxDistance": 1,
+      "command": "Replace",
+      "subworldNames": [
+        "dlc5::subworlds/space/SpaceWithBeachBorder"
+      ]
+    }
+  ],
+  "worldTemplateRules": [
+    {
+      "names": [
+        "dlc5::poi/beach/aquatic_research_unlock"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 200,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc5::subworlds/beach/BeachStart"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/beach/beach_gear"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 200,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "subworldNames": [
+            "dlc5::subworlds/beach/BeachStart"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/beach/simplepalm1",
+        "dlc5::poi/beach/simplepalm2",
+        "dlc5::poi/beach/simplepalm3",
+        "dlc5::poi/beach/simplepalm4",
+        "dlc5::poi/beach/simplepalm5",
+        "dlc5::poi/beach/tiny_palm"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Beach"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/smallReefGeyser"
+      ],
+      "listRule": "TryOne",
+      "times": 10,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/tidalspring_med1",
+        "dlc5::poi/reef/tidalspring_med2",
+        "dlc5::poi/reef/tidalspring_big1"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/reef/clam_small",
+        "dlc5::poi/reef/clam_large"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/imperative/minnowPOI_A"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Reef"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/imperative/minnowPOI_B"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "KelpForest"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/abyss/abyss_geyser",
+        "dlc5::poi/abyss/abyss_snail_pond"
+      ],
+      "listRule": "GuaranteeOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/abyss/murky_vent_small"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "dlc5::poi/imperative/minnowPOI_C_small"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 500,
+      "allowNearStart": true,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Abyss"
+          ]
+        }
+      ]
+    },
+    {
+      "names": [
+        "poi/poi_ocean_geyser_saltwater"
+      ],
+      "listRule": "GuaranteeOne",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "zoneTypes": [
+            "Ocean"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/warp/sender",
+        "expansion1::poi/warp/receiver",
+        "expansion1::poi/warp/teleporter"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 90,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 1,
+          "maxDistance": 3
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 1
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    },
+    {
+      "names": [
+        "expansion1::poi/genericGravitas/poi_office"
+      ],
+      "listRule": "GuaranteeAll",
+      "priority": 100,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 99
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtDepths",
+          "minDistance": 0,
+          "maxDistance": 2
+        }
+      ]
+    },
+    {
+      "names": [
+        "geysers/steam",
+        "geysers/chlorine_gas",
+        "geysers/hot_po2",
+        "geysers/methane",
+        "geysers/filthy_water",
+        "geysers/liquid_co2",
+        "geysers/hot_hydrogen",
+        "geysers/big_volcano"
+      ],
+      "listRule": "TryOne",
+      "times": 3,
+      "allowDuplicates": true,
+      "priority": 10,
+      "allowedCellsFilter": [
+        {
+          "command": "Replace",
+          "tagcommand": "DistanceFromTag",
+          "tag": "AtStart",
+          "minDistance": 2,
+          "maxDistance": 10
+        },
+        {
+          "command": "ExceptWith",
+          "zoneTypes": [
+            "Space"
+          ]
+        },
+        {
+          "command": "ExceptWith",
+          "tagcommand": "AtTag",
+          "tag": "NoGlobalFeatureSpawning"
+        }
+      ]
+    }
+  ]
+}

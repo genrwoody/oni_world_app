@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldForest",
   "temperatureRange": "Room",
   "pdWeight": 0.5,
   "density": {
@@ -9,7 +8,6 @@
   "avoidRadius": 5,
   "minChildCount": 4,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "rocky",
   "biomes": [
     {
       "name": "biomes/Forest/Basic",

@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MOON_BARREN.NAME",
-  "description": "STRINGS.WORLDS.MOON_BARREN.DESCRIPTION",
   "disableWorldTraits": true,
   "worldTraitScale": 0.09,
   "worldsize": {

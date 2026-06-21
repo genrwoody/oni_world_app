@@ -1,0 +1,24 @@
+{
+  "requiredDlcIds": [
+    "DLC5_ID"
+  ],
+  "forbiddenDlcIds": [
+    "EXPANSION1_ID"
+  ],
+  "coordinatePrefix": "AQU-A",
+  "clusterCategory": "Vanilla",
+  "clusterTags": [
+    "AquaticCluster",
+    "MinnowRecruitedAchievement"
+  ],
+  "startWorldIndex": 0,
+  "worldPlacements": [
+    {
+      "world": "dlc5::worlds/AquaticBaseGameAsteroid",
+      "allowedRings": {
+        "min": 0,
+        "max": 0
+      }
+    }
+  ]
+}

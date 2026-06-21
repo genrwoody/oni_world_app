@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Default",
   "temperatureRange": "HumanWarm",
   "minChildCount": 2,
   "pdWeight": 2,

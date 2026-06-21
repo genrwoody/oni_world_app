@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.PREHISTORICBASEGAME.NAME",
-  "description": "STRINGS.WORLDS.PREHISTORICBASEGAME.DESCRIPTION",
-  "nameTables": [
-    "PREHISTORIC"
-  ],
-  "asteroidIcon": "prehistoric_asteroid_base",
   "worldTags": [
     "Prehistoric"
   ],
@@ -65,10 +60,6 @@
       "minCount": 2,
       "maxCount": 4
     }
-  ],
-  "seasons": [
-    "LargeImpactor",
-    "PrehistoricMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

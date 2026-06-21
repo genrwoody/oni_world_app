@@ -1,0 +1,29 @@
+{
+  "info": {
+    "size": {
+      "X": 21,
+      "Y": 16
+    },
+    "min": {
+      "X": -10,
+      "Y": -7
+    },
+    "area": 230
+  },
+  "otherEntities": [
+    {
+      "id": "SeaLettuce",
+      "location_x": 7,
+      "location_y": -6
+    },
+    {
+      "id": "MusselSprout",
+      "location_x": 7,
+      "location_y": -1
+    },
+    {
+      "id": "BeachVista",
+      "location_y": -3
+    }
+  ]
+}

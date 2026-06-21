@@ -1,0 +1,65 @@
+{
+  "tags": [
+    "AllowExceedNodeBorders",
+    "Wet"
+  ],
+  "shape": "Circle",
+  "borders": [
+    1,
+    1
+  ],
+  "blobSize": {
+    "min": 5,
+    "max": 6
+  },
+  "internalMobs": null,
+  "ElementChoiceGroups": {
+    "RoomCenterElements": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Oxygen",
+          "weight": 1.0
+        },
+        {
+          "element": "Water",
+          "weight": 0.05
+        },
+        {
+          "element": "Sand",
+          "weight": 0.1
+        }
+      ]
+    },
+    "RoomBorderChoices0": {
+      "selectionMethod": "HorizontalSlice",
+      "choices": [
+        {
+          "element": "Salt",
+          "weight": 0.5
+        },
+        {
+          "element": "Algae",
+          "weight": 1
+        }
+      ]
+    },
+    "RoomBorderChoices1": {
+      "selectionMethod": "WeightedResample",
+      "choices": [
+        {
+          "element": "Salt",
+          "weight": 1
+        },
+        {
+          "element": "Algae",
+          "weight": 2
+        },
+        {
+          "element": "Fertilizer",
+          "weight": 0.2
+        }
+      ]
+    }
+  }
+}

@@ -75,7 +75,7 @@ def handle_clusters(obj: dict, source: Path):
         return False
     remove = ["poiPlacements", "name", "description", "welcomeMessage", \
               "clusterAudio", "clusterUnlocks", "dlcIdFrom", "difficulty", \
-              "menuOrder", "mixedPoiPlacements", "startingMinions"]
+              "menuOrder", "mixedPoiPlacements", "startingMinions", "skip"]
     for key in remove:
         if key in obj:
             del obj[key]
@@ -105,6 +105,10 @@ def handle_traits(obj: dict, source: Path):
         obj["exclusiveWith"] = [
             trait.replace("GeoDormant", "Geodormant") for trait in traits
         ]
+    remove = ["description", "colorHex", "icon"]
+    for key in remove:
+        if key in obj:
+            del obj[key]
     return True
 
 def is_worlds(source: str):
@@ -121,6 +125,22 @@ def handle_worlds(obj: dict, source: Path):
             rule["forbiddenTraits"] = [
                 trait.replace("GeoDormant", "Geodormant") for trait in traits
             ]
+    remove = ["description", "nameTables", "overrideName", "asteroidIcon", \
+              "iconScale", "skip", "seasons"]
+    for key in remove:
+        if key in obj:
+            del obj[key]
+    return True
+
+def is_subworlds(source: str):
+    return str(Path("/worldgen/subworlds/")) in source
+
+def handle_subworlds(obj: dict, source: Path):
+    remove = ["nameKey", "descriptionKey", "utilityKey", "overrideNoise", \
+              "biomeNoise", "densityNoise", "backwallNoise", "borderOverride"]
+    for key in remove:
+        if key in obj:
+            del obj[key]
     return True
 
 def is_templates(source: str):
@@ -154,6 +174,7 @@ def handle(obj: dict, source: Path):
         (is_features, handle_features),
         (is_traits, handle_traits),
         (is_worlds, handle_worlds),
+        (is_subworlds, handle_subworlds),
         (is_templates, handle_templates),
     ]
     for condition, function in dispatcher:

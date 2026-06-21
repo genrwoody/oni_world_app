@@ -1,8 +1,6 @@
 {
-  "biomeNoise": "noise/Generic",
   "temperatureRange": "ExtremelyHot",
   "singleChildCount": true,
-  "borderOverride": "hardToDig",
   "borderOverridePriority": 10,
   "density": {
     "min": 35,

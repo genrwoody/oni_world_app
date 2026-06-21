@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.REGOLITHMOONLET.NAME",
-  "description": "STRINGS.WORLDS.REGOLITHMOONLET.DESCRIPTION",
-  "nameTables": [
-    "REGOLITH"
-  ],
-  "asteroidIcon": "asteroid_regolith_moonlet_kanim",
   "worldTraitScale": 0.15,
   "worldsize": {
     "X": 160,
@@ -72,9 +67,6 @@
   "fixedTraits": [
     "sunlightVeryVeryVeryHigh",
     "cosmicRadiationMed"
-  ],
-  "seasons": [
-    "RegolithMoonMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

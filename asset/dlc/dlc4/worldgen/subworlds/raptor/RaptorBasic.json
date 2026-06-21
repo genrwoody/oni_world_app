@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "dlc4::noise/Raptor",
   "temperatureRange": "Chilly",
   "density": {
     "min": 10,
@@ -9,7 +8,6 @@
   "minChildCount": 5,
   "dontRelaxChildren": true,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "hardToDig",
   "borderOverridePriority": 5,
   "biomes": [
     {

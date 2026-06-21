@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.CERESSPACEDOUT.NAME",
-  "description": "STRINGS.WORLDS.CERESSPACEDOUT.DESCRIPTION",
-  "nameTables": [
-    "CERES"
-  ],
-  "asteroidIcon": "asteroid_classic_so_kanim",
   "worldTags": [
     "Ceres"
   ],
@@ -55,9 +50,6 @@
     "sunlightVeryVeryLow",
     "cosmicRadiationLow",
     "northernLightsOn"
-  ],
-  "seasons": [
-    "CeresMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

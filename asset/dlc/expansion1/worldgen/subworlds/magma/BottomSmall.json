@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
   "temperatureRange": "ExtremelyHot",
   "minChildCount": 15,
   "density": {
@@ -7,7 +6,6 @@
     "max": 15
   },
   "avoidRadius": 8.0,
-  "borderOverride": "hardToDig",
   "borderOverridePriority": 10,
   "sampleBehaviour": "PoissonDisk",
   "biomes": [

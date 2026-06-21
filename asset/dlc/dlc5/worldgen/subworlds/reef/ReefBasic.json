@@ -1,0 +1,53 @@
+{
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 1,
+  "density": {
+    "min": 10,
+    "max": 20
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 6,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/Reef/Basic",
+      "weight": 4,
+      "tags": [
+        "PacuTropical",
+        "ParrotFish",
+        "OxyCoral",
+        "Clam",
+        "CrabFreshWater",
+        "PlanktonCoral",
+        "SeaHorse",
+        "PufferFish",
+        "ReefSeaLettuce",
+        "FilamentPlant",
+        "OxyCoralSeedBuried"
+      ]
+    },
+    {
+      "name": "dlc5::biomes/Reef/Corals",
+      "weight": 4,
+      "tags": [
+        "PacuTropical",
+        "ParrotFish",
+        "OxyCoral",
+        "Clam",
+        "CrabFreshWater",
+        "PlanktonCoral",
+        "SeaHorse",
+        "PufferFish",
+        "ReefSeaLettuce",
+        "FilamentPlant",
+        "OxyCoralSeedBuried"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "Reef"
+}

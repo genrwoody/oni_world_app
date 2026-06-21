@@ -173,7 +173,7 @@ App::~App() {}
 
 void App::Initialize(int seed)
 {
-    uint32_t count = SETTING_ASSET_FILESIZE;
+    uint32_t count = SETTING_ASSET_FILESIZE - 40; // skip sha1
     auto data = std::make_unique<char[]>(count);
     jsExchangeData(RT_Resource, count, (size_t)data.get());
     std::string_view content(data.get(), count);

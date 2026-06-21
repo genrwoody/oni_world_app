@@ -1,0 +1,43 @@
+{
+  "info": {
+    "size": {
+      "X": 11,
+      "Y": 13
+    },
+    "min": {
+      "X": -5,
+      "Y": -6
+    },
+    "area": 121
+  },
+  "otherEntities": [
+    {
+      "id": "SeaLettuce",
+      "location_x": 4,
+      "location_y": -1
+    },
+    {
+      "id": "SeaLettuce",
+      "location_x": 2,
+      "location_y": -5
+    },
+    {
+      "id": "Clam",
+      "location_x": -3,
+      "location_y": -2
+    },
+    {
+      "id": "OxyCoral",
+      "location_x": 1,
+      "location_y": -4
+    },
+    {
+      "id": "ReefVista",
+      "location_y": -5
+    },
+    {
+      "id": "MinnowImperativePOIA",
+      "location_y": -2
+    }
+  ]
+}

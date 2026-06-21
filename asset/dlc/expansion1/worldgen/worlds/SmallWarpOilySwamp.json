@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.WARPOILYSWAMP.NAME",
-  "description": "STRINGS.WORLDS.WARPOILYSWAMP.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_swamp_oil_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.12,
   "worldsize": {

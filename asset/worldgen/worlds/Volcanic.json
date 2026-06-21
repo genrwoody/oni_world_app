@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VOLCANIC.NAME",
-  "description": "STRINGS.WORLDS.VOLCANIC.DESCRIPTION",
-  "nameTables": [
-    "MAGMA"
-  ],
-  "asteroidIcon": "Asteroid_volcanic",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -63,9 +58,6 @@
   ],
   "startSubworldName": "subworlds/sandstone/SandstoneStart",
   "startingBaseTemplate": "bases/sandstoneBase",
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

@@ -1,0 +1,30 @@
+{
+  "info": {
+    "size": {
+      "X": 20,
+      "Y": 14
+    },
+    "min": {
+      "X": -8,
+      "Y": -6
+    },
+    "area": 248
+  },
+  "otherEntities": [
+    {
+      "id": "Clam",
+      "location_x": 2,
+      "location_y": -3
+    },
+    {
+      "id": "SeaLettuce",
+      "location_x": 6,
+      "location_y": -3
+    },
+    {
+      "id": "SeaLettuce",
+      "location_x": -5,
+      "location_y": -1
+    }
+  ]
+}

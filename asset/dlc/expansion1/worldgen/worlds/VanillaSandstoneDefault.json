@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLASANDSTONEDEFAULT.NAME",
-  "description": "STRINGS.WORLDS.VANILLASANDSTONEDEFAULT.DESCRIPTION",
-  "nameTables": [
-    "TERRA"
-  ],
-  "asteroidIcon": "asteroid_vanilla_sandstone_start_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.9,
   "worldsize": {
@@ -15,10 +10,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaSandstoneDefaultMeteorShowers"
   ],
   "subworldMixingRules": [
     {

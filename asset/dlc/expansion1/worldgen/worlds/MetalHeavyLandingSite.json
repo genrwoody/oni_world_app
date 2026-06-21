@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.METALHEAVYLANDINGSITE.NAME",
-  "description": "STRINGS.WORLDS.METALHEAVYLANDINGSITE.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_swamp_rocket_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -61,10 +55,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleRocketMeteorShowers",
-    "MetalHeavyLandingSiteMeteorShowers"
   ],
   "subworldFiles": [
     {

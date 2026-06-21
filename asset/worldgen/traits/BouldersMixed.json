@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.BOULDERS_MIXED.NAME",
-  "description": "STRINGS.WORLD_TRAITS.BOULDERS_MIXED.DESCRIPTION",
-  "colorHex": "BDBDBD",
   "exclusiveWith": [
     "traits/BouldersSmall"
   ],

@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/SandstoneStrange",
   "temperatureRange": "Room",
   "pdWeight": 3,
   "density": {
@@ -11,7 +10,6 @@
   "doAvoidPoints": false,
   "dontRelaxChildren": true,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "rocky",
   "biomes": [
     {
       "name": "biomes/Sedimentary/Basic",

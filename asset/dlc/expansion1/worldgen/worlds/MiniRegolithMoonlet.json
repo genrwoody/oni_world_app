@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.REGOLITHMOONLET.NAME",
-  "description": "STRINGS.WORLDS.REGOLITHMOONLET.DESCRIPTION",
-  "nameTables": [
-    "REGOLITH"
-  ],
-  "asteroidIcon": "asteroid_regolith_moonlet_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.09,
   "worldsize": {
@@ -110,9 +105,6 @@
         "(CoreMixing)"
       ]
     }
-  ],
-  "seasons": [
-    "RegolithMoonMeteorShowers"
   ],
   "worldTemplateRules": [
     {

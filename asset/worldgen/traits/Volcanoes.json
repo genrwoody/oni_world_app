@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.VOLCANOES.NAME",
-  "description": "STRINGS.WORLD_TRAITS.VOLCANOES.DESCRIPTION",
-  "colorHex": "FA4545",
   "forbiddenDLCIds": [
     "EXPANSION1_ID"
   ],

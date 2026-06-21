@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.VANILLAFORESTDEFAULT.NAME",
-  "description": "STRINGS.WORLDS.VANILLAFORESTDEFAULT.DESCRIPTION",
-  "nameTables": [
-    "FOREST"
-  ],
-  "asteroidIcon": "asteroid_vanilla_forest_start_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 240,
@@ -56,10 +51,6 @@
   "fixedTraits": [
     "sunlightMed",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleStartMeteorShowers",
-    "VanillaForestDefaultMeteorShowers"
   ],
   "defaultsOverrides": {
     "startingWorldElements": [],

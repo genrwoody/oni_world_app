@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.CERESBASEGAMESHATTERED.NAME",
-  "description": "STRINGS.WORLDS.CERESBASEGAMESHATTERED.DESCRIPTION",
-  "nameTables": [
-    "CERES"
-  ],
-  "asteroidIcon": "asteroid_base_ceres_shattered_kanim",
   "worldTags": [
     "Ceres"
   ],
@@ -65,9 +60,6 @@
   "fixedTraits": [
     "sunlightVeryVeryLow",
     "northernLightsOn"
-  ],
-  "seasons": [
-    "CeresMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

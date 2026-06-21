@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MEDIUMSWAMPY.NAME",
-  "description": "STRINGS.WORLDS.MEDIUMSWAMPY.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_vanilla_mediumswampy_kanim",
   "worldTraitScale": 0.3,
   "worldsize": {
     "X": 160,
@@ -53,10 +48,6 @@
   "fixedTraits": [
     "sunlightMedLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "ClassicStyleWarpMeteorShowers",
-    "MediumSwampyMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/swamp/SwampWarpStart",
   "startingBaseTemplate": "expansion1::bases/warpworldSwampBase",

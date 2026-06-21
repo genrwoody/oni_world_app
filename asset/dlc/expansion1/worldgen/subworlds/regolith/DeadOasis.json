@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/OilPockets",
   "temperatureRange": "Chilly",
   "minChildCount": 2,
   "pdWeight": 2,
@@ -8,7 +7,6 @@
     "max": 45
   },
   "avoidRadius": 50.0,
-  "borderOverride": "regolith",
   "sampleBehaviour": "PoissonDisk",
   "biomes": [
     {

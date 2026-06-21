@@ -1,6 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
-  "borderOverride": "frozenRustCrust",
   "temperatureRange": "VeryCold",
   "singleChildCount": true,
   "minChildCount": 1,

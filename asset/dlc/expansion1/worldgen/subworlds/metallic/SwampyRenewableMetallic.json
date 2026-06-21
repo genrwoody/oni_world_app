@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "expansion1::noise/Metallic",
   "temperatureRange": "Room",
   "density": {
     "min": 10,

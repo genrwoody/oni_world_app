@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TERRAMOONLET.NAME",
-  "description": "STRINGS.WORLDS.TERRAMOONLET.DESCRIPTION",
-  "nameTables": [
-    "TERRA"
-  ],
-  "asteroidIcon": "asteroid_sandstone_start_kanim",
   "disableWorldTraits": true,
   "worldTraitScale": 0.44,
   "worldsize": {
@@ -49,10 +44,6 @@
   "fixedTraits": [
     "sunlightVeryLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleStartMeteorShowers",
-    "TerraMoonletMeteorShowers"
   ],
   "subworldFiles": [
     {

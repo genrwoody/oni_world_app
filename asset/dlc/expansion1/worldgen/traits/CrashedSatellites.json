@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.CRASHED_SATELLITES.NAME",
-  "description": "STRINGS.WORLD_TRAITS.CRASHED_SATELLITES.DESCRIPTION",
-  "colorHex": "5CD64C",
   "traitTags": [
     "Radiation"
   ],

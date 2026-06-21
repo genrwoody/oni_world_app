@@ -1,0 +1,14 @@
+{
+  "name": "STRINGS.SUBWORLDS.KELPFOREST.NAME",
+  "description": "STRINGS.SUBWORLDS.KELPFOREST.DESC",
+  "icon": "biomeIconKelpForest",
+  "mixingTags": [
+    "Aquatic"
+  ],
+  "forbiddenClusterTags": [
+    "AquaticCluster"
+  ],
+  "subworld": {
+    "name": "dlc5::subworlds/kelpforest/KelpForestMixing"
+  }
+}

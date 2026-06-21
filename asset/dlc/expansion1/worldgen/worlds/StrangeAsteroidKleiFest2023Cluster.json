@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.NAME",
-  "description": "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.DESCRIPTION",
-  "asteroidIcon": "asteroid_strange_kanim",
   "worldTraitScale": 0.9,
   "worldsize": {
     "X": 380,
@@ -75,9 +73,6 @@
   ],
   "startSubworldName": "subworlds/sandstone/SandstoneStartStrange",
   "startingBaseTemplate": "bases/sandstoneBase",
-  "seasons": [
-    "ClassicStyleStartMeteorShowers"
-  ],
   "unknownCellsAllowedSubworlds": [
     {
       "tagcommand": "Default",

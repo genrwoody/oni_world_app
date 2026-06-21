@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINISHATTEREDWARP.NAME",
-  "description": "STRINGS.WORLDS.MINISHATTEREDWARP.DESCRIPTION",
-  "nameTables": [
-    "CERES"
-  ],
-  "asteroidIcon": "asteroid_moonlet_top_kanim",
   "worldTags": [
     "Ceres"
   ],
@@ -49,9 +44,6 @@
     "sunlightVeryVeryLow",
     "cosmicRadiationMedLow",
     "northernLightsOn"
-  ],
-  "seasons": [
-    "CeresMeteorShowers"
   ],
   "defaultsOverrides": {
     "data": {

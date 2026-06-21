@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINISHATTEREDGEO.NAME",
-  "description": "STRINGS.WORLDS.MINISHATTEREDGEO.DESCRIPTION",
-  "nameTables": [
-    "CERES",
-    "MAGMA"
-  ],
-  "asteroidIcon": "asteroid_moonlet_bottom_kanim",
   "worldTags": [
     "Ceres"
   ],

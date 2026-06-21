@@ -1,9 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TWINMOONLET.NAME",
-  "description": "STRINGS.WORLDS.TWINMOONLET.DESCRIPTION",
-  "nameTables": [
-    "TERRA"
-  ],
   "disableWorldTraits": true,
   "worldTraitScale": 0.15,
   "worldsize": {

@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.PREHISTORICMIXING.NAME",
-  "description": "STRINGS.WORLDS.PREHISTORICMIXING.DESCRIPTION",
-  "nameTables": [
-    "PREHISTORIC"
-  ],
-  "asteroidIcon": "asteroid_prehistoric_kanim",
   "worldTags": [
     "Mixing",
     "PrehistoricWorld",

@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.WATERMOONLET.NAME",
-  "description": "STRINGS.WORLDS.WATERMOONLET.DESCRIPTION",
-  "nameTables": [
-    "WATER"
-  ],
-  "asteroidIcon": "asteroid_water_moonlet_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 80,
@@ -78,9 +73,6 @@
   "fixedTraits": [
     "sunlightHigh",
     "cosmicRadiationMedLow"
-  ],
-  "seasons": [
-    "WaterMoonletMeteorShowers"
   ],
   "unknownCellsAllowedSubworlds": [
     {

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.FOREST_HOT.NAME",
-  "description": "STRINGS.WORLDS.FOREST_HOT.DESCRIPTION",
-  "asteroidIcon": "Asteroid_hotforest",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -71,9 +69,6 @@
     "min": 0.45,
     "max": 0.55
   },
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

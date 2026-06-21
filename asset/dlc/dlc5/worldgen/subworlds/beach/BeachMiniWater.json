@@ -1,0 +1,33 @@
+{
+  "temperatureRange": "HumanWarm",
+  "pdWeight": 0.5,
+  "density": {
+    "min": 7,
+    "max": 14
+  },
+  "avoidRadius": 20.0,
+  "minChildCount": 12,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/Beach/Water",
+      "weight": 4,
+      "tags": [
+        "BeachCrab",
+        "WaterCups",
+        "MusselSprout",
+        "SaltySticksPlant",
+        "DewPalm",
+        "Snail"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride",
+    "NoGlobalFeatureSpawning",
+    "StartWorld"
+  ],
+  "zoneType": "Beach"
+}

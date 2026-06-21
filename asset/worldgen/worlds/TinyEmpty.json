@@ -1,6 +1,5 @@
 {
   "name": "STRINGS.WORLDS.TINYEMPTY.NAME",
-  "description": "STRINGS.WORLDS.TINYEMPTY.DESCRIPTION",
   "disableWorldTraits": true,
   "worldTraitScale": 1,
   "worldsize": {

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLDS.SANDSTONE_FROZEN.NAME",
-  "description": "STRINGS.WORLDS.SANDSTONE_FROZEN.DESCRIPTION",
-  "asteroidIcon": "Asteroid_icysandstone",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 256,
@@ -83,9 +81,6 @@
     "min": 0.45,
     "max": 0.55
   },
-  "seasons": [
-    "MeteorShowers"
-  ],
   "worldTraitRules": [
     {
       "min": 2,

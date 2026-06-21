@@ -14,13 +14,6 @@ struct SubWorld {
     bool doAvoidPoints = true;
     bool dontRelaxChildren = false;
     MinMax blobSize;
-    std::string nameKey;
-    std::string descriptionKey;
-    std::string utilityKey;
-    std::string biomeNoise;
-    std::string overrideNoise;
-    std::string densityNoise;
-    std::string borderOverride;
     int borderOverridePriority{};
     MinMax borderSizeOverride;
     Range temperatureRange{};
@@ -46,9 +39,6 @@ struct SubWorld {
 struct WorldTrait {
     std::string filePath;
     std::string name;
-    std::string description;
-    std::string colorHex;
-    std::string icon;
     std::vector<std::string> forbiddenDLCIds;
     std::vector<std::string> exclusiveWith;
     std::vector<std::string> exclusiveWithTags;
@@ -72,11 +62,6 @@ struct WorldTrait {
 
 struct World {
     std::string name;
-    std::string description;
-    std::vector<std::string> nameTables;
-    std::vector<std::string> overrideName;
-    std::string asteroidIcon;
-    float iconScale = 1.0f;
     std::vector<std::string> worldTags;
     std::string dlcIdFrom;
     std::vector<std::string> requiredDlcIds;
@@ -84,7 +69,6 @@ struct World {
     bool disableWorldTraits{};
     std::vector<TraitRule> worldTraitRules;
     float worldTraitScale = 1.0f;
-    Skip skip{};
     bool moduleInterior{};
     WorldCategory category{};
     Vector2f worldsize;
@@ -100,7 +84,6 @@ struct World {
     MinMax startingBasePositionHorizontal = {0.5f, 0.5f};
     MinMax startingBasePositionVertical = {0.5f, 0.5f};
     std::vector<TemplateSpawnRules> worldTemplateRules;
-    std::vector<std::string> seasons;
     std::vector<std::string> fixedTraits;
     bool adjacentTemporalTear{};
 

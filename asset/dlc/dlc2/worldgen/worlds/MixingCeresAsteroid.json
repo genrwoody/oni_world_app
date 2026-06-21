@@ -1,10 +1,5 @@
 {
   "name": "STRINGS.WORLDS.CERESMIXING.NAME",
-  "description": "STRINGS.WORLDS.CERESMIXING.DESCRIPTION",
-  "nameTables": [
-    "CERES"
-  ],
-  "asteroidIcon": "asteroid_classic_mini_ceres_so_kanim",
   "worldTags": [
     "Mixing",
     "CeresWorld",
@@ -64,9 +59,6 @@
     "sunlightVeryVeryLow",
     "cosmicRadiationMed",
     "northernLightsOn"
-  ],
-  "seasons": [
-    "CeresMeteorShowers"
   ],
   "subworldMixingRules": [
     {

@@ -1,7 +1,5 @@
 {
   "name": "STRINGS.WORLD_TRAITS.DEEP_OIL.NAME",
-  "description": "STRINGS.WORLD_TRAITS.DEEP_OIL.DESCRIPTION",
-  "colorHex": "6C6C6C",
   "traitTags": [
     "AboveCore",
     "Oil"

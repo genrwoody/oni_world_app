@@ -1,0 +1,29 @@
+{
+  "temperatureRange": "HumanWarm",
+  "density": {
+    "min": 10,
+    "max": 15
+  },
+  "avoidRadius": 15.0,
+  "doAvoidPoints": false,
+  "dontRelaxChildren": true,
+  "extraBiomeChildren": 3,
+  "sampleBehaviour": "PoissonDisk",
+  "biomes": [
+    {
+      "name": "dlc5::biomes/KelpForest/Basic",
+      "weight": 1,
+      "tags": [
+        "SeaTree",
+        "SeaFairy",
+        "SeaTurtle",
+        "KelpForestThimbleReed",
+        "KelpForestBulbPlant"
+      ]
+    }
+  ],
+  "tags": [
+    "IgnoreCaveOverride"
+  ],
+  "zoneType": "KelpForest"
+}

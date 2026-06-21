@@ -1,6 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
-  "borderOverride": "organicCrust",
   "temperatureRange": "VeryCold",
   "singleChildCount": true,
   "minChildCount": 1,

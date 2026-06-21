@@ -1,0 +1,19 @@
+{
+  "info": {
+    "size": {
+      "X": 8,
+      "Y": 8
+    },
+    "min": {
+      "X": -3,
+      "Y": -3
+    },
+    "area": 61
+  },
+  "otherEntities": [
+    {
+      "id": "GeyserGeneric_murky_brine",
+      "location_y": 1
+    }
+  ]
+}

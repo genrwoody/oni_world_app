@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "dlc4::noise/Garden",
   "temperatureRange": "HumanWarm",
   "density": {
     "min": 10,

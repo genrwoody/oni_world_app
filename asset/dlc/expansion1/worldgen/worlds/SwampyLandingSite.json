@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.SWAMPYLANDINGSITE.NAME",
-  "description": "STRINGS.WORLDS.SWAMPYLANDINGSITE.DESCRIPTION",
-  "nameTables": [
-    "SWAMP",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_forest_rocket_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -62,10 +56,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleRocketMeteorShowers",
-    "SwampyLandingSiteMeteorShowers"
   ],
   "subworldFiles": [
     {

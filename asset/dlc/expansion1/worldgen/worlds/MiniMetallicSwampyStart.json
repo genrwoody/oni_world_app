@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.MINIMETALLICSWAMPY.NAME",
-  "description": "STRINGS.WORLDS.MINIMETALLICSWAMPY.DESCRIPTION",
-  "nameTables": [
-    "SWAMP"
-  ],
-  "asteroidIcon": "asteroid_mini_metallicswampy_kanim",
-  "iconScale": 1.2,
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -62,9 +56,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "MiniMetallicSwampyMeteorShowers"
   ],
   "subworldFiles": [
     {

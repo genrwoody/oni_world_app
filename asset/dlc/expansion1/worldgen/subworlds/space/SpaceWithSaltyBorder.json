@@ -1,6 +1,4 @@
 {
-  "biomeNoise": "noise/Generic",
-  "borderOverride": "saltyCrust",
   "temperatureRange": "VeryCold",
   "singleChildCount": true,
   "minChildCount": 1,

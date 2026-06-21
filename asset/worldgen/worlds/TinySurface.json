@@ -1,8 +1,6 @@
 {
   "name": "STRINGS.WORLDS.TINYSURFACE.NAME",
-  "description": "STRINGS.WORLDS.TINYSURFACE.DESCRIPTION",
   "disableWorldTraits": true,
-  "asteroidIcon": "asteroid_swamp_rocket_kanim",
   "worldTraitScale": 1,
   "worldsize": {
     "X": 32,

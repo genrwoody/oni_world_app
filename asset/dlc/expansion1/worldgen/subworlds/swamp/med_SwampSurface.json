@@ -1,5 +1,4 @@
 {
-  "biomeNoise": "noise/subworldForest",
   "temperatureRange": "Room",
   "density": {
     "min": 10,
@@ -8,7 +7,6 @@
   "avoidRadius": 20.0,
   "minChildCount": 4,
   "sampleBehaviour": "PoissonDisk",
-  "borderOverride": "swampyMetalCrust",
   "biomes": [
     {
       "name": "expansion1::biomes/Swamp/Basic",

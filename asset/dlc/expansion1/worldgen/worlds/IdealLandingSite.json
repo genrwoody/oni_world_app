@@ -1,11 +1,5 @@
 {
   "name": "STRINGS.WORLDS.IDEALLANDINGSITE.NAME",
-  "description": "STRINGS.WORLDS.IDEALLANDINGSITE.DESCRIPTION",
-  "nameTables": [
-    "FOREST",
-    "RADIOACTIVE"
-  ],
-  "asteroidIcon": "asteroid_swamp_rocket_kanim",
   "worldTraitScale": 0.2,
   "worldsize": {
     "X": 128,
@@ -51,10 +45,6 @@
   "fixedTraits": [
     "sunlightLow",
     "cosmicRadiationVeryLow"
-  ],
-  "seasons": [
-    "SpacedOutStyleRocketMeteorShowers",
-    "IdealLandingSiteMeteorShowers"
   ],
   "startSubworldName": "expansion1::subworlds/barren/LargeChasmStart",
   "startingBaseTemplate": "poi/poi_satellite_3_a",
