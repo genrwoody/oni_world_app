@@ -652,7 +652,7 @@ static std::map<std::string_view, int> GenerateGeysersDict()
         // important buildings
         "receiver", "sender", "teleporter", "cryopod", "printpod"};
     std::map<std::string_view, int> result;
-    for (int i = 0; i < std::size(configs); ++i) {
+    for (int i = 0; i < (int)std::size(configs); ++i) {
         result.emplace(configs[i], i);
     }
     return result;
@@ -685,20 +685,18 @@ std::vector<Vector3i> WorldGen::GetGeysers(int globalWorldSeed) const
             result.emplace_back(pos.x, pos.y, configs["cryopod"]);
         } else if (!templt.container->otherEntities.empty()) {
             for (auto &item : templt.container->otherEntities) {
-                if (item.id == "OilWell" ||
-                    item.id == "SmallReefGeyser" ||
+                if (item.id == "OilWell" || item.id == "SmallReefGeyser" ||
                     item.id == "UnderwaterVent") {
                     pos.x += item.location_x;
                     pos.y -= item.location_y;
                     result.emplace_back(pos.x, pos.y, configs[item.id]);
-                } else if (item.id.find("GeyserGeneric_") == item.id.npos) {
-                    continue;
-                }
-                auto itr = configs.find(item.id.substr(14));
-                if (itr != configs.end()) {
-                    pos.x += item.location_x;
-                    pos.y -= item.location_y;
-                    result.emplace_back(pos.x, pos.y, itr->second);
+                } else if (item.id.find("GeyserGeneric_") == 0) {
+                    auto itr = configs.find(item.id.substr(14));
+                    if (itr != configs.end()) {
+                        pos.x += item.location_x;
+                        pos.y -= item.location_y;
+                        result.emplace_back(pos.x, pos.y, itr->second);
+                    }
                 }
             }
         }

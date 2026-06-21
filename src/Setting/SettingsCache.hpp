@@ -67,7 +67,7 @@ public:
     int Seed() const { return m_seed; }
     bool LoadSettingsCache(const std::string_view &content);
     bool CoordinateChanged(const std::string &text);
-    bool CoordinateChanged(int type, int seed, int mix);
+    bool CoordinateChanged(int type, int seed, uint64_t mix);
     bool InitializeWorlds(std::vector<World *> &chosenWorlds);
     bool IsSpaceOutEnabled() const { return (m_dlcState & 1) == 1; }
     bool IsMiniCluster() const { return m_cluster->IsMiniCluster(); }

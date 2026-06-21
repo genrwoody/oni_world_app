@@ -259,7 +259,7 @@ std::string SettingsCache::BinaryToBase36(uint32_t input)
     return result;
 }
 
-bool SettingsCache::CoordinateChanged(int type, int seed, int mix)
+bool SettingsCache::CoordinateChanged(int type, int seed, uint64_t mix)
 {
     const char *clusterPrefix[] = {
         "SNDST-A",   "OCAN-A",   "S-FRZ",     "LUSH-A",    "FRST-A",
@@ -275,7 +275,7 @@ bool SettingsCache::CoordinateChanged(int type, int seed, int mix)
         return false;
     }
     m_seed = seed;
-    ParseAndApplyMixingSettingsCode((uint32_t)mix);
+    ParseAndApplyMixingSettingsCode(mix);
     return InitializeCluster(clusterPrefix[type]);
 }
 
